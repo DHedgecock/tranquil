@@ -1,0 +1,29 @@
+# -----------------------------------------------------------------------------
+# Tranquil Color Variables
+# -----------------------------------------------------------------------------
+$black:         '#3F3F3F'
+$dark-gray:     '#709080'
+$light-gray:    '#BFBFBF'
+$white:         '#DCDCCC'
+#Red
+$bold-red:      '#DCA3A3'
+$red:           '#705050'
+# Magento
+$bold-magenta:  '#EC93D3'
+$magenta:       '#DC8CC3'
+# Yellow
+$bold-yellow:   '#F0DFAF'
+$yellow:        '#DFAF8F'
+# Blue
+$bold-blue:     '#94BFF3'
+$blue:          '#506070'
+# Cyan
+$bold-cyan:     '#93E0E3'
+$cyan:          '#8CD0D3'
+# Green
+$bold-green:    '#C3BF9F'
+$green:         '#60B48A'
+# Element Variables
+$background: '#3F3F3F'
+$foreground: '#DCDCCC'
+

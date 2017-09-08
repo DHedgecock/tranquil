@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  color: #dcdccc;
+}
+
+.background {
+  flex: 1;
+}
+
+.row {
+  margin-left: 100px;
+}
+
+.block {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  flex: 1;
+}
+
+.black {
+  background-color: #3f3f3f;
+}
+.steel {
+  background-color: #506070;
+}
+.smoke {
+  background-color: #bfbfbf;
+}
+.white {
+  background-color: #dcdccc;
+}
+
+.rust {
+  background-color: #705050;
+}
+.pepto {
+  background-color: #ec93d3;
+}
+.salmon {
+  background-color: #dc8cc3;
+}
+.grapefruit {
+  background-color: #dca3a3;
+}
+.peach {
+  background-color: #dfaf8f;
+}
+.puke {
+  background-color: #c3bf9f;
+}
+.yellow {
+  background-color: #f0dfaf;
+}
+
+.turtle {
+  background-color: #709080;
+}
+.whale {
+  background-color: #94bff3;
+}
+.cyan {
+  background-color: #8cd0d3;
+}
+.sky {
+  background-color: #93e0e3;
+}
+.seafoam {
+  background-color: #60b48a;
+}
