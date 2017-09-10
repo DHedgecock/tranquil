@@ -2,7 +2,7 @@
     "name": "tranquil-theme",
     "displayName": "Tranquil",
     "description": "Calm dark theme",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "publisher": "dhedgecock",
     "engines": {
         "vscode": "^1.12.0"
