@@ -1,0 +1,24 @@
+# -----------------------------------------------------------------------------
+# Integrated terminal styles
+# -----------------------------------------------------------------------------
+terminal.background: $background
+terminal.foreground: $foreground
+terminalCursor.background: $foreground
+terminalCursor.foreground: $cursor
+terminal.ansiBlack: $background
+terminal.ansiBlue: $blue
+terminal.ansiCyan: $cyan
+terminal.ansiGreen: $green
+terminal.ansiMagenta: $magenta
+terminal.ansiRed: $red
+terminal.ansiWhite: $foreground
+terminal.ansiYellow: $yellow
+terminal.ansiBrightBlack: $gray300
+terminal.ansiBrightBlue: $bold-blue
+terminal.ansiBrightCyan: $bold-cyan
+terminal.ansiBrightGreen: $bold-green
+terminal.ansiBrightMagenta: $bold-magenta
+terminal.ansiBrightRed: $bold-red
+terminal.ansiBrightWhite: $gray600
+terminal.ansiBrightYellow: $bold-yellow
+

@@ -1,0 +1,7 @@
+# -----------------------------------------------------------------------------
+# Docker syntax token styles
+# -----------------------------------------------------------------------------
+# Docker file `FROM`
+- scope: keyword.other.special-method
+  settings:
+    foreground: $blue

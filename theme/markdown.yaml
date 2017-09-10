@@ -1,0 +1,70 @@
+# -----------------------------------------------------------------------------
+# Markdown syntax token styles
+# -----------------------------------------------------------------------------
+- scope: markup.bold
+  settings:
+    foreground: $bold-yellow
+    font-weight: bold
+- scope: punctuation.definition.bold.markdown
+  settings:
+    foreground: $yellow
+    font-weight: bold
+- scope: markup.changed
+  settings:
+    foreground: $bold-magenta
+- scope: markup.deleted
+  settings:
+    foreground: $red
+# Italic Text
+- scope: markup.italic
+  settings:
+    foreground: $cyan
+    fontStyle: italic
+- scope: punctuation.definition.italic.markdown
+  settings:
+    foreground: $cyan
+    fontStyle: italic
+- scope: markup.inserted
+  settings:
+    foreground: $cyan
+# Headings Punctuation
+- scope: punctuation.definition.heading
+  settings:
+    foreground: $cyan
+# Headings Text
+- scope: entity.name.section.markdown
+  settings:
+    foreground: $gray600
+# Block Quotes
+- scope: markup.quote
+  settings:
+    foreground: $bold-yellow
+# Inline code blocks: `code`
+- scope: markup.inline.raw
+  settings:
+    foreground: $cyan
+    fontStyle: italic
+# List punctuation: -
+- scope: beginning.punctuation.definition.list
+  settings:
+    foreground: $bold-magenta
+# Fenced code blocks
+- scope: markup.fenced_code.block.markdown punctuation.definition.markdown
+  settings:
+    foreground: $gray700
+- scope: fenced_code.block.language
+  settings:
+    foreground: gray600
+    fontStyle: italic
+######################################################## Links
+- scope: string.other.link
+  settings:
+    foreground: $gray500
+    fontStyle: normal
+- scope: meta.link.inline.markdown
+  settings:
+    foreground: $bold-cyan
+    fontStyle: italic bold
+- scope: text.html.markdown punctuation.definition.string
+  settings:
+    foreground: $yellow

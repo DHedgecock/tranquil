@@ -1,0 +1,72 @@
+# -----------------------------------------------------------------------------
+# Template langauges syntax token styles
+# -----------------------------------------------------------------------------
+#
+# -----------------------------------------------------------------------------
+# JSX
+# -----------------------------------------------------------------------------
+# Component names
+- scope: support.class.component
+  settings:
+    foreground: $bold-magenta
+    fontStyle: italic
+# HTML tag names
+- scope: meta.tag.js entity.name.tag
+  settings:
+    foreground: $yellow
+# HTML and Component attribute's name
+- scope: entity.other.attribute-name
+  settings:
+    foreground: $bold-yellow
+# -----------------------------------------------------------------------------
+# Handlebars/Glimmer
+# -----------------------------------------------------------------------------
+- scope: meta.source.handlebars entity.name.tag
+  settings:
+    foreground: $cyan
+# {{, {{{, () and </>
+- scope: punctuation.definition.expression, punctuation.definition.subexpression, punctuation.definition.block.unescaped, punctuation.definition.tag
+  settings:
+    fontStyle: italic
+    foreground: $yellow
+# name: Expression Name,
+- scope: entity.name.function.expression
+  settings:
+    foreground: $bold-magenta
+# Unescaped value
+- scope: entity.unescaped.expression
+  settings:
+    foreground: $violet
+# Matches pipes in as expressions
+- scope: constant.other.symbol
+  settings:
+    foreground: $cyan
+# Expression parameter NAME
+- scope: entity.expression variable.parameter.name
+  settings:
+    foreground: $bold-yellow
+# Expression parameter VALUE
+- scope: entity.expression variable.parameter.value
+  settings:
+    foreground: $cyan
+# Ember built in helpers
+- scope: entity.expression support.function.builtin
+  settings:
+    foreground: $magenta
+# HTML tag names
+- scope: entity.name.tag.html
+  settings:
+    foreground: $yellow
+# HTML attribute NAME
+- scope: entity.other.attribute-name.handlebars
+  settings:
+    foreground: $yellow
+# -----------------------------------------------------------------------------
+# HTML
+# -----------------------------------------------------------------------------
+- scope: meta.tag.structure.any.html, meta.tag.other.html, entity.name.tag.html, meta.tag.metadata.script.html, entity.name.tag.jade
+  settings:
+    foreground: $yellow
+- scope: entity.name.tag.inline.any.html, entity.name.tag.other.html, entity.name.tag.block.any.html
+  settings:
+    foreground: $yellow

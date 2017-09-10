@@ -1,0 +1,196 @@
+# -----------------------------------------------------------------------------
+# Workbench styles are the general theme rules for VSCode and include most
+# everything that isn't syntax tokens.
+#
+# NOTE: Some of the more specific editor features (like the integrated terminal) are
+# split out into separate files for easier maintainability.
+# -----------------------------------------------------------------------------
+# TODO: Include ALL THE VARIABLES from the theme color ref here!
+# Defaults for editor elements, will be used if not set by a specific component
+# focusBorder. TODO: widget.shadow, selection.background
+focusBorder: $subdued
+foreground: $foreground
+widget.shadow: $shadow
+selection.background: $selection # Selection background inside text inputs
+errorForeground: $error
+# -----------------------------------------------------------------------------
+# Buttons
+# -----------------------------------------------------------------------------
+button.background: $attention
+button.foreground: $foreground
+button.hoverBackground: $contrast
+extensionButton.prominentBackground: $attention
+extensionButton.prominentForeground: $foreground
+extensionButton.prominentHoverBackground: $contrast
+# -----------------------------------------------------------------------------
+# Activity Bar
+# -----------------------------------------------------------------------------
+# The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
+activityBar.background: $well-background
+activityBar.foreground: $foreground
+activityBar.border: $primary
+activityBarBadge.background: $primary
+activityBarBadge.foreground: $inverse-foreground
+# -----------------------------------------------------------------------------
+# Badges
+# -----------------------------------------------------------------------------
+badge.background: $primary
+badge.foreground: $inverse-foreground
+# -----------------------------------------------------------------------------
+# ProgressBar
+# Shows for long running operations
+# -----------------------------------------------------------------------------
+progressBar.background: $violet
+# -----------------------------------------------------------------------------
+# Diff View
+# -----------------------------------------------------------------------------
+diffEditor.insertedTextBackground: $diff-green
+diffEditor.insertedTextBorder: $transparent
+diffEditor.removedTextBackground: $diff-red
+diffEditor.removedTextBorder: $transparent
+# -----------------------------------------------------------------------------
+# Merge Conflicts
+# -----------------------------------------------------------------------------
+merge.currentHeaderBackground: $merge-current-header
+merge.currentContentBackground: $merge-current-content
+merge.incomingHeaderBackground: $merge-incoming-header
+merge.incomingContentBackground: $merge-incoming-content
+merge.border: $transparent
+# -----------------------------------------------------------------------------
+# Editor
+# -----------------------------------------------------------------------------
+editor.background: $background
+editor.foreground: $foreground
+editorCursor.foreground: $cursor
+editorRuler.foreground: $violet-fade
+editorBracketMatch.border: $cyan
+editorCodeLens.foreground: $violet-fade
+editorWhitespace.foreground: $gray200
+# editorBracketMatch.background: NONE
+# Selection highlight settings are applied when text is selected, the highlight
+# background will automatically highlight all other matches of the selected text
+editor.selectionBackground: $selection
+editor.inactiveSelectionBackground: $selection
+editor.selectionHighlightBackground: $selection
+# Word highlight settings are used when the cursor is inside of a symbol and will
+# automatically highlight all other occurences of that symbol (with the option for
+# different colors for read vs write access of symbol). Note that this overrides
+# the selection background after double clicking a symbol to select, but not when
+# selecting with keyboard
+# TODO: Make these more subtle, they're distracting
+editor.wordHighlightBackground: $violet-fade # During read access, like console.log
+editor.wordHighlightStrongBackground: $selection # During write access, like const =
+# Find match settings are triggered by current find/replace dialong in top right
+editor.findMatchBackground: $violet-fade
+editor.findMatchHighlightBackground: $selection
+# editor.findRangeHighlightBackground: ??? What does this do ???
+# Currently active line background
+editor.lineHighlightBackground: $background-light
+# -----------------------------------------------------------------------------
+# Widgets
+# -----------------------------------------------------------------------------
+# Widgets are feautures inside the main editor like snippets, autocomplete, in
+# file find.
+editorWidget.background: $background
+editorWidget.border: $background-light
+# This sets the background for suggestions complete currently selected element
+editorSuggestWidget.selectedBackground: $selection
+editorHoverWidget.background: $background-light
+# -----------------------------------------------------------------------------
+# Overview Ruler
+# -----------------------------------------------------------------------------
+# The overview ruler is the thin bar at the far right of the editor, it has
+# decorations for git status and linter warnings
+editorOverviewRuler.border: $transparent
+# editorOverviewRuler.findMatchForeground: TODO
+# editorOverviewRuler.rangeHighlightForeground: TODO
+# editorOverviewRuler.selectionHighlightForeground: TODO
+# editorOverviewRuler.wordHighlightForeground: TODO
+# editorOverviewRuler.wordHighlightStrongForeground: TODO
+editorOverviewRuler.modifiedForeground: $git-modified
+editorOverviewRuler.addedForeground: $git-added
+editorOverviewRuler.deletedForeground: $git-removed
+editorOverviewRuler.errorForeground: $error
+editorOverviewRuler.warningForeground: $warning
+editorOverviewRuler.infoForeground: $info
+# -----------------------------------------------------------------------------
+# Errors
+# -----------------------------------------------------------------------------
+# Themes the squiggly+borders underneath linter errors
+editorError.foreground: $error
+editorError.border: $error
+editorWarning.foreground: $warning
+editorWarning.border: $warning
+# -----------------------------------------------------------------------------
+# Git Gutters
+# -----------------------------------------------------------------------------
+editorGutter.modifiedBackground: $git-modified
+editorGutter.addedBackground: $git-added
+editorGutter.deletedBackground: $git-removed
+# -----------------------------------------------------------------------------
+# List
+# -----------------------------------------------------------------------------
+# List elements are inside the sidebar + command dropdown
+# Mouse hover
+list.hoverBackground: $background-light
+list.hoverForeground: $gray500
+
+# Keyboard focus
+list.focusBackground: $background-light
+list.focusForeground: $cyan
+
+# Selected item when the list container is in focus
+list.activeSelectionBackground: $background-light
+list.activeSelectionForeground: $cyan
+# Selected item when the list container is NOT in focus
+list.inactiveSelectionBackground: $background-light
+list.inactiveSelectionForeground: $cyan
+# The text that matches a search term inside of lists
+list.highlightForeground: $cyan
+# -----------------------------------------------------------------------------
+# Sidebar
+# -----------------------------------------------------------------------------
+# The side bar includes the file tree, search interface, git status and debug
+# interfaces. It is located between the Activity Bar and the Editor.
+sideBar.background: $well-background
+sideBar.foreground: $foreground
+sideBar.border: $subdued
+# -----------------------------------------------------------------------------
+# Scrollbar
+# -----------------------------------------------------------------------------
+# The .shadow shows under headers in the sideBar and editor when scrolled.
+# The scrollbarSlider themes BOTH the scrollbar in sideBar/editor AND the minimap
+# overlays, so it's important to use transparent colors.
+scrollbar.shadow: $background
+scrollbarSlider.background: $translucent
+scrollbarSlider.activeBackground: $gray500
+scrollbarSlider.hoverBackground: $gray500
+# -----------------------------------------------------------------------------
+# Status Bar
+# -----------------------------------------------------------------------------
+# Bar at bottom of editor with status updates
+statusBar.background: $well-background
+statusBar.foreground: $foreground
+statusBar.noFolderBackground: $black
+statusBar.noFolderForeground: $foreground
+statusBar.debuggingBackground: $violet
+statusBar.debuggingForeground: $foreground
+statusBar.border: $transparent
+# statusBarItem.prominentBackground: NONE
+# statusBarItem.prominentHoverBackground: NONE
+# -----------------------------------------------------------------------------
+# Title Bar
+# -----------------------------------------------------------------------------
+titleBar.activeBackground: $black
+titleBar.activeForeground: $foreground
+titleBar.inactiveBackground: $black
+titleBar.inactiveForeground: $foreground
+# -----------------------------------------------------------------------------
+# Tabs
+# -----------------------------------------------------------------------------
+tab.activeBackground: $background-light
+tab.activeForeground: $cyan
+tab.activeBorder: $cyan
+tab.inactiveBackground: $black
+tab.inactiveForeground: $foreground
+tab.unfocusedActiveBorder: $transparent

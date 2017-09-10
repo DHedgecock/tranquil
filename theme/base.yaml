@@ -1,0 +1,55 @@
+$schema: vscode://schemas/color-theme
+author: Dan Hedgecock
+name: Tranquil
+colorSpaceName: sRGB
+semanticClass: theme.dark.tranquil
+# Colors namespace is for all editor theming, including workbench, terminal, etc.
+# These rules are contained in separate files
+colors: {}
+# TokenColors namespace is for syntax token theming. The generic types are themed
+# here according to the Textmate naming convention and the package color semantics.
+# See: http://manual.macromates.com/en/language_grammars#naming_conventions.html
+# NOTE: Generic <meta> does not get a visual style, see naming conventions
+tokenColors:
+  # Generic <comment> matches
+  - scope: comment
+    settings:
+      foreground: $gray400
+      fontStyle: italic
+  # Generic <constant> matches
+  - scope: constant
+    settings:
+      foreground: $bold-yellow
+  # Generic <entity> match
+  - scope: entity
+    settings:
+      foreground: $foreground
+  # Generic <invalid>
+  - scope: invalid
+    settings:
+      foreground: $error
+      fontStyle: italic bold underline
+  # Generic <keyword> matches
+  - scope: keyword
+    settings:
+      foreground: $bold-magenta
+  # Generic <markup> match
+  - scope: markup
+    settings:
+      foreground: $foreground
+  # Generic <storage> matches
+  - scope: storage
+    settings:
+      foreground: $bold-yellow
+  # Generic <string> match
+  - scope: string
+    settings:
+      foreground: $cyan
+  # Generic <support> match
+  - scope: support
+    settings:
+      foreground: $yellow
+  # Generic <variable> matches
+  - scope: variable
+    settings:
+      foreground: $foreground

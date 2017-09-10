@@ -1,0 +1,81 @@
+# -----------------------------------------------------------------------------
+# Tranquil Color Variables
+# -----------------------------------------------------------------------------
+# Primary grays are based on primary color: '#93E0E3'
+# The 'bold' colors are based on terminal emulators and are 'brighter' versions
+# of that color
+$black:         '#272822'
+$gray100:       '#2e3030'
+$gray200:       '#333535'
+$gray300:       '#474949'
+$gray400:       '#5d5f5f'
+$gray500:       '#7b7d7d'
+$gray600:       '#b4b5b5'
+$gray700:       '#c3c4c4'
+$gray800:       '#d7d8d8'
+$gray900:       '#e7e8e8'
+$white:         '#eeeeee'
+# Red/Pink
+$red:           '#FF9AC1'
+$bold-red:      '#e2366b'
+# Magenta
+$magenta:       '#EC93D3'
+$bold-magenta:  '#D33682'
+# Violet
+$violet:        '#BCAAFE'
+$bold-violet:   '#A569BD'
+# Yellow
+$yellow:        '#F0DFAF'
+$bold-yellow:   '#FFC300'
+# Orange
+$orange:        '#FFCC95'
+$bold-orange:   '#F5B041'
+# Blue
+$blue:          '#85C1E9'
+$bold-blue:     '#2980B9'
+# Cyan
+$cyan:          '#93E0E3'
+$bold-cyan:     '#3ed1bb'
+# Green
+$green:         '#DAF7A6'
+$bold-green:    '#2AA198'
+# -----------------------------------------------------------------------------
+# Element/Feature Variables
+# -----------------------------------------------------------------------------
+# Transparent Hex: https://stackoverflow.com/questions/23201134/transparent-argb-hex-value
+$primary: '#93E0E3'
+$contrast: '#2AA198'
+$attention: '#196187'
+$subdued: '#506070' # Buttons+Badges
+# Primary black/white for background/foreground
+# Two backgrounds are used to provide contrast between section in editor.
+$well-background: '#272822'
+$background: '#2e3030'
+$background-light: '#5d5f5f'
+$shadow: '#333535'
+# Font colors for normal font
+$foreground: '#e7e8e8'
+$inverse-foreground: '#333535'
+$foreground-bold: '#d7d8d8'
+$foreground-dark: '#5d5f5f'
+# General
+$cursor: '#FF4B82'
+$violet-fade: '#BCAAFE60'
+$selection: '#93E0E360'
+# Transparent
+$transparent: '#00000000'
+$translucent: '#373B4199'
+# Linter Colors, nice ANGRY red for invalid/error elements
+$error: '#FF2C6D'
+$warning: '#FFC300'
+$info: '#93E0E3'
+# Git Colors
+$git-added: '#3ed1bb'
+$git-removed: '#D33682'
+$git-modified: '#FFC300'
+$diff-green: '#3ed1bb66'
+$diff-red: '#D3368266'
+$merge-current-header: '#BCAAFEB3' # purple with alpha
+$merge-current-content: '#BCAAFE4D' # same purple less alpha
+$merge-incoming-header: '#67afe5b3' # orange with alpha
+$merge-incoming-content: '#67afe54d' # same orange less alpha
