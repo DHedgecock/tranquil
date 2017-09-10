@@ -5,7 +5,7 @@
 # The 'bold' colors are based on terminal emulators and are 'brighter' versions
 # of that color
 $black:         '#272822'
-$gray100:       '#242626'
+$gray100:       '#242626' #272822
 $gray200:       '#2e3030'
 $gray300:       '#474949'
 $gray400:       '#5d5f5f'

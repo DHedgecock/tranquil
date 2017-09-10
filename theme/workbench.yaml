@@ -64,7 +64,7 @@ merge.incomingContentBackground: $merge-incoming-content
 # -----------------------------------------------------------------------------
 # Panels include terminal, problems, output. Shown below editor
 # panel.background:
-panel.border: $primary-border
+panel.border: $gray300
 panelTitle.activeBorder: $primary
 panelTitle.activeForeground: $primary
 panelTitle.inactiveForeground: $editor-contrast-fg
@@ -166,7 +166,7 @@ list.highlightForeground: $cyan
 # interfaces. It is located between the Activity Bar and the Editor.
 sideBar.background: $well-bg
 sideBar.foreground: $well-fg
-sideBar.border: $primary-border
+# sideBar.border: NONE
 # Use gray on grays for sidebar headers, the title is 'Explorer' or 'Debug' at
 # top, the section headers are internal headers like 'Commits' or 'Git Stashes'
 sideBarTitle.foreground: $gray300 # Special extra dark for extra subtle title
@@ -178,7 +178,7 @@ sideBarSectionHeader.foreground: $well-contrast-fg
 # editorGroup.background: This doesn't appear to do anything
 editorGroup.border: $primary-border
 editorGroupHeader.tabsBackground: $editor-bg
-editorGroupHeader.tabsBorder: $editor-contrast-bg
+editorGroupHeader.tabsBorder: $gray300
 tab.activeBackground: $editor-contrast-bg
 tab.activeForeground: $cyan
 tab.border: $editor-bg
@@ -202,9 +202,9 @@ scrollbarSlider.hoverBackground: $gray500
 # Status Bar
 # -----------------------------------------------------------------------------
 # Bar at bottom of editor with status updates
-statusBar.background: $well-bg
+statusBar.background: $editor-bg
 statusBar.foreground: $well-fg
-# statusBar.border: NONE
+statusBar.border: $primary-border
 statusBar.debuggingBackground: $blue
 statusBar.debuggingForeground: $well-fg
 # statusBar.debuggingBorder: NONE
@@ -219,9 +219,10 @@ statusBarItem.prominentHoverBackground: $contrast
 # Title Bar
 # -----------------------------------------------------------------------------
 titleBar.activeBackground: $black
-titleBar.activeForeground: $well-fg
+titleBar.activeForeground: $gray500
 titleBar.inactiveBackground: $black
-titleBar.inactiveForeground: $well-fg
+titleBar.inactiveForeground: $gray500
+titleBar.border: $primary-border
 # -----------------------------------------------------------------------------
 # Extensions
 # -----------------------------------------------------------------------------
