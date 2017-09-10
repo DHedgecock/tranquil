@@ -15,6 +15,19 @@ following values are valid for font-style:
 
 
 ## Color Safe
+#45A9F9
+#6FC1FF
+#B084EB
+#BCAAFE
+#19f9d8
+#6FE7D2
+#FF2C6D
+#FF4B82
+#FFB86C
+#FFCC95
+#FF75B5
+#FF9AC1
+
 #3ec481 #2e3030
 Zenburn
 #BFBFBF
@@ -58,3 +71,6 @@ Ambiance
 #F2F1F0
 #282828
 #F07746
+
+
+

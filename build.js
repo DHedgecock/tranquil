@@ -15,14 +15,14 @@ Object.assign(
 
 // Add language highlighting rules
 theme.tokenColors = [
-  ...theme.tokenColors
+  ...theme.tokenColors,
   // ...load('theme/css.yaml'),
   // ...load('theme/docker.yaml'),
-  // ...load('theme/javascript.yaml'),
+  ...load('theme/javascript.yaml'),
   // ...load('theme/jsdoc.yaml'),
   // ...load('theme/markdown.yaml'),
   // ...load('theme/regex.yaml'),
-  // ...load('theme/template.yaml')
+  ...load('theme/template.yaml')
 ]
 
 // Color Variables

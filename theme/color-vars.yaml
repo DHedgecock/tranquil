@@ -19,8 +19,8 @@ $white:         '#eeeeee'
 $red:           '#FF9AC1'
 $bold-red:      '#e2366b'
 # Magenta
-$magenta:       '#DE68A1'
-$bold-magenta:  '#D33682'
+$magenta:       '#FF75B5' #'#DE68A1' ##FF75B5
+$bold-magenta:  '#FF75B5' #'#D33682'
 # Violet
 $violet:        '#BCAAFE'
 $bold-violet:   '#A569BD'
@@ -31,26 +31,26 @@ $bold-yellow:   '#FFCA58'
 $orange:        '#FFCC95'
 $bold-orange:   '#F5B041'
 # Blue
-$blue:          '#66AABB'
+$blue:          '#58BED8' ##45A9F9
 $bold-blue:     '#2980B9'
 # Cyan
 $cyan:          '#93E0E3'
 $bold-cyan:     '#3ed1bb'
 # Green
-$green:         '#CEFF76'
+$green:         '#19f9d8'
 $bold-green:    '#2AA198'
 # -----------------------------------------------------------------------------
 # Token Variables
 # -----------------------------------------------------------------------------
 $comment: '#7b7d7d'
-$constant: '#FFCC95'
+$constant: '#FFCA58'
 $entity: '#F0DFAF'
 $invalid: '#FF2C6D'
-$keyword: '#DE68A1'
+$keyword: '#FF75B5' #'#DE68A1'
 $markup: '#e7e8e8'
-$storage: '#FFCA58'
-$string: '#3ed1bb'
-$support: '#BCAAFE'
+$storage: '#FFB86C' #'#FFCA58'
+$string: '#41EED4' #'#3ed1bb'
+$support: '#FFCC95' #BCAAFE'
 $variable: '#d7d8d8'
 # -----------------------------------------------------------------------------
 # Element/Feature Variables

@@ -103,7 +103,7 @@
     "statusBar.background": "#272822",
     "statusBar.foreground": "#e7e8e8",
     "statusBar.border": "#00000000",
-    "statusBar.debuggingBackground": "#66AABB",
+    "statusBar.debuggingBackground": "#58BED8",
     "statusBar.debuggingForeground": "#e7e8e8",
     "statusBar.debuggingBorder": "#00000000",
     "statusBar.noFolderBackground": "#272822",
@@ -127,16 +127,16 @@
     "terminal.ansiBlack": "#2e3030",
     "terminal.ansiBlue": "#2980B9",
     "terminal.ansiCyan": "#3ed1bb",
-    "terminal.ansiGreen": "#CEFF76",
-    "terminal.ansiMagenta": "#DE68A1",
+    "terminal.ansiGreen": "#19f9d8",
+    "terminal.ansiMagenta": "#FF75B5",
     "terminal.ansiRed": "#e2366b",
     "terminal.ansiWhite": "#e7e8e8",
     "terminal.ansiYellow": "#FFCC95",
     "terminal.ansiBrightBlack": "#474949",
-    "terminal.ansiBrightBlue": "#66AABB",
+    "terminal.ansiBrightBlue": "#58BED8",
     "terminal.ansiBrightCyan": "#93E0E3",
     "terminal.ansiBrightGreen": "#2AA198",
-    "terminal.ansiBrightMagenta": "#D33682",
+    "terminal.ansiBrightMagenta": "#FF75B5",
     "terminal.ansiBrightRed": "#FF9AC1",
     "terminal.ansiBrightWhite": "#b4b5b5",
     "terminal.ansiBrightYellow": "#F0DFAF"
@@ -152,7 +152,7 @@
     {
       "scope": "constant",
       "settings": {
-        "foreground": "#FFCC95"
+        "foreground": "#FFCA58"
       }
     },
     {
@@ -171,7 +171,7 @@
     {
       "scope": "keyword",
       "settings": {
-        "foreground": "#DE68A1"
+        "foreground": "#FF75B5"
       }
     },
     {
@@ -183,25 +183,214 @@
     {
       "scope": "storage",
       "settings": {
-        "foreground": "#FFCA58"
+        "foreground": "#FFB86C"
       }
     },
     {
       "scope": "string",
       "settings": {
-        "foreground": "#3ed1bb"
+        "foreground": "#41EED4"
       }
     },
     {
       "scope": "support",
       "settings": {
-        "foreground": "#BCAAFE"
+        "foreground": "#FFCC95"
       }
     },
     {
       "scope": "variable",
       "settings": {
         "foreground": "#d7d8d8"
+      }
+    },
+    {
+      "scope": "source.js entity",
+      "settings": {
+        "foreground": "#e7e8e8"
+      }
+    },
+    {
+      "scope": "keyword.control, keyword.operator.new",
+      "settings": {
+        "foreground": "#FF75B5"
+      }
+    },
+    {
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#e7e8e8"
+      }
+    },
+    {
+      "scope": "keyword.operator.logical, keyword.operator.comparison",
+      "settings": {
+        "foreground": "#FFCC95"
+      }
+    },
+    {
+      "scope": "constant.character.escape",
+      "settings": {
+        "foreground": "#2980B9"
+      }
+    },
+    {
+      "scope": "variable.parameter",
+      "settings": {
+        "foreground": "#b4b5b5",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "meta.object-binding-pattern-variable.js variable",
+      "settings": {
+        "foreground": "#F0DFAF"
+      }
+    },
+    {
+      "scope": "variable.other.constant, variable.language.this, variable.interpolation",
+      "settings": {
+        "foreground": "#FF75B5"
+      }
+    },
+    {
+      "scope": "variable.other.object",
+      "settings": {
+        "foreground": "#FF75B5"
+      }
+    },
+    {
+      "scope": "variable.other.property",
+      "settings": {
+        "foreground": "#e7e8e8"
+      }
+    },
+    {
+      "scope": "punctuation.definition.template-expression",
+      "settings": {
+        "foreground": "#F0DFAF"
+      }
+    },
+    {
+      "scope": "support.class",
+      "settings": {
+        "foreground": "#F0DFAF"
+      }
+    },
+    {
+      "scope": "support.type.object.module.js",
+      "settings": {
+        "foreground": "#BCAAFE"
+      }
+    },
+    {
+      "scope": "support.function",
+      "settings": {
+        "foreground": "#19f9d8"
+      }
+    },
+    {
+      "scope": "entity.name.function",
+      "settings": {
+        "foreground": "#58BED8"
+      }
+    },
+    {
+      "scope": "entity.other.inherited-class",
+      "settings": {
+        "foreground": "#FF75B5"
+      }
+    },
+    {
+      "scope": "entity.name.tag.yaml",
+      "settings": {
+        "foreground": "#F0DFAF"
+      }
+    },
+    {
+      "scope": "meta.decorator punctuation.decorator",
+      "settings": {
+        "foreground": "#FFCA58"
+      }
+    },
+    {
+      "scope": "meta.decorator variable",
+      "settings": {
+        "foreground": "#19f9d8"
+      }
+    },
+    {
+      "scope": "punctuation.definition.expression, punctuation.definition.subexpression, punctuation.definition.block.unescaped, punctuation.definition.tag",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#FFCC95"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#FFCC95"
+      }
+    },
+    {
+      "scope": "support.class.component",
+      "settings": {
+        "foreground": "#FF75B5",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "meta.tag.js entity.name.tag",
+      "settings": {
+        "foreground": "#F0DFAF"
+      }
+    },
+    {
+      "scope": "meta.source.handlebars entity.name.tag",
+      "settings": {
+        "foreground": "#93E0E3"
+      }
+    },
+    {
+      "scope": "entity.name.function.expression",
+      "settings": {
+        "foreground": "#FF75B5"
+      }
+    },
+    {
+      "scope": "entity.unescaped.expression",
+      "settings": {
+        "foreground": "#BCAAFE"
+      }
+    },
+    {
+      "scope": "constant.other.symbol",
+      "settings": {
+        "foreground": "#93E0E3"
+      }
+    },
+    {
+      "scope": "entity.expression variable.parameter.name",
+      "settings": {
+        "foreground": "#FFCA58"
+      }
+    },
+    {
+      "scope": "entity.expression variable.parameter.value",
+      "settings": {
+        "foreground": "#93E0E3"
+      }
+    },
+    {
+      "scope": "entity.expression support.function.builtin",
+      "settings": {
+        "foreground": "#FF75B5"
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name.handlebars",
+      "settings": {
+        "foreground": "#FFCC95"
       }
     }
   ]
