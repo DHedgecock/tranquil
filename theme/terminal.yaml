@@ -1,11 +1,11 @@
 # -----------------------------------------------------------------------------
 # Integrated terminal styles
 # -----------------------------------------------------------------------------
-terminal.background: $background
+terminal.background: $editor-bg
 terminal.foreground: $foreground
 terminalCursor.background: $foreground
 terminalCursor.foreground: $cursor
-terminal.ansiBlack: $background
+terminal.ansiBlack: $editor-bg
 terminal.ansiBlue: $bold-blue
 terminal.ansiCyan: $bold-cyan # ampersand, file path and arrow
 terminal.ansiGreen: $green # branch name

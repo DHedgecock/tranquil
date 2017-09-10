@@ -53,24 +53,29 @@ $string: '#41EED4' #'#3ed1bb'
 $support: '#FFCC95' #BCAAFE'
 $variable: '#d7d8d8'
 # -----------------------------------------------------------------------------
-# Element/Feature Variables
+# VSCode Editor Variables
 # -----------------------------------------------------------------------------
 # Transparent Hex: https://stackoverflow.com/questions/23201134/transparent-argb-hex-value
+# Primary and accent colors,
 $primary: '#93E0E3'
 $contrast: '#2AA198'
-$attention: '#196187'
-$subdued: '#506070' # Buttons+Badges
-# Primary black/white for background/foreground
-# Two backgrounds are used to provide contrast between section in editor.
-$well-background: '#272822'
-$background: '#2e3030'
-$background-light: '#343636'
-$shadow: '#b4b5b51a'
+$primary-border: '#506070' # Use for providing theming that is subtle
 # Font colors for normal font
 $foreground: '#e7e8e8'
 $inverse-foreground: '#333535'
-$foreground-bold: '#d7d8d8'
-$foreground-dark: '#474949'
+# Two backgrounds, one for the editor and one for sidebar/panels/status bar
+# Two backgrounds are used to provide contrast between interactive features
+# 'well' is the darker background for sidebar/status bar, etc
+$well-bg: '#272822'
+$well-fg: '#d7d8d8' # One step up from $foreground
+$well-contrast-bg: '#2e3030'
+$well-contrast-fg: '#5d5f5f'
+# 'editor' is the lighter background for the editor
+$editor-bg: '#2e3030'
+$editor-fg: '#e7e8e8'
+$editor-contrast-bg: '#343636' # Contrasting gray for backgrounds inside editor
+$editor-contrast-fg: '#7b7d7d'
+$shadow: '#b4b5b51a'
 # General
 $cursor: '#FF4B82'
 $violet-fade: '#BCAAFE60'

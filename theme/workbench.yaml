@@ -8,7 +8,7 @@
 # TODO: Include ALL THE VARIABLES from the theme color ref here!
 # Defaults for editor elements, will be used if not set by a specific component
 # focusBorder. TODO: widget.shadow, selection.background
-focusBorder: $subdued
+focusBorder: $primary-border
 foreground: $foreground
 # widget.shadow: NONE
 selection.background: $selection # Selection background inside text inputs
@@ -16,22 +16,22 @@ errorForeground: $error
 # -----------------------------------------------------------------------------
 # Buttons
 # -----------------------------------------------------------------------------
-button.background: $attention
-button.foreground: $foreground
-button.hoverBackground: $contrast
+button.background: $primary
+button.foreground: $inverse-foreground
+button.hoverBackground: $constrast
 # -----------------------------------------------------------------------------
 # Dropdowns
 # -----------------------------------------------------------------------------
-dropdown.background: $background-light
-dropdown.border: $subdued
-dropdown.foreground: $foreground
+dropdown.background: $editor-contrast-bg
+dropdown.border: $primary-border
+dropdown.foreground: $editor-fg
 # -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
 # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
-activityBar.background: $well-background
-activityBar.foreground: $foreground
-activityBar.border: $primary
+activityBar.background: $well-bg
+activityBar.foreground: $well-fg
+activityBar.border: $primary # When the activity bar is open, it pops
 activityBarBadge.background: $primary
 activityBarBadge.foreground: $inverse-foreground
 # -----------------------------------------------------------------------------
@@ -48,9 +48,9 @@ progressBar.background: $violet
 # Diff View
 # -----------------------------------------------------------------------------
 diffEditor.insertedTextBackground: $diff-green
-diffEditor.insertedTextBorder: $transparent
+# diffEditor.insertedTextBorder: NONE
 diffEditor.removedTextBackground: $diff-red
-diffEditor.removedTextBorder: $transparent
+# diffEditor.removedTextBorder: NONE
 # -----------------------------------------------------------------------------
 # Merge Conflicts
 # -----------------------------------------------------------------------------
@@ -58,26 +58,26 @@ merge.currentHeaderBackground: $merge-current-header
 merge.currentContentBackground: $merge-current-content
 merge.incomingHeaderBackground: $merge-incoming-header
 merge.incomingContentBackground: $merge-incoming-content
-merge.border: $transparent
+# merge.border: NONE
 # -----------------------------------------------------------------------------
 # Panel
 # -----------------------------------------------------------------------------
 # Panels include terminal, problems, output. Shown below editor
 # panel.background:
-panel.border: $subdued
+panel.border: $primary-border
 panelTitle.activeBorder: $primary
 panelTitle.activeForeground: $primary
-panelTitle.inactiveForeground: $gray500
+panelTitle.inactiveForeground: $editor-contrast-fg
 # -----------------------------------------------------------------------------
 # Editor
 # -----------------------------------------------------------------------------
-editor.background: $background
-editor.foreground: $foreground
+editor.background: $editor-bg
+editor.foreground: $editor-fg
 editorCursor.foreground: $cursor
 editorRuler.foreground: $violet-fade
 editorBracketMatch.border: $cyan
 editorCodeLens.foreground: $violet-fade
-editorWhitespace.foreground: $gray200
+# editorWhitespace.foreground: NONE
 # editorBracketMatch.background: NONE
 # Selection highlight settings are applied when text is selected, the highlight
 # background will automatically highlight all other matches of the selected text
@@ -97,23 +97,23 @@ editor.findMatchBackground: $violet-fade
 editor.findMatchHighlightBackground: $selection
 # editor.findRangeHighlightBackground: ??? What does this do ???
 # Currently active line background
-editor.lineHighlightBackground: $background-light
+editor.lineHighlightBackground: $editor-contrast-bg
 # -----------------------------------------------------------------------------
 # Widgets
 # -----------------------------------------------------------------------------
 # Widgets are feautures inside the main editor like snippets, autocomplete, in
 # file find.
-editorWidget.background: $background
-editorWidget.border: $background-light
+editorWidget.background: $editor-bg
+editorWidget.border: $editor-contrast-bg
 # This sets the background for suggestions complete currently selected element
 editorSuggestWidget.selectedBackground: $selection
-editorHoverWidget.background: $background-light
+editorHoverWidget.background: $editor-contrast-bg
 # -----------------------------------------------------------------------------
 # Overview Ruler
 # -----------------------------------------------------------------------------
 # The overview ruler is the thin bar at the far right of the editor, it has
 # decorations for git status and linter warnings
-editorOverviewRuler.border: $transparent
+# editorOverviewRuler.border: NONE
 # No highlights for search matches, just git status and linter warnings
 # editorOverviewRuler.findMatchForeground: NONE
 # editorOverviewRuler.rangeHighlightForeground: NONE
@@ -145,17 +145,17 @@ editorGutter.deletedBackground: $git-removed
 # -----------------------------------------------------------------------------
 # List elements are inside the sidebar + command dropdown
 # Mouse hover
-list.hoverBackground: $well-background
+list.hoverBackground: $well-bg
 list.hoverForeground: $cyan
 # Keyboard focus
-list.focusBackground: $well-background
+list.focusBackground: $well-bg
 list.focusForeground: $cyan
 
 # Selected item when the list container is in focus
-list.activeSelectionBackground: $well-background
-list.activeSelectionForeground: $contrast
+list.activeSelectionBackground: $well-bg
+list.activeSelectionForeground: $cyan
 # Selected item when the list container is NOT in focus
-list.inactiveSelectionBackground: $well-background
+list.inactiveSelectionBackground: $well-bg
 list.inactiveSelectionForeground: $cyan
 # The text that matches a search term inside of lists
 list.highlightForeground: $cyan
@@ -164,37 +164,37 @@ list.highlightForeground: $cyan
 # -----------------------------------------------------------------------------
 # The side bar includes the file tree, search interface, git status and debug
 # interfaces. It is located between the Activity Bar and the Editor.
-sideBar.background: $well-background
-sideBar.foreground: $gray800 # One step up from $foreground
-sideBar.border: $subdued
+sideBar.background: $well-bg
+sideBar.foreground: $well-fg
+sideBar.border: $primary-border
 # Use gray on grays for sidebar headers, the title is 'Explorer' or 'Debug' at
 # top, the section headers are internal headers like 'Commits' or 'Git Stashes'
-sideBarTitle.foreground: $gray300
-sideBarSectionHeader.background: $gray200
-sideBarSectionHeader.foreground: $gray400
+sideBarTitle.foreground: $gray300 # Special extra dark for extra subtle title
+sideBarSectionHeader.background: $well-contrast-bg
+sideBarSectionHeader.foreground: $well-contrast-fg
 # -----------------------------------------------------------------------------
 # Editor Groups and Tabs
 # -----------------------------------------------------------------------------
 # editorGroup.background: This doesn't appear to do anything
-editorGroup.border: $subdued
-editorGroupHeader.tabsBackground: $background
-editorGroupHeader.tabsBorder: $well-background
-tab.activeBackground: $background-light
+editorGroup.border: $primary-border
+editorGroupHeader.tabsBackground: $editor-bg
+editorGroupHeader.tabsBorder: $editor-contrast-bg
+tab.activeBackground: $editor-contrast-bg
 tab.activeForeground: $cyan
-tab.border: $background
+tab.border: $editor-bg
 tab.activeBorder: $cyan
-tab.inactiveBackground: $background
-tab.inactiveForeground: $gray600
-tab.unfocusedActiveBorder: $well-background
-tab.unfocusedActiveForeground: $background
-tab.unfocusedInactiveForeground: $gray600
+tab.inactiveBackground: $editor-bg
+tab.inactiveForeground: $editor-contrast-fg
+tab.unfocusedActiveBorder: $well-bg
+tab.unfocusedActiveForeground: $editor-bg
+tab.unfocusedInactiveForeground: $editor-contrast-fg
 # -----------------------------------------------------------------------------
 # Scrollbar
 # -----------------------------------------------------------------------------
 # The .shadow shows under headers in the sideBar and editor when scrolled.
 # The scrollbarSlider themes BOTH the scrollbar in sideBar/editor AND the minimap
 # overlays, so it's important to use transparent colors.
-scrollbar.shadow: $background
+scrollbar.shadow: $editor-bg
 scrollbarSlider.background: $translucent
 scrollbarSlider.activeBackground: $gray500
 scrollbarSlider.hoverBackground: $gray500
@@ -202,15 +202,15 @@ scrollbarSlider.hoverBackground: $gray500
 # Status Bar
 # -----------------------------------------------------------------------------
 # Bar at bottom of editor with status updates
-statusBar.background: $well-background
-statusBar.foreground: $foreground
-statusBar.border: $transparent
+statusBar.background: $well-bg
+statusBar.foreground: $well-fg
+# statusBar.border: NONE
 statusBar.debuggingBackground: $blue
-statusBar.debuggingForeground: $foreground
-statusBar.debuggingBorder: $transparent
+statusBar.debuggingForeground: $well-fg
+# statusBar.debuggingBorder: NONE
 statusBar.noFolderBackground: $black
-statusBar.noFolderForeground: $foreground
-statusBar.noFolderBorder: $transparent
+statusBar.noFolderForeground: $well-fg
+# statusBar.noFolderBorder: NONE
 statusBarItem.activeBackground: $primary
 statusBarItem.hoverBackground: $contrast
 statusBarItem.prominentBackground: $primary
@@ -219,12 +219,12 @@ statusBarItem.prominentHoverBackground: $contrast
 # Title Bar
 # -----------------------------------------------------------------------------
 titleBar.activeBackground: $black
-titleBar.activeForeground: $foreground
+titleBar.activeForeground: $well-fg
 titleBar.inactiveBackground: $black
-titleBar.inactiveForeground: $foreground
+titleBar.inactiveForeground: $well-fg
 # -----------------------------------------------------------------------------
 # Extensions
 # -----------------------------------------------------------------------------
-extensionButton.prominentBackground: $attention
-extensionButton.prominentForeground: $foreground
+extensionButton.prominentBackground: $primary
+extensionButton.prominentForeground: $inverse-foreground
 extensionButton.prominentHoverBackground: $contrast
