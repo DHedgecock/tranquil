@@ -60,6 +60,15 @@ merge.incomingHeaderBackground: $merge-incoming-header
 merge.incomingContentBackground: $merge-incoming-content
 merge.border: $transparent
 # -----------------------------------------------------------------------------
+# Panel
+# -----------------------------------------------------------------------------
+# Panels include terminal, problems, output. Shown below editor
+# panel.background:
+panel.border: $subdued
+panelTitle.activeBorder: $primary
+panelTitle.activeForeground: $primary
+panelTitle.inactiveForeground: $gray500
+# -----------------------------------------------------------------------------
 # Editor
 # -----------------------------------------------------------------------------
 editor.background: $background
@@ -136,18 +145,17 @@ editorGutter.deletedBackground: $git-removed
 # -----------------------------------------------------------------------------
 # List elements are inside the sidebar + command dropdown
 # Mouse hover
-list.hoverBackground: $background-light
-list.hoverForeground: $gray500
-
+list.hoverBackground: $well-background
+list.hoverForeground: $cyan
 # Keyboard focus
-list.focusBackground: $background-light
+list.focusBackground: $well-background
 list.focusForeground: $cyan
 
 # Selected item when the list container is in focus
-list.activeSelectionBackground: $background-light
-list.activeSelectionForeground: $cyan
+list.activeSelectionBackground: $well-background
+list.activeSelectionForeground: $contrast
 # Selected item when the list container is NOT in focus
-list.inactiveSelectionBackground: $background-light
+list.inactiveSelectionBackground: $well-background
 list.inactiveSelectionForeground: $cyan
 # The text that matches a search term inside of lists
 list.highlightForeground: $cyan
@@ -157,7 +165,7 @@ list.highlightForeground: $cyan
 # The side bar includes the file tree, search interface, git status and debug
 # interfaces. It is located between the Activity Bar and the Editor.
 sideBar.background: $well-background
-sideBar.foreground: $foreground
+sideBar.foreground: $gray800 # One step up from $foreground
 sideBar.border: $subdued
 # Use gray on grays for sidebar headers, the title is 'Explorer' or 'Debug' at
 # top, the section headers are internal headers like 'Commits' or 'Git Stashes'
@@ -176,10 +184,10 @@ tab.activeForeground: $cyan
 tab.border: $background
 tab.activeBorder: $cyan
 tab.inactiveBackground: $background
-tab.inactiveForeground: $gray500
+tab.inactiveForeground: $gray600
 tab.unfocusedActiveBorder: $well-background
 tab.unfocusedActiveForeground: $background
-tab.unfocusedInactiveForeground: $gray500
+tab.unfocusedInactiveForeground: $gray600
 # -----------------------------------------------------------------------------
 # Scrollbar
 # -----------------------------------------------------------------------------
