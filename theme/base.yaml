@@ -14,42 +14,49 @@ tokenColors:
   # Generic <comment> matches
   - scope: comment
     settings:
-      foreground: $gray400
+      foreground: $comment
       fontStyle: italic
   # Generic <constant> matches
+  # Constants are actually variables, booleans are constants
   - scope: constant
     settings:
-      foreground: $bold-yellow
+      foreground: $constant
   # Generic <entity> match
+  # Entities end up being a lot of things, most noticably class names, method names
+  # The light yellow provides color without grabbing too much attention
   - scope: entity
     settings:
-      foreground: $foreground
+      foreground: $entity
   # Generic <invalid>
   - scope: invalid
     settings:
-      foreground: $error
+      foreground: $invalid
       fontStyle: italic bold underline
   # Generic <keyword> matches
+  # Language keywords like export or return
   - scope: keyword
     settings:
-      foreground: $bold-magenta
+      foreground: $keyword
   # Generic <markup> match
+  # Base for markup languages like markdown
   - scope: markup
     settings:
-      foreground: $foreground
+      foreground: $markup
   # Generic <storage> matches
+  # Includes things like variable declarations
   - scope: storage
     settings:
-      foreground: $bold-yellow
+      foreground: $storage
   # Generic <string> match
   - scope: string
     settings:
-      foreground: $cyan
+      foreground: $string
   # Generic <support> match
+  # Support is meant to be things provided by external frameworks or libraries
   - scope: support
     settings:
-      foreground: $yellow
+      foreground: $support
   # Generic <variable> matches
   - scope: variable
     settings:
-      foreground: $foreground
+      foreground: $variable

@@ -6,19 +6,19 @@ terminal.foreground: $foreground
 terminalCursor.background: $foreground
 terminalCursor.foreground: $cursor
 terminal.ansiBlack: $background
-terminal.ansiBlue: $blue
-terminal.ansiCyan: $cyan
-terminal.ansiGreen: $green
-terminal.ansiMagenta: $magenta
-terminal.ansiRed: $red
+terminal.ansiBlue: $bold-blue
+terminal.ansiCyan: $bold-cyan # ampersand, file path and arrow
+terminal.ansiGreen: $green # branch name
+terminal.ansiMagenta: $magenta # name
+terminal.ansiRed: $bold-red
 terminal.ansiWhite: $foreground
-terminal.ansiYellow: $yellow
+terminal.ansiYellow: $orange # computer name
 terminal.ansiBrightBlack: $gray300
-terminal.ansiBrightBlue: $bold-blue
-terminal.ansiBrightCyan: $bold-cyan
+terminal.ansiBrightBlue: $blue
+terminal.ansiBrightCyan: $cyan
 terminal.ansiBrightGreen: $bold-green
 terminal.ansiBrightMagenta: $bold-magenta
-terminal.ansiBrightRed: $bold-red
+terminal.ansiBrightRed: $red
 terminal.ansiBrightWhite: $gray600
-terminal.ansiBrightYellow: $bold-yellow
+terminal.ansiBrightYellow: $yellow
 

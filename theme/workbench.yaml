@@ -10,7 +10,7 @@
 # focusBorder. TODO: widget.shadow, selection.background
 focusBorder: $subdued
 foreground: $foreground
-widget.shadow: $shadow
+# widget.shadow: NONE
 selection.background: $selection # Selection background inside text inputs
 errorForeground: $error
 # -----------------------------------------------------------------------------
@@ -19,9 +19,12 @@ errorForeground: $error
 button.background: $attention
 button.foreground: $foreground
 button.hoverBackground: $contrast
-extensionButton.prominentBackground: $attention
-extensionButton.prominentForeground: $foreground
-extensionButton.prominentHoverBackground: $contrast
+# -----------------------------------------------------------------------------
+# Dropdowns
+# -----------------------------------------------------------------------------
+dropdown.background: $background-light
+dropdown.border: $subdued
+dropdown.foreground: $foreground
 # -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
@@ -102,11 +105,12 @@ editorHoverWidget.background: $background-light
 # The overview ruler is the thin bar at the far right of the editor, it has
 # decorations for git status and linter warnings
 editorOverviewRuler.border: $transparent
-# editorOverviewRuler.findMatchForeground: TODO
-# editorOverviewRuler.rangeHighlightForeground: TODO
-# editorOverviewRuler.selectionHighlightForeground: TODO
-# editorOverviewRuler.wordHighlightForeground: TODO
-# editorOverviewRuler.wordHighlightStrongForeground: TODO
+# No highlights for search matches, just git status and linter warnings
+# editorOverviewRuler.findMatchForeground: NONE
+# editorOverviewRuler.rangeHighlightForeground: NONE
+# editorOverviewRuler.selectionHighlightForeground: NONE
+# editorOverviewRuler.wordHighlightForeground: NONE
+# editorOverviewRuler.wordHighlightStrongForeground: NONE
 editorOverviewRuler.modifiedForeground: $git-modified
 editorOverviewRuler.addedForeground: $git-added
 editorOverviewRuler.deletedForeground: $git-removed
@@ -155,6 +159,27 @@ list.highlightForeground: $cyan
 sideBar.background: $well-background
 sideBar.foreground: $foreground
 sideBar.border: $subdued
+# Use gray on grays for sidebar headers, the title is 'Explorer' or 'Debug' at
+# top, the section headers are internal headers like 'Commits' or 'Git Stashes'
+sideBarTitle.foreground: $gray300
+sideBarSectionHeader.background: $gray200
+sideBarSectionHeader.foreground: $gray400
+# -----------------------------------------------------------------------------
+# Editor Groups and Tabs
+# -----------------------------------------------------------------------------
+# editorGroup.background: This doesn't appear to do anything
+editorGroup.border: $subdued
+editorGroupHeader.tabsBackground: $background
+editorGroupHeader.tabsBorder: $well-background
+tab.activeBackground: $background-light
+tab.activeForeground: $cyan
+tab.border: $background
+tab.activeBorder: $cyan
+tab.inactiveBackground: $background
+tab.inactiveForeground: $gray500
+tab.unfocusedActiveBorder: $well-background
+tab.unfocusedActiveForeground: $background
+tab.unfocusedInactiveForeground: $gray500
 # -----------------------------------------------------------------------------
 # Scrollbar
 # -----------------------------------------------------------------------------
@@ -171,13 +196,17 @@ scrollbarSlider.hoverBackground: $gray500
 # Bar at bottom of editor with status updates
 statusBar.background: $well-background
 statusBar.foreground: $foreground
+statusBar.border: $transparent
+statusBar.debuggingBackground: $blue
+statusBar.debuggingForeground: $foreground
+statusBar.debuggingBorder: $transparent
 statusBar.noFolderBackground: $black
 statusBar.noFolderForeground: $foreground
-statusBar.debuggingBackground: $violet
-statusBar.debuggingForeground: $foreground
-statusBar.border: $transparent
-# statusBarItem.prominentBackground: NONE
-# statusBarItem.prominentHoverBackground: NONE
+statusBar.noFolderBorder: $transparent
+statusBarItem.activeBackground: $primary
+statusBarItem.hoverBackground: $contrast
+statusBarItem.prominentBackground: $primary
+statusBarItem.prominentHoverBackground: $contrast
 # -----------------------------------------------------------------------------
 # Title Bar
 # -----------------------------------------------------------------------------
@@ -186,11 +215,8 @@ titleBar.activeForeground: $foreground
 titleBar.inactiveBackground: $black
 titleBar.inactiveForeground: $foreground
 # -----------------------------------------------------------------------------
-# Tabs
+# Extensions
 # -----------------------------------------------------------------------------
-tab.activeBackground: $background-light
-tab.activeForeground: $cyan
-tab.activeBorder: $cyan
-tab.inactiveBackground: $black
-tab.inactiveForeground: $foreground
-tab.unfocusedActiveBorder: $transparent
+extensionButton.prominentBackground: $attention
+extensionButton.prominentForeground: $foreground
+extensionButton.prominentHoverBackground: $contrast
