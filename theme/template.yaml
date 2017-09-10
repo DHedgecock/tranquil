@@ -19,8 +19,8 @@
   settings:
     foreground: $magenta
     fontStyle: italic
-# HTML tag names
-- scope: meta.tag.js entity.name.tag
+# HTML tag names in JSX
+- scope: source.js entity.name.tag
   settings:
     foreground: $entity
 # -----------------------------------------------------------------------------
