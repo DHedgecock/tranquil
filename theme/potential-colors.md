@@ -1,19 +1,3 @@
-# Tranquil Theme Guide
-This theme uses a build system to manage setting the color variables for individual
-token and editor settings. See `build.js` for details.
-
-## Token Styles
-Currently the only token styles available are foreground and font-style. The
-following values are valid for font-style:
-- italic
-- bold
-- underline
-- italic bold
-- italic underline
-- bold underline
-- italic bold underline
-
-
 ## Color Safe
 #45A9F9
 #6FC1FF
@@ -27,8 +11,11 @@ following values are valid for font-style:
 #FFCC95
 #FF75B5
 #FF9AC1
+#93C54B
+#00bc8c
+#3ec481
+#2e3030
 
-#3ec481 #2e3030
 Zenburn
 #BFBFBF
 #DCDCCC
@@ -71,6 +58,3 @@ Ambiance
 #F2F1F0
 #282828
 #F07746
-
-
-

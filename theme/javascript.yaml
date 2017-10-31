@@ -14,7 +14,7 @@
 # 2. `new` keyword
 - scope: keyword.control, keyword.operator.new
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
 # Make operators light gray by default
 - scope: keyword.operator
   settings:
@@ -33,7 +33,7 @@
 # Regex, string escape `\`
 - scope: constant.character.escape
   settings:
-    foreground: $bold-blue
+    foreground: $boldBlue
 # Function parameters
 - scope: variable.parameter
   settings:
@@ -102,7 +102,7 @@
 # JS Class/Method decorators -> @ punctuation is orange
 - scope: meta.decorator punctuation.decorator
   settings:
-    foreground: $bold-yellow
+    foreground: $boldYellow
 # JS Class/Method decorators -> blue function name
 - scope: meta.decorator variable
   settings:

@@ -1,23 +1,23 @@
 # -----------------------------------------------------------------------------
 # Integrated terminal styles
 # -----------------------------------------------------------------------------
-terminal.background: $editor-bg
+terminal.background: $editorBackground
 terminal.foreground: $foreground
 terminalCursor.background: $foreground
 terminalCursor.foreground: $cursor
-terminal.ansiBlack: $editor-bg
-terminal.ansiBlue: $bold-blue
-terminal.ansiCyan: $bold-cyan # ampersand, file path and arrow
+terminal.ansiBlack: $editorBackground
+terminal.ansiBlue: $boldBlue
+terminal.ansiCyan: $boldCyan # ampersand, file path and arrow
 terminal.ansiGreen: $green # branch name
 terminal.ansiMagenta: $magenta # name
-terminal.ansiRed: $bold-red
+terminal.ansiRed: $boldRed
 terminal.ansiWhite: $foreground
 terminal.ansiYellow: $orange # computer name
 terminal.ansiBrightBlack: $gray300
 terminal.ansiBrightBlue: $blue
 terminal.ansiBrightCyan: $cyan
-terminal.ansiBrightGreen: $bold-green
-terminal.ansiBrightMagenta: $bold-magenta
+terminal.ansiBrightGreen: $boldGreen
+terminal.ansiBrightMagenta: $boldMagenta
 terminal.ansiBrightRed: $red
 terminal.ansiBrightWhite: $gray600
 terminal.ansiBrightYellow: $yellow

@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 - scope: markup.bold
   settings:
-    foreground: $bold-yellow
+    foreground: $boldYellow
     font-weight: bold
 - scope: punctuation.definition.bold.markdown
   settings:
@@ -11,7 +11,7 @@
     font-weight: bold
 - scope: markup.changed
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
 - scope: markup.deleted
   settings:
     foreground: $red
@@ -38,7 +38,7 @@
 # Block Quotes
 - scope: markup.quote
   settings:
-    foreground: $bold-yellow
+    foreground: $boldYellow
 # Inline code blocks: `code`
 - scope: markup.inline.raw
   settings:
@@ -47,14 +47,14 @@
 # List punctuation: -
 - scope: beginning.punctuation.definition.list
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
 # Fenced code blocks
 - scope: markup.fenced_code.block.markdown punctuation.definition.markdown
   settings:
     foreground: $gray700
 - scope: fenced_code.block.language
   settings:
-    foreground: gray600
+    foreground: $gray600
     fontStyle: italic
 ######################################################## Links
 - scope: string.other.link
@@ -63,7 +63,7 @@
     fontStyle: normal
 - scope: meta.link.inline.markdown
   settings:
-    foreground: $bold-cyan
+    foreground: $boldCyan
     fontStyle: italic bold
 - scope: text.html.markdown punctuation.definition.string
   settings:

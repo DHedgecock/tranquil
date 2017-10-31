@@ -22,4 +22,4 @@
 # Custom doc tags, tag defaults, tag default strings
 - scope: comment.block storage.custom, variable.other.jsdoc, variable.other.jsdoc punctuation.definition.string
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta

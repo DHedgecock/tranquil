@@ -8,7 +8,7 @@
 # Hit word boundary and back references
 - scope: string.regexp keyword, string.regexp keyword.control
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
     fontStyle: normal
 # Operators like +, ?
 - scope: string.regexp keyword.operator

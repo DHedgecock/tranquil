@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 - scope: entity.name.tag.css
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
 
 - scope: support.type.property-name.css
   settings:
@@ -15,11 +15,11 @@
 
 - scope: entity.name.tag.reference.scss
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
 
 - scope: keyword.other.unit.rem.css, keyword.other.unit.vh.css, keyword.other.unit.px.css, keyword.other.unit.em.css, keyword.other.unit.deg.css, keyword.other.unit.percentage.css
   settings:
-    foreground: $bold-yellow
+    foreground: $boldYellow
 # Expressions like @import
 - scope: keyword.control.at-rule
   settings:
@@ -27,7 +27,7 @@
 # Style !important declarations
 - scope: keyword.other.important
   settings:
-    foreground: $bold-red
+    foreground: $boldRed
 - scope: variable.interpolation
   settings:
-    foreground: $bold-magenta
+    foreground: $boldMagenta
