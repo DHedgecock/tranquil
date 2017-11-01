@@ -54,7 +54,7 @@ const STEEL = '#506070' // Alpha border
 // Contrasting Purples
 
 const LAVENDER = '#BCAAFE'
-const PLUM = '#A569BD'
+const PLUM = '#8c5685'
 const FUCHSIA = '#cf03cf'
 
 // Primary grays are shade based on primary color: '#93E0E3'
@@ -89,7 +89,7 @@ const $variable = $gray800
 /**
  * Primary and Accent
  */
-const $primary = ARCTIC
+const $primary = '#11BAB4' // ARCTIC
 const $contrast = AQUAMARINE
 const $primaryBorder = STEEL
 
@@ -129,6 +129,14 @@ const $editorContrastBackground = STORMY
 const $editorContrastForeground = $gray500
 
 /**
+ * Action Items
+ * Actionable items should pop a bit to provide some appropriate variety
+ */
+const $actionableBackground = PLUM
+const $actionableHoverBackground = PLEASANT_RUST
+const $actionableForeground = $editorForeground
+
+/**
  * General
  */
 const $cursor = VALENTINE
@@ -153,12 +161,14 @@ const $gitRemoved = ANGRY
 const $gitModified = MELON
 const $gitIgnored = ALUMINUM
 const $gitConflicted = ANGRY
-const $diffGreen = '#3ed1bb66'
-const $diffRed = '#D3368266'
-const $mergeCurrentHeader = '#BCAAFEB3' // purple with alpha
-const $mergeCurrentContent = '#BCAAFE4D' // same purple less alpha
-const $mergeIncomingHeader = '#67afe5b3' // orange with alpha
-const $mergeIncomingContent = '#67afe54d' // same orange less alpha
+
+const $diffGreen = '#94d53318'
+const $diffRed = '#ff2c7218'
+
+const $mergeCurrentHeader = '#703268'
+const $mergeCurrentContent = '#8c568648'
+const $mergeIncomingHeader = '#1E4751'
+const $mergeIncomingContent = '#5c9fcb33'
 
 // Terminal
 // ---------------------------------------------------------------------------
@@ -202,7 +212,6 @@ module.exports = {
   // Editor Elements
   $primary,
   $contrast,
-  $primaryBorder,
   $editorForeground,
   $editorSubtleForeground,
   $wellForeground,
@@ -212,11 +221,15 @@ module.exports = {
   $inverseForeground,
   $activeForeground,
   $editorBackground,
-  $editorContrastBackground,
-  $editorContrastForeground,
   $wellBackground,
   $ultimateBackground,
+  $editorContrastBackground,
+  $editorContrastForeground,
+  $primaryBorder,
   $cursor,
+  $actionableBackground,
+  $actionableHoverBackground,
+  $actionableForeground,
   $violetFade,
   $selection,
   $shadow,

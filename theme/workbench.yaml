@@ -16,9 +16,9 @@ errorForeground: $error
 # -----------------------------------------------------------------------------
 # Buttons
 # -----------------------------------------------------------------------------
-button.background: $primary
-button.foreground: $inverseForeground
-button.hoverBackground: $contrast
+button.background: $actionableBackground
+button.foreground: $actionableForeground
+button.hoverBackground: $actionableHoverBackground
 # -----------------------------------------------------------------------------
 # Dropdowns
 # -----------------------------------------------------------------------------
@@ -30,15 +30,17 @@ dropdown.foreground: $editorForeground
 # -----------------------------------------------------------------------------
 # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
 activityBar.background: $wellBackground
-activityBar.foreground: $wellForeground
+activityBar.foreground: $wellSubtleForeground # Well headers for subtlety
 activityBar.border: $primary # When the activity bar is open, it pops
-activityBarBadge.background: $primary
-activityBarBadge.foreground: $inverseForeground
+activityBarBadge.background: $actionableBackground
+# Activity bar badges are a little than other badges and the foreground looks great
+# when it matches the subtle icon foreground
+activityBarBadge.foreground: $wellSubtleForeground
 # -----------------------------------------------------------------------------
 # Badges
 # -----------------------------------------------------------------------------
-badge.background: $primary
-badge.foreground: $inverseForeground
+badge.background: $actionableBackground
+badge.foreground: $actionableForeground
 # -----------------------------------------------------------------------------
 # ProgressBar
 # Shows for long running operations
@@ -54,11 +56,15 @@ diffEditor.removedTextBackground: $diffRed
 # -----------------------------------------------------------------------------
 # Merge Conflicts
 # -----------------------------------------------------------------------------
+merge.border: $editorBackground
 merge.currentHeaderBackground: $mergeCurrentHeader
 merge.currentContentBackground: $mergeCurrentContent
 merge.incomingHeaderBackground: $mergeIncomingHeader
 merge.incomingContentBackground: $mergeIncomingContent
-# merge.border: NONE
+editorOverviewRuler.currentContentForeground: $mergeCurrentHeader
+editorOverviewRuler.incomingContentForeground: $mergeIncomingHeader
+editorOverviewRuler.commonContentForeground: '#ff0000' # TODO: find example
+
 # -----------------------------------------------------------------------------
 # Panel
 # -----------------------------------------------------------------------------
@@ -238,6 +244,6 @@ titleBar.border: $primaryBorder
 # -----------------------------------------------------------------------------
 # Extensions
 # -----------------------------------------------------------------------------
-extensionButton.prominentBackground: $primary
-extensionButton.prominentForeground: $inverseForeground
-extensionButton.prominentHoverBackground: $contrast
+extensionButton.prominentBackground: $actionableBackground
+extensionButton.prominentForeground: $actionableForeground
+extensionButton.prominentHoverBackground: $actionableHoverBackground

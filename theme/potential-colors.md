@@ -21,7 +21,8 @@ USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 #2f2833
 #372f3c
 #7e6c88
-#8c5685
+#8c5685 // Buttons + Badges
+#A569BD
 
 ## Rainbow
 #cf03cf

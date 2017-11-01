@@ -28,6 +28,9 @@ following values are valid for `font-style`:
 - italic bold underline
 
 ## Wish List:
+- Finalize background and foreground colors
+- Update input and dropdown colors
 - Better contrast between variables and source text (gray and white are almost the
   same color)
+- Anchor hover color (hover over alpha HEX link in colors for example)
 
