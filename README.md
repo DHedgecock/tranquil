@@ -27,3 +27,7 @@ following values are valid for `font-style`:
 - bold underline
 - italic bold underline
 
+## Wish List:
+- Better contrast between variables and source text (gray and white are almost the
+  same color)
+

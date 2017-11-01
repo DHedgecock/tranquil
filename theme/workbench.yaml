@@ -9,7 +9,7 @@
 # Defaults for editor elements, will be used if not set by a specific component
 # focusBorder. TODO: widget.shadow, selection.background
 focusBorder: $primaryBorder
-foreground: $foreground
+foreground: $editorForeground
 # widget.shadow: NONE
 selection.background: $selection # Selection background inside text inputs
 errorForeground: $error
@@ -176,13 +176,12 @@ sideBar.foreground: $wellForeground
 # sideBar.border: NONE
 # Use gray on grays for sidebar headers, the title is 'Explorer' or 'Debug' at
 # top, the section headers are internal headers like 'Commits' or 'Git Stashes'
-# Title is at top of sidebar, eg 'Explorer' or 'Debug'. Use special extra dark for
-# extra subtle title
-sideBarTitle.foreground: $gray300
+# Title is at top of sidebar, eg 'Explorer' or 'Debug'.
+sideBarTitle.foreground: $wellUltimateSubtleForeground
 # Section Headers group sidebar features like 'Docker', 'Open Editors'. 'Commits'.
-# Use the same gray as side bar for subtler headers
+# Use the same background as side bar for subtler headers
 sideBarSectionHeader.background: $wellBackground
-sideBarSectionHeader.foreground: $wellContrastHeaderForeground
+sideBarSectionHeader.foreground: $wellSubtleForeground
 # -----------------------------------------------------------------------------
 # Editor Groups and Tabs
 # -----------------------------------------------------------------------------
@@ -221,7 +220,7 @@ statusBar.border: $primaryBorder
 statusBar.debuggingBackground: $blue
 statusBar.debuggingForeground: $wellForeground
 # statusBar.debuggingBorder: NONE
-statusBar.noFolderBackground: $black
+statusBar.noFolderBackground: $ultimateBackground
 statusBar.noFolderForeground: $wellForeground
 # statusBar.noFolderBorder: NONE
 statusBarItem.activeBackground: $primary
@@ -231,10 +230,10 @@ statusBarItem.prominentHoverBackground: $contrast
 # -----------------------------------------------------------------------------
 # Title Bar
 # -----------------------------------------------------------------------------
-titleBar.activeBackground: $black
-titleBar.activeForeground: $gray500
-titleBar.inactiveBackground: $black
-titleBar.inactiveForeground: $gray500
+titleBar.activeBackground: $ultimateBackground
+titleBar.activeForeground: $ultimateForeground
+titleBar.inactiveBackground: $ultimateBackground
+titleBar.inactiveForeground: $ultimateForeground
 titleBar.border: $primaryBorder
 # -----------------------------------------------------------------------------
 # Extensions

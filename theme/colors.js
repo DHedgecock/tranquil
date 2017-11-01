@@ -33,16 +33,31 @@ const AQUAMARINE = '#2AA198'
 const ARCTIC = '#93E0E3'
 const SKY = '#58BED8'
 const LAPIS = '#2980B9'
-const STEEL = '#506070' // Use for providing subtle background contrast
+
+// Background Colors
+// ---------------------------------------------------------------------------
+const STORMY = '#1c2e36'
+const COBALT = '#1a2937' // Editor BG
+const MIDNIGHT = '#101c29' // Well BG
+const SPACE = '#0a121b' // Ultimate BG
+
+// Foreground+Border Colors
+// ---------------------------------------------------------------------------
+
 // Aluminum is a lighter blue gray used for headers and git ignored files in the
 // side bar, it's light enought that it's a readable text
-const ALUMINUM = '#7D8DA4'
+const ALUMINUM = '#7D8DA4' // Not-subtle well headers
+const WHALE = '#35405b' // Use for subtle well headers
+const PLEASANT_RUST = '#7e6c88' // Use with ultimate bg
+const STEEL = '#506070' // Alpha border
+
+// Contrasting Purples
 
 const LAVENDER = '#BCAAFE'
 const PLUM = '#A569BD'
+const FUCHSIA = '#cf03cf'
 
 // Primary grays are shade based on primary color: '#93E0E3'
-const $black = '#272822'
 const $gray100 = '#242626'
 const $gray200 = '#2e3030'
 const $gray300 = '#474949'
@@ -52,7 +67,6 @@ const $gray600 = '#b4b5b5'
 const $gray700 = '#c3c4c4'
 const $gray800 = '#d7d8d8'
 const $gray900 = '#e7e8e8'
-const $white = '#eeeeee'
 
 // Token Variables
 // ---------------------------------------------------------------------------
@@ -71,30 +85,52 @@ const $variable = $gray800
 // VSCode Editor Variables
 // ---------------------------------------------------------------------------
 // Transparent Hex: https://stackoverflow.com/questions/23201134/transparent-argb-hex-value
-// Primary and accent colors,
+
+/**
+ * Primary and Accent
+ */
 const $primary = ARCTIC
 const $contrast = AQUAMARINE
 const $primaryBorder = STEEL
 
-// Font colors
-const $foreground = $gray900
-const $inverseForeground = '#333535'
+/**
+ * Fonts
+ * For the editor and well elements there is a font for maximum readability and a
+ * de-emphasized font color
+ */
+const $editorForeground = $gray900 // Best readability (editor)
+const $editorSubtleForeground = $gray700 // De-emphasized elements
 
-// Two backgrounds, one for the editor and one for sidebar/panels/status bar
-// Two backgrounds are used to provide contrast between interactive features
-// 'well' is the darker background for sidebar/status bar, etc
-const $wellBackground = '#101c29'
-const $wellForeground = $gray800 // One step up from $foreground
-const $wellContrastHeaderForeground = ALUMINUM
-const $wellContrastBackground = '#0a121b'
-const $wellContrastForeground = $gray400
-// 'editor' is the lighter background for the editor
-const $editorBackground = '#1a2937'
-const $editorForeground = $gray900
-const $editorContrastBackground = '#35405b' // Contrasting gray for backgrounds inside editor
+const $wellForeground = $gray900 // Best readability (well)
+const $wellSubtleForeground = ALUMINUM // De-emphasized elements
+const $wellUltimateSubtleForeground = WHALE // MORE de-emphasized!
+
+const $ultimateForeground = PLEASANT_RUST
+const $inverseForeground = $gray200 // For use with light background colors
+const $activeForeground = '#a6dcd0'
+
+/**
+ * ## Backgrounds
+ * There are three types of background colors:
+ * 1. 'editor' backgrounds are the lightest, use for backgrounds with code
+ * 2. 'well' backgrounds are an intermediate dark for contrast with frequently used
+ *    elements like the sidebar
+ * 3. 'ultimate' backgrounds are the darkest and should be used for accessory
+ *    elements
+ */
+
+const $editorBackground = COBALT
+const $wellBackground = MIDNIGHT
+const $ultimateBackground = SPACE
+
+// Contrasting backgrounds inside editor like line highlight
+// TODO: rename
+const $editorContrastBackground = STORMY
 const $editorContrastForeground = $gray500
 
-// General
+/**
+ * General
+ */
 const $cursor = VALENTINE
 const $violetFade = '#BCAAFE60' // TODO rename
 const $selection = '#93E0E360'
@@ -104,6 +140,9 @@ const $shadow = '#b4b5b51a'
 const $transparent = '#00000000'
 const $translucent = '#373B4199'
 
+/**
+ * Status+Information
+ */
 // Linter Colors
 const $error = ANGRY
 const $warning = MELON
@@ -145,7 +184,6 @@ const $boldGreen = AQUAMARINE
 
 module.exports = {
   // Grays TODO: refactor to elements
-  $black,
   $gray300,
   $gray500,
   $gray600,
@@ -165,15 +203,19 @@ module.exports = {
   $primary,
   $contrast,
   $primaryBorder,
-  $foreground,
-  $inverseForeground,
-  $wellBackground,
-  $wellForeground,
-  $wellContrastHeaderForeground,
-  $editorBackground,
   $editorForeground,
+  $editorSubtleForeground,
+  $wellForeground,
+  $wellSubtleForeground,
+  $wellUltimateSubtleForeground,
+  $ultimateForeground,
+  $inverseForeground,
+  $activeForeground,
+  $editorBackground,
   $editorContrastBackground,
   $editorContrastForeground,
+  $wellBackground,
+  $ultimateBackground,
   $cursor,
   $violetFade,
   $selection,
@@ -212,10 +254,3 @@ module.exports = {
   $green,
   $boldGreen
 }
-
-/**
- * Island of almost picked colors
- * #45A9F9
- * #DE68A1
- * #D33682
- */

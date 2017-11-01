@@ -6,7 +6,7 @@
 # waters down the language
 - scope: source.js entity
   settings:
-    foreground: $foreground
+    foreground: $editorForeground
 # -----------------------------------------------------------------------------
 # Keywords
 # -----------------------------------------------------------------------------
@@ -18,7 +18,7 @@
 # Make operators light gray by default
 - scope: keyword.operator
   settings:
-    foreground: $foreground
+    foreground: $editorForeground
 # Make logical operators light orange, eg ||, ===
 - scope: keyword.operator.logical, keyword.operator.comparison
   settings:
@@ -57,7 +57,7 @@
 # The accessed property match
 - scope: variable.other.property
   settings:
-    foreground: $foreground
+    foreground: $editorForeground
 # -----------------------------------------------------------------------------
 # Punctuation
 # -----------------------------------------------------------------------------
