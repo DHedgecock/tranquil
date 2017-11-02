@@ -148,11 +148,11 @@ editorGutter.modifiedBackground: $gitModified
 editorGutter.addedBackground: $gitAdded
 editorGutter.deletedBackground: $gitRemoved
 # Sidebar file names and status letter
-git.ignoredForeground: $gitIgnored
-git.modifiedForeground: $gitModified
-git.deletedForeground: $gitRemoved
-git.conflictForeground: $gitConflicted
-git.untrackedForeground: $gitAdded
+gitDecoration.modifiedResourceForeground: $gitModified
+gitDecoration.conflictingResourceForeground: $gitConflicted
+gitDecoration.deletedResourceForeground: $gitRemoved
+gitDecoration.ignoredResourceForeground: $gitIgnored
+gitDecoration.untrackedResourceForeground: $gitAdded
 # -----------------------------------------------------------------------------
 # List
 # -----------------------------------------------------------------------------
