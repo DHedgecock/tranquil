@@ -38,6 +38,20 @@ dropdown.background: $editorBackground
 dropdown.border: $primaryBorder
 dropdown.foreground: $editorForeground
 # -----------------------------------------------------------------------------
+# Inputs
+# -----------------------------------------------------------------------------
+input.background: $editorBackground
+input.border: $transparent
+input.foreground: $editorForeground
+input.placeholderForeground: $wellSubtleForeground
+inputOption.activeBorder: $subtleThemeContrast
+inputValidation.errorBackground: $error
+inputValidation.errorBorder: $error
+inputValidation.infoBackground: $info
+inputValidation.infoBorder: $info
+inputValidation.warningBackground: $warning
+inputValidation.warningBorder: $warning
+# -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
 # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
