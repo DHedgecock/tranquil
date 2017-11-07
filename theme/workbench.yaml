@@ -34,9 +34,9 @@ button.hoverBackground: $actionableHoverBackground
 # -----------------------------------------------------------------------------
 # Dropdowns
 # -----------------------------------------------------------------------------
-dropdown.background: $wellBackground
+dropdown.background: $editorBackground
 dropdown.border: $primaryBorder
-dropdown.foreground: $wellForeground
+dropdown.foreground: $editorForeground
 # -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
@@ -116,7 +116,7 @@ editor.findMatchBackground: $violetFade
 editor.findMatchHighlightBackground: $selection
 # editor.findRangeHighlightBackground: ??? What does this do ???
 # Currently active line background
-editor.lineHighlightBackground: $wellBackground
+editor.lineHighlightBackground: $backgroundContrast
 # -----------------------------------------------------------------------------
 # Widgets
 # -----------------------------------------------------------------------------

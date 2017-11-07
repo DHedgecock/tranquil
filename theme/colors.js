@@ -36,7 +36,6 @@ const LAPIS = '#2980B9'
 
 // Background Colors
 // ---------------------------------------------------------------------------
-const STORMY = '#1c2e36'
 const COBALT = '#1a2937' // Editor BG
 const MIDNIGHT = '#101c29' // Well BG
 const SPACE = '#0a121b' // Ultimate BG
@@ -117,7 +116,6 @@ const $inverseForeground = $gray200 // For use with light background colors
  * 3. 'ultimate' backgrounds are the darkest and should be used for accessory
  *    elements
  */
-
 const $editorBackground = COBALT
 const $wellBackground = MIDNIGHT
 const $ultimateBackground = SPACE
@@ -127,6 +125,7 @@ const $ultimateBackground = SPACE
  */
 const $subtleThemeContrast = PLEASANT_RUST
 const $boldThemeContrast = ELECTRIC_LEAF
+const $backgroundContrast = WHALE // For specific bg contrast elements
 
 /**
  * Action Items
@@ -225,6 +224,7 @@ module.exports = {
   // Contrast
   $subtleThemeContrast,
   $boldThemeContrast,
+  $backgroundContrast,
   $primaryBorder,
   $cursor,
   $actionableBackground,
