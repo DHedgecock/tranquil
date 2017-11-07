@@ -33,10 +33,6 @@ h1, h2, h3, h4, p, .block {
   flex: 1;
 }
 
-.black {
-  background-color: #272822;
-}
-
 .gray300 {
   background-color: #474949;
 }
@@ -94,19 +90,35 @@ h1, h2, h3, h4, p, .block {
 }
 
 .primary {
-  background-color: #93E0E3;
+  background-color: #3ed1bb;
 }
 
 .contrast {
   background-color: #2AA198;
 }
 
-.primaryBorder {
-  background-color: #506070;
+.editorForeground {
+  background-color: #e7e8e8;
 }
 
-.foreground {
+.editorSubtleForeground {
+  background-color: #c3c4c4;
+}
+
+.wellForeground {
   background-color: #e7e8e8;
+}
+
+.wellSubtleForeground {
+  background-color: #7D8DA4;
+}
+
+.wellUltimateSubtleForeground {
+  background-color: #35405b;
+}
+
+.ultimateForeground {
+  background-color: #7e6c88;
 }
 
 .inverseForeground {
@@ -117,36 +129,40 @@ h1, h2, h3, h4, p, .block {
   background-color: #1a2937;
 }
 
-.editorForeground {
-  background-color: #e7e8e8;
-}
-
-.editorContrastBackground {
-  background-color: #1c2e36;
-}
-
-.editorContrastForeground {
-  background-color: #7b7d7d;
-}
-
 .wellBackground {
   background-color: #101c29;
-}
-
-.wellForeground {
-  background-color: #d7d8d8;
-}
-
-.wellContrastHeaderForeground {
-  background-color: #7D8DA4;
 }
 
 .ultimateBackground {
   background-color: #0a121b;
 }
 
+.subtleThemeContrast {
+  background-color: #7e6c88;
+}
+
+.boldThemeContrast {
+  background-color: #3ed1bb;
+}
+
+.primaryBorder {
+  background-color: #506070;
+}
+
 .cursor {
   background-color: #FF4B82;
+}
+
+.actionableBackground {
+  background-color: #8c5685;
+}
+
+.actionableHoverBackground {
+  background-color: #7e6c88;
+}
+
+.actionableForeground {
+  background-color: #e7e8e8;
 }
 
 .violetFade {
@@ -202,27 +218,27 @@ h1, h2, h3, h4, p, .block {
 }
 
 .diffGreen {
-  background-color: #3ed1bb66;
+  background-color: #94d53318;
 }
 
 .diffRed {
-  background-color: #D3368266;
+  background-color: #ff2c7218;
 }
 
 .mergeCurrentHeader {
-  background-color: #BCAAFEB3;
+  background-color: #703268;
 }
 
 .mergeCurrentContent {
-  background-color: #BCAAFE4D;
+  background-color: #8c568648;
 }
 
 .mergeIncomingHeader {
-  background-color: #67afe5b3;
+  background-color: #1E4751;
 }
 
 .mergeIncomingContent {
-  background-color: #67afe54d;
+  background-color: #5c9fcb33;
 }
 
 .red {
@@ -246,7 +262,7 @@ h1, h2, h3, h4, p, .block {
 }
 
 .boldViolet {
-  background-color: #A569BD;
+  background-color: #8c5685;
 }
 
 .yellow {

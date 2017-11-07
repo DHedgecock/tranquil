@@ -89,7 +89,7 @@ const $variable = $gray800
 /**
  * Primary and Accent
  */
-const $primary = '#11BAB4' // ARCTIC
+const $primary = ELECTRIC_LEAF
 const $contrast = AQUAMARINE
 const $primaryBorder = STEEL
 
@@ -107,7 +107,6 @@ const $wellUltimateSubtleForeground = WHALE // MORE de-emphasized!
 
 const $ultimateForeground = PLEASANT_RUST
 const $inverseForeground = $gray200 // For use with light background colors
-const $activeForeground = '#a6dcd0'
 
 /**
  * ## Backgrounds
@@ -123,10 +122,11 @@ const $editorBackground = COBALT
 const $wellBackground = MIDNIGHT
 const $ultimateBackground = SPACE
 
-// Contrasting backgrounds inside editor like line highlight
-// TODO: rename
-const $editorContrastBackground = STORMY
-const $editorContrastForeground = $gray500
+/**
+ * Colors for adding 🎉 to the theme
+ */
+const $subtleThemeContrast = PLEASANT_RUST
+const $boldThemeContrast = ELECTRIC_LEAF
 
 /**
  * Action Items
@@ -219,12 +219,12 @@ module.exports = {
   $wellUltimateSubtleForeground,
   $ultimateForeground,
   $inverseForeground,
-  $activeForeground,
   $editorBackground,
   $wellBackground,
   $ultimateBackground,
-  $editorContrastBackground,
-  $editorContrastForeground,
+  // Contrast
+  $subtleThemeContrast,
+  $boldThemeContrast,
   $primaryBorder,
   $cursor,
   $actionableBackground,

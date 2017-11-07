@@ -1,11 +1,23 @@
 # -----------------------------------------------------------------------------
+# VSCODE WORKBENCH THEME CONFIGURATION
 # Workbench styles are the general theme rules for VSCode and include most
 # everything that isn't syntax tokens.
 #
 # NOTE: Some of the more specific editor features (like the integrated terminal) are
 # split out into separate files for easier maintainability.
-# -----------------------------------------------------------------------------
+#
+# Theme Reference: https://code.visualstudio.com/docs/getstarted/theme-color-reference
 # TODO: Include ALL THE VARIABLES from the theme color ref here!
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Contrast
+# -----------------------------------------------------------------------------
+# This is not a contrast theme, no contrast borders
+# contrastActiveBorder: NONE
+# contrastBorder: NONE
+# -----------------------------------------------------------------------------
+# Base
+# -----------------------------------------------------------------------------
 # Defaults for editor elements, will be used if not set by a specific component
 # focusBorder. TODO: widget.shadow, selection.background
 focusBorder: $primaryBorder
@@ -22,16 +34,16 @@ button.hoverBackground: $actionableHoverBackground
 # -----------------------------------------------------------------------------
 # Dropdowns
 # -----------------------------------------------------------------------------
-dropdown.background: $editorContrastBackground
+dropdown.background: $wellBackground
 dropdown.border: $primaryBorder
-dropdown.foreground: $editorForeground
+dropdown.foreground: $wellForeground
 # -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
 # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
 activityBar.background: $wellBackground
 activityBar.foreground: $wellSubtleForeground # Well headers for subtlety
-activityBar.border: $primary # When the activity bar is open, it pops
+activityBar.border: $boldThemeContrast # When the activity bar is open, it pops
 activityBarBadge.background: $actionableBackground
 # Activity bar badges are a little than other badges and the foreground looks great
 # when it matches the subtle icon foreground
@@ -73,12 +85,13 @@ editorOverviewRuler.commonContentForeground: '#ff0000' # TODO: find example
 panel.border: $gray300
 panelTitle.activeBorder: $primary
 panelTitle.activeForeground: $primary
-panelTitle.inactiveForeground: $editorContrastForeground
+panelTitle.inactiveForeground: $editorSubtleForeground
 # -----------------------------------------------------------------------------
 # Editor
 # -----------------------------------------------------------------------------
 editor.background: $editorBackground
 editor.foreground: $editorForeground
+editorLineNumber.foreground: $subtleThemeContrast
 editorCursor.foreground: $cursor
 editorRuler.foreground: $violetFade
 editorBracketMatch.border: $cyan
@@ -103,17 +116,17 @@ editor.findMatchBackground: $violetFade
 editor.findMatchHighlightBackground: $selection
 # editor.findRangeHighlightBackground: ??? What does this do ???
 # Currently active line background
-editor.lineHighlightBackground: $editorContrastBackground
+editor.lineHighlightBackground: $wellBackground
 # -----------------------------------------------------------------------------
 # Widgets
 # -----------------------------------------------------------------------------
-# Widgets are feautures inside the main editor like snippets, autocomplete, in
-# file find.
+# Widgets are feautures inside the main editor eg: Find/Replace dialog, the
+# suggestion widget, and the editor hover
 editorWidget.background: $editorBackground
-editorWidget.border: $editorContrastBackground
+editorWidget.border: $primaryBorder
 # This sets the background for suggestions complete currently selected element
 editorSuggestWidget.selectedBackground: $selection
-editorHoverWidget.background: $editorContrastBackground
+editorHoverWidget.background: $wellBackground
 # -----------------------------------------------------------------------------
 # Overview Ruler
 # -----------------------------------------------------------------------------
@@ -202,10 +215,10 @@ tab.activeForeground: $primary
 tab.border: $editorBackground
 tab.activeBorder: $primary
 tab.inactiveBackground: $editorBackground
-tab.inactiveForeground: $editorContrastForeground
+tab.inactiveForeground: $editorSubtleForeground
 tab.unfocusedActiveBorder: $wellBackground
 tab.unfocusedActiveForeground: $editorBackground
-tab.unfocusedInactiveForeground: $editorContrastForeground
+tab.unfocusedInactiveForeground: $editorSubtleForeground
 # -----------------------------------------------------------------------------
 # Scrollbar
 # -----------------------------------------------------------------------------
