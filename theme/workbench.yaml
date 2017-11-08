@@ -52,6 +52,16 @@ inputValidation.infoBorder: $info
 inputValidation.warningBackground: $warning
 inputValidation.warningBorder: $warning
 # -----------------------------------------------------------------------------
+# Scrollbar
+# -----------------------------------------------------------------------------
+# The .shadow shows under headers in the sideBar and editor when scrolled.
+# The scrollbarSlider themes BOTH the scrollbar in sideBar/editor AND the minimap
+# overlays, so it's important to use transparent colors.
+scrollbar.shadow: $editorBackground
+scrollbarSlider.background: $translucent
+scrollbarSlider.activeBackground: $gray500
+scrollbarSlider.hoverBackground: $gray500
+# -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
 # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
@@ -108,7 +118,7 @@ editor.foreground: $editorForeground
 editorLineNumber.foreground: $subtleThemeContrast
 editorCursor.foreground: $cursor
 editorRuler.foreground: $violetFade
-editorBracketMatch.border: $cyan
+editorBracketMatch.border: $primary
 editorCodeLens.foreground: $violetFade
 # editorWhitespace.foreground: NONE
 # editorBracketMatch.background: NONE
@@ -139,8 +149,20 @@ editor.lineHighlightBackground: $backgroundContrast
 editorWidget.background: $editorBackground
 editorWidget.border: $primaryBorder
 # This sets the background for suggestions complete currently selected element
-editorSuggestWidget.selectedBackground: $selection
-editorHoverWidget.background: $wellBackground
+editorSuggestWidget.background: $editorBackground
+editorSuggestWidget.border: $primaryBorder
+editorSuggestWidget.foreground: $editorForeground
+editorSuggestWidget.selectedBackground: $actionableHoverBackground
+editorSuggestWidget.highlightForeground: $info
+# Hover widget appears on hover of methods, vars, etc.
+editorHoverWidget.background: $editorBackground
+editorHoverWidget.border: $primaryBorder
+# debugExceptionWidget.background: TODO
+# debugExceptionWidget.border: TODO
+# editorMarkerNavigation.background TODO
+# editorMarkerNavigationError.background TODO
+# editorMarkerNavigationWarning.background TODO
+# editorMarkerNavigationInfo.background TODO
 # -----------------------------------------------------------------------------
 # Overview Ruler
 # -----------------------------------------------------------------------------
@@ -186,19 +208,20 @@ gitDecoration.untrackedResourceForeground: $gitAdded
 # List elements are inside the sidebar + command dropdown
 # Mouse hover
 list.hoverBackground: $wellBackground
-list.hoverForeground: $cyan
+list.hoverForeground: $info
 # Keyboard focus
 list.focusBackground: $wellBackground
-list.focusForeground: $cyan
-
+list.focusForeground: $subtleThemeContrast
+# Drag and drop background, shows when you hover a drag item over a droppable area
+list.dropBackground: $actionableBackground
 # Selected item when the list container is in focus
 list.activeSelectionBackground: $wellBackground
-list.activeSelectionForeground: $cyan
+list.activeSelectionForeground: $info
 # Selected item when the list container is NOT in focus
 list.inactiveSelectionBackground: $wellBackground
-list.inactiveSelectionForeground: $cyan
+list.inactiveSelectionForeground: $info
 # The text that matches a search term inside of lists
-list.highlightForeground: $cyan
+list.highlightForeground: $info
 # -----------------------------------------------------------------------------
 # Sidebar
 # -----------------------------------------------------------------------------
@@ -233,16 +256,6 @@ tab.inactiveForeground: $editorSubtleForeground
 tab.unfocusedActiveBorder: $wellBackground
 tab.unfocusedActiveForeground: $editorBackground
 tab.unfocusedInactiveForeground: $editorSubtleForeground
-# -----------------------------------------------------------------------------
-# Scrollbar
-# -----------------------------------------------------------------------------
-# The .shadow shows under headers in the sideBar and editor when scrolled.
-# The scrollbarSlider themes BOTH the scrollbar in sideBar/editor AND the minimap
-# overlays, so it's important to use transparent colors.
-scrollbar.shadow: $editorBackground
-scrollbarSlider.background: $translucent
-scrollbarSlider.activeBackground: $gray500
-scrollbarSlider.hoverBackground: $gray500
 # -----------------------------------------------------------------------------
 # Status Bar
 # -----------------------------------------------------------------------------
