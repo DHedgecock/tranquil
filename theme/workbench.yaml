@@ -9,34 +9,38 @@
 # Theme Reference: https://code.visualstudio.com/docs/getstarted/theme-color-reference
 # TODO: Include ALL THE VARIABLES from the theme color ref here!
 # -----------------------------------------------------------------------------
+
 # -----------------------------------------------------------------------------
 # Contrast
 # -----------------------------------------------------------------------------
 # This is not a contrast theme, no contrast borders
 # contrastActiveBorder: NONE
 # contrastBorder: NONE
+
 # -----------------------------------------------------------------------------
 # Base
 # -----------------------------------------------------------------------------
 # Defaults for editor elements, will be used if not set by a specific component
-# focusBorder. TODO: widget.shadow, selection.background
 focusBorder: $primaryBorder
 foreground: $editorForeground
-# widget.shadow: NONE
+widget.shadow: $transparent
 selection.background: $selection # Selection background inside text inputs
 errorForeground: $error
+
 # -----------------------------------------------------------------------------
 # Buttons
 # -----------------------------------------------------------------------------
 button.background: $actionableBackground
 button.foreground: $actionableForeground
 button.hoverBackground: $actionableHoverBackground
+
 # -----------------------------------------------------------------------------
 # Dropdowns
 # -----------------------------------------------------------------------------
 dropdown.background: $editorBackground
 dropdown.border: $primaryBorder
 dropdown.foreground: $editorForeground
+
 # -----------------------------------------------------------------------------
 # Inputs
 # -----------------------------------------------------------------------------
@@ -51,6 +55,7 @@ inputValidation.infoBackground: $info
 inputValidation.infoBorder: $info
 inputValidation.warningBackground: $warning
 inputValidation.warningBorder: $warning
+
 # -----------------------------------------------------------------------------
 # Scrollbar
 # -----------------------------------------------------------------------------
@@ -61,6 +66,7 @@ scrollbar.shadow: $editorBackground
 scrollbarSlider.background: $translucent
 scrollbarSlider.activeBackground: $gray500
 scrollbarSlider.hoverBackground: $gray500
+
 # -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
@@ -72,16 +78,19 @@ activityBarBadge.background: $actionableBackground
 # Activity bar badges are a little than other badges and the foreground looks great
 # when it matches the subtle icon foreground
 activityBarBadge.foreground: $wellSubtleForeground
+
 # -----------------------------------------------------------------------------
 # Badges
 # -----------------------------------------------------------------------------
 badge.background: $actionableBackground
 badge.foreground: $actionableForeground
+
 # -----------------------------------------------------------------------------
 # ProgressBar
 # Shows for long running operations
 # -----------------------------------------------------------------------------
 progressBar.background: $violet
+
 # -----------------------------------------------------------------------------
 # Diff View
 # -----------------------------------------------------------------------------
@@ -89,6 +98,7 @@ diffEditor.insertedTextBackground: $diffGreen
 # diffEditor.insertedTextBorder: NONE
 diffEditor.removedTextBackground: $diffRed
 # diffEditor.removedTextBorder: NONE
+
 # -----------------------------------------------------------------------------
 # Merge Conflicts
 # -----------------------------------------------------------------------------
@@ -105,11 +115,12 @@ editorOverviewRuler.commonContentForeground: '#ff0000' # TODO: find example
 # Panel
 # -----------------------------------------------------------------------------
 # Panels include terminal, problems, output. Shown below editor
-# panel.background:
-panel.border: $gray300
-panelTitle.activeBorder: $primary
-panelTitle.activeForeground: $primary
+panel.background: $editorBackground
+panel.border: $backgroundContrast
+panelTitle.activeBorder: $boldThemeContrast
+panelTitle.activeForeground: $boldThemeContrast
 panelTitle.inactiveForeground: $editorSubtleForeground
+
 # -----------------------------------------------------------------------------
 # Editor
 # -----------------------------------------------------------------------------
@@ -118,7 +129,7 @@ editor.foreground: $editorForeground
 editorLineNumber.foreground: $subtleThemeContrast
 editorCursor.foreground: $cursor
 editorRuler.foreground: $violetFade
-editorBracketMatch.border: $primary
+editorBracketMatch.border: $ultraContrast
 editorCodeLens.foreground: $violetFade
 # editorWhitespace.foreground: NONE
 # editorBracketMatch.background: NONE
@@ -141,6 +152,7 @@ editor.findMatchHighlightBackground: $selection
 # editor.findRangeHighlightBackground: ??? What does this do ???
 # Currently active line background
 editor.lineHighlightBackground: $backgroundContrast
+
 # -----------------------------------------------------------------------------
 # Widgets
 # -----------------------------------------------------------------------------
@@ -163,6 +175,7 @@ editorHoverWidget.border: $primaryBorder
 # editorMarkerNavigationError.background TODO
 # editorMarkerNavigationWarning.background TODO
 # editorMarkerNavigationInfo.background TODO
+
 # -----------------------------------------------------------------------------
 # Overview Ruler
 # -----------------------------------------------------------------------------
@@ -181,14 +194,19 @@ editorOverviewRuler.deletedForeground: $gitRemoved
 editorOverviewRuler.errorForeground: $error
 editorOverviewRuler.warningForeground: $warning
 editorOverviewRuler.infoForeground: $info
+
 # -----------------------------------------------------------------------------
 # Errors
 # -----------------------------------------------------------------------------
-# Themes the squiggly+borders underneath linter errors
-editorError.foreground: $error
+# Themes the squiggly+borders underneath linter errors, foreground is the squiggly
+# lines, use just the borders, it looks nicer
+editorError.foreground: $transparent
 editorError.border: $error
-editorWarning.foreground: $warning
+editorWarning.foreground: $transparent
 editorWarning.border: $warning
+editorInfo.foreground: $transparent
+editorInfo.border: $info
+
 # -----------------------------------------------------------------------------
 # Git
 # -----------------------------------------------------------------------------
@@ -202,6 +220,7 @@ gitDecoration.conflictingResourceForeground: $gitConflicted
 gitDecoration.deletedResourceForeground: $gitRemoved
 gitDecoration.ignoredResourceForeground: $gitIgnored
 gitDecoration.untrackedResourceForeground: $gitAdded
+
 # -----------------------------------------------------------------------------
 # List
 # -----------------------------------------------------------------------------
@@ -222,6 +241,7 @@ list.inactiveSelectionBackground: $wellBackground
 list.inactiveSelectionForeground: $info
 # The text that matches a search term inside of lists
 list.highlightForeground: $info
+
 # -----------------------------------------------------------------------------
 # Sidebar
 # -----------------------------------------------------------------------------
@@ -238,6 +258,7 @@ sideBarTitle.foreground: $wellUltimateSubtleForeground
 # Use the same background as side bar for subtler headers
 sideBarSectionHeader.background: $wellBackground
 sideBarSectionHeader.foreground: $wellSubtleForeground
+
 # -----------------------------------------------------------------------------
 # Editor Groups and Tabs
 # -----------------------------------------------------------------------------
@@ -256,6 +277,7 @@ tab.inactiveForeground: $editorSubtleForeground
 tab.unfocusedActiveBorder: $wellBackground
 tab.unfocusedActiveForeground: $editorBackground
 tab.unfocusedInactiveForeground: $editorSubtleForeground
+
 # -----------------------------------------------------------------------------
 # Status Bar
 # -----------------------------------------------------------------------------
@@ -273,6 +295,7 @@ statusBarItem.activeBackground: $primary
 statusBarItem.hoverBackground: $contrast
 statusBarItem.prominentBackground: $primary
 statusBarItem.prominentHoverBackground: $contrast
+
 # -----------------------------------------------------------------------------
 # Title Bar
 # -----------------------------------------------------------------------------
@@ -281,6 +304,7 @@ titleBar.activeForeground: $ultimateForeground
 titleBar.inactiveBackground: $ultimateBackground
 titleBar.inactiveForeground: $ultimateForeground
 titleBar.border: $primaryBorder
+
 # -----------------------------------------------------------------------------
 # Extensions
 # -----------------------------------------------------------------------------

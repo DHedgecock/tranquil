@@ -54,17 +54,14 @@ const STEEL = '#506070' // Alpha border
 
 const LAVENDER = '#BCAAFE'
 const PLUM = '#8c5685'
-const FUCHSIA = '#cf03cf'
+const FUCHSIA = '#FC54FC'
 
-// Primary grays are shade based on primary color: '#93E0E3'
-const $gray100 = '#242626'
+// Gray spectrum is shaded with: #93E0E3
 const $gray200 = '#2e3030'
 const $gray300 = '#474949'
-const $gray400 = '#5d5f5f'
 const $gray500 = '#7b7d7d'
 const $gray600 = '#b4b5b5'
 const $gray700 = '#c3c4c4'
-const $gray800 = '#d7d8d8'
 const $gray900 = '#e7e8e8'
 
 // Token Variables
@@ -79,7 +76,7 @@ const $markup = $gray900
 const $storage = CARROT
 const $string = ELECTRIC_AQUA
 const $support = PEACH
-const $variable = $gray800
+const $variable = $gray700
 
 // VSCode Editor Variables
 // ---------------------------------------------------------------------------
@@ -125,6 +122,7 @@ const $ultimateBackground = SPACE
  */
 const $subtleThemeContrast = PLEASANT_RUST
 const $boldThemeContrast = ELECTRIC_LEAF
+const $ultraContrast = FUCHSIA
 const $backgroundContrast = WHALE // For specific bg contrast elements
 
 /**
@@ -224,6 +222,7 @@ module.exports = {
   // Contrast
   $subtleThemeContrast,
   $boldThemeContrast,
+  $ultraContrast,
   $backgroundContrast,
   $primaryBorder,
   $cursor,
