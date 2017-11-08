@@ -75,9 +75,7 @@ activityBar.background: $wellBackground
 activityBar.foreground: $wellSubtleForeground # Well headers for subtlety
 activityBar.border: $boldThemeContrast # When the activity bar is open, it pops
 activityBarBadge.background: $actionableBackground
-# Activity bar badges are a little than other badges and the foreground looks great
-# when it matches the subtle icon foreground
-activityBarBadge.foreground: $wellSubtleForeground
+activityBarBadge.foreground: $editorSubtleForeground
 
 # -----------------------------------------------------------------------------
 # Badges
@@ -304,6 +302,21 @@ titleBar.activeForeground: $ultimateForeground
 titleBar.inactiveBackground: $ultimateBackground
 titleBar.inactiveForeground: $ultimateForeground
 titleBar.border: $primaryBorder
+
+# -----------------------------------------------------------------------------
+# Notification Dialog
+# -----------------------------------------------------------------------------
+notification.background: $wellBackground
+notification.foreground: $wellForeground
+notification.buttonBackground: $actionableBackground
+notification.buttonHoverBackground: $actionableHoverBackground
+notification.buttonForeground: $editorForeground
+notification.infoBackground: $wellBackground
+notification.infoForeground: $info
+notification.warningBackground: $wellBackground
+notification.warningForeground: $warning
+notification.errorBackground: $wellBackground
+notification.errorForeground: $error
 
 # -----------------------------------------------------------------------------
 # Extensions
