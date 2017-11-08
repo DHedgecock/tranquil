@@ -282,13 +282,13 @@ tab.unfocusedInactiveForeground: $editorSubtleForeground
 # Bar at bottom of editor with status updates
 statusBar.background: $editorBackground
 statusBar.foreground: $wellForeground
-statusBar.border: $primaryBorder
-statusBar.debuggingBackground: $blue
-statusBar.debuggingForeground: $wellForeground
-# statusBar.debuggingBorder: NONE
-statusBar.noFolderBackground: $ultimateBackground
+statusBar.border: $backgroundContrast
+statusBar.debuggingBackground: $actionableBackground
+statusBar.debuggingForeground: $editorSubtleForeground
+statusBar.debuggingBorder: $backgroundContrast
+statusBar.noFolderBackground: $wellBackground
 statusBar.noFolderForeground: $wellForeground
-# statusBar.noFolderBorder: NONE
+statusBar.noFolderBorder: $backgroundContrast
 statusBarItem.activeBackground: $primary
 statusBarItem.hoverBackground: $contrast
 statusBarItem.prominentBackground: $primary
@@ -324,3 +324,9 @@ notification.errorForeground: $error
 extensionButton.prominentBackground: $actionableBackground
 extensionButton.prominentForeground: $actionableForeground
 extensionButton.prominentHoverBackground: $actionableHoverBackground
+
+# -----------------------------------------------------------------------------
+# Debug
+# -----------------------------------------------------------------------------
+# Debug toolbar
+debugToolBar.background: $wellBackground

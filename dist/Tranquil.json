@@ -38,7 +38,7 @@
     "activityBarBadge.foreground": "#c3c4c4",
     "badge.background": "#8c5685",
     "badge.foreground": "#e7e8e8",
-    "progressBar.background": "#BCAAFE",
+    "progressBar.background": "#9d58b1",
     "diffEditor.insertedTextBackground": "#94d53318",
     "diffEditor.removedTextBackground": "#ff2c7218",
     "merge.border": "#1a2937",
@@ -127,11 +127,13 @@
     "tab.unfocusedInactiveForeground": "#c3c4c4",
     "statusBar.background": "#1a2937",
     "statusBar.foreground": "#e7e8e8",
-    "statusBar.border": "#506070",
-    "statusBar.debuggingBackground": "#58BED8",
-    "statusBar.debuggingForeground": "#e7e8e8",
-    "statusBar.noFolderBackground": "#0a121b",
+    "statusBar.border": "#35405b",
+    "statusBar.debuggingBackground": "#8c5685",
+    "statusBar.debuggingForeground": "#c3c4c4",
+    "statusBar.debuggingBorder": "#35405b",
+    "statusBar.noFolderBackground": "#101c29",
     "statusBar.noFolderForeground": "#e7e8e8",
+    "statusBar.noFolderBorder": "#35405b",
     "statusBarItem.activeBackground": "#3ed1bb",
     "statusBarItem.hoverBackground": "#2AA198",
     "statusBarItem.prominentBackground": "#3ed1bb",
@@ -155,6 +157,7 @@
     "extensionButton.prominentBackground": "#8c5685",
     "extensionButton.prominentForeground": "#e7e8e8",
     "extensionButton.prominentHoverBackground": "#7e6c88",
+    "debugToolBar.background": "#101c29",
     "terminal.background": "#1a2937",
     "terminal.foreground": "#e7e8e8",
     "terminalCursor.background": "#e7e8e8",
@@ -162,7 +165,7 @@
     "terminal.ansiBlack": "#1a2937",
     "terminal.ansiBlue": "#2980B9",
     "terminal.ansiCyan": "#3ed1bb",
-    "terminal.ansiGreen": "#19f9d8",
+    "terminal.ansiGreen": "#a6dcd0",
     "terminal.ansiMagenta": "#FF75B5",
     "terminal.ansiRed": "#e2366b",
     "terminal.ansiWhite": "#e7e8e8",
@@ -224,7 +227,7 @@
     {
       "scope": "string",
       "settings": {
-        "foreground": "#19f9d8"
+        "foreground": "#a6dcd0"
       }
     },
     {
@@ -272,7 +275,7 @@
     {
       "scope": "keyword.control.at-rule",
       "settings": {
-        "foreground": "#BCAAFE"
+        "foreground": "#9d58b1"
       }
     },
     {
@@ -369,13 +372,13 @@
     {
       "scope": "support.type.object.module.js",
       "settings": {
-        "foreground": "#BCAAFE"
+        "foreground": "#9d58b1"
       }
     },
     {
       "scope": "support.function",
       "settings": {
-        "foreground": "#19f9d8"
+        "foreground": "#a6dcd0"
       }
     },
     {
@@ -405,7 +408,7 @@
     {
       "scope": "meta.decorator variable",
       "settings": {
-        "foreground": "#19f9d8"
+        "foreground": "#a6dcd0"
       }
     },
     {
@@ -610,7 +613,7 @@
     {
       "scope": "entity.unescaped.expression",
       "settings": {
-        "foreground": "#BCAAFE"
+        "foreground": "#9d58b1"
       }
     },
     {

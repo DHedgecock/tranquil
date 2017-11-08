@@ -27,7 +27,7 @@ const PEACH = '#FFCC95'
 const CARROT = '#FFB86C'
 
 const LIME = '#94D533'
-const ELECTRIC_AQUA = '#19f9d8'
+const ICE = '#a6dcd0'
 const ELECTRIC_LEAF = '#3ed1bb'
 const AQUAMARINE = '#2AA198'
 const ARCTIC = '#93E0E3'
@@ -52,7 +52,7 @@ const STEEL = '#506070' // Alpha border
 
 // Contrasting Purples
 
-const LAVENDER = '#BCAAFE'
+const LAVENDER = '#9d58b1'
 const PLUM = '#8c5685'
 const FUCHSIA = '#FC54FC'
 
@@ -74,7 +74,7 @@ const $invalid = ANGRY
 const $keyword = PEPTO
 const $markup = $gray900
 const $storage = CARROT
-const $string = ELECTRIC_AQUA
+const $string = ICE
 const $support = PEACH
 const $variable = $gray700
 
@@ -186,7 +186,7 @@ const $blue = SKY
 const $boldBlue = LAPIS
 const $cyan = ARCTIC
 const $boldCyan = ELECTRIC_LEAF
-const $green = ELECTRIC_AQUA
+const $green = ICE
 const $boldGreen = AQUAMARINE
 
 module.exports = {
