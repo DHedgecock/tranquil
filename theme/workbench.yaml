@@ -198,7 +198,7 @@ editorOverviewRuler.infoForeground: $info
 # -----------------------------------------------------------------------------
 # Themes the squiggly+borders underneath linter errors, foreground is the squiggly
 # lines, use just the borders, it looks nicer
-editorError.foreground: $transparent
+editorError.foreground: $error
 editorError.border: $error
 editorWarning.foreground: $transparent
 editorWarning.border: $warning
