@@ -200,9 +200,9 @@ editorOverviewRuler.infoForeground: $info
 # lines, use just the borders, it looks nicer
 editorError.foreground: $error
 editorError.border: $error
-editorWarning.foreground: $transparent
+editorWarning.foreground: $warning
 editorWarning.border: $warning
-editorInfo.foreground: $transparent
+editorInfo.foreground: $info
 editorInfo.border: $info
 
 # -----------------------------------------------------------------------------
