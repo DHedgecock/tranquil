@@ -21,36 +21,36 @@
 # Base
 # -----------------------------------------------------------------------------
 # Defaults for editor elements, will be used if not set by a specific component
-focusBorder: $primaryBorder
-foreground: $editorForeground
+focusBorder: $border
+foreground: $fgPrimary
 widget.shadow: $transparent
 selection.background: $selection # Selection background inside text inputs
-errorForeground: $error
+errorForeground: $danger
 
 # -----------------------------------------------------------------------------
 # Buttons
 # -----------------------------------------------------------------------------
-button.background: $actionableBackground
-button.foreground: $actionableForeground
-button.hoverBackground: $actionableHoverBackground
+button.background: $actionBackground
+button.foreground: $actionForeground
+button.hoverBackground: $actionHoverBackground
 
 # -----------------------------------------------------------------------------
 # Dropdowns
 # -----------------------------------------------------------------------------
-dropdown.background: $editorBackground
-dropdown.border: $primaryBorder
-dropdown.foreground: $editorForeground
+dropdown.background: $bgEditor
+dropdown.border: $border
+dropdown.foreground: $fgPrimary
 
 # -----------------------------------------------------------------------------
 # Inputs
 # -----------------------------------------------------------------------------
-input.background: $editorBackground
+input.background: $bgEditor
 input.border: $transparent
-input.foreground: $editorForeground
-input.placeholderForeground: $wellSubtleForeground
-inputOption.activeBorder: $subtleThemeContrast
-inputValidation.errorBackground: $error
-inputValidation.errorBorder: $error
+input.foreground: $fgPrimary
+input.placeholderForeground: $fgHeader
+inputOption.activeBorder: $inputBorder
+inputValidation.errorBackground: $danger
+inputValidation.errorBorder: $danger
 inputValidation.infoBackground: $info
 inputValidation.infoBorder: $info
 inputValidation.warningBackground: $warning
@@ -62,26 +62,27 @@ inputValidation.warningBorder: $warning
 # The .shadow shows under headers in the sideBar and editor when scrolled.
 # The scrollbarSlider themes BOTH the scrollbar in sideBar/editor AND the minimap
 # overlays, so it's important to use transparent colors.
-scrollbar.shadow: $editorBackground
-scrollbarSlider.background: $translucent
-scrollbarSlider.activeBackground: $gray500
-scrollbarSlider.hoverBackground: $gray500
+scrollbar.shadow: $scrollbarScrolledIndicator
+scrollbarSlider.background: $scrollbar
+scrollbarSlider.activeBackground: $scrollbarHover
+scrollbarSlider.hoverBackground: $scrollbarHover
 
 # -----------------------------------------------------------------------------
 # Activity Bar
 # -----------------------------------------------------------------------------
 # The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility!)
-activityBar.background: $wellBackground
-activityBar.foreground: $wellSubtleForeground # Well headers for subtlety
-activityBar.border: $boldThemeContrast # When the activity bar is open, it pops
-activityBarBadge.background: $actionableBackground
-activityBarBadge.foreground: $editorSubtleForeground
+activityBar.background: $bgWell
+activityBar.foreground: $fgHeader # Well headers for subtlety
+# Add primary contrast as activity bar border so that when it is open, it pops!
+activityBar.border: $themeBorder
+activityBarBadge.background: $actionBackground
+activityBarBadge.foreground: $fgHeader
 
 # -----------------------------------------------------------------------------
 # Badges
 # -----------------------------------------------------------------------------
-badge.background: $actionableBackground
-badge.foreground: $actionableForeground
+badge.background: $actionBackground
+badge.foreground: $actionForeground
 
 # -----------------------------------------------------------------------------
 # ProgressBar
@@ -100,7 +101,7 @@ diffEditor.removedTextBackground: $diffRed
 # -----------------------------------------------------------------------------
 # Merge Conflicts
 # -----------------------------------------------------------------------------
-merge.border: $editorBackground
+merge.border: $bgEditor
 merge.currentHeaderBackground: $mergeCurrentHeader
 merge.currentContentBackground: $mergeCurrentContent
 merge.incomingHeaderBackground: $mergeIncomingHeader
@@ -113,22 +114,23 @@ editorOverviewRuler.commonContentForeground: '#ff0000' # TODO: find example
 # Panel
 # -----------------------------------------------------------------------------
 # Panels include terminal, problems, output. Shown below editor
-panel.background: $editorBackground
-panel.border: $backgroundContrast
-panelTitle.activeBorder: $boldThemeContrast
-panelTitle.activeForeground: $boldThemeContrast
-panelTitle.inactiveForeground: $editorSubtleForeground
+panel.background: $bgEditor
+panel.border: $border
+panelTitle.activeBorder: $fgContrast
+panelTitle.activeForeground: $fgContrast
+panelTitle.inactiveForeground: $fgHeader
 
 # -----------------------------------------------------------------------------
 # Editor
 # -----------------------------------------------------------------------------
-editor.background: $editorBackground
-editor.foreground: $editorForeground
-editorLineNumber.foreground: $subtleThemeContrast
+editor.background: $bgEditor
+editor.foreground: $fgPrimary
+editorLineNumber.foreground: $fgContrast
 editorCursor.foreground: $cursor
-editorRuler.foreground: $violetFade
-editorBracketMatch.border: $ultraContrast
-editorCodeLens.foreground: $violetFade
+editorRuler.foreground: $fgTranslucent
+# Add a primary border around
+editorBracketMatch.border: $fgContrast
+editorCodeLens.foreground: $fgTranslucent
 # editorWhitespace.foreground: NONE
 # editorBracketMatch.background: NONE
 # Selection highlight settings are applied when text is selected, the highlight
@@ -142,31 +144,31 @@ editor.selectionHighlightBackground: $selection
 # the selection background after double clicking a symbol to select, but not when
 # selecting with keyboard
 # TODO: Make these more subtle, they're distracting
-editor.wordHighlightBackground: $violetFade # During read access, like console.log
+editor.wordHighlightBackground: $fgTranslucent # During read access, like console.log
 editor.wordHighlightStrongBackground: $selection # During write access, like const =
 # Find match settings are triggered by current find/replace dialong in top right
-editor.findMatchBackground: $violetFade
+editor.findMatchBackground: $fgTranslucent
 editor.findMatchHighlightBackground: $selection
 # editor.findRangeHighlightBackground: ??? What does this do ???
 # Currently active line background
-editor.lineHighlightBackground: $backgroundContrast
+editor.lineHighlightBackground: $lineHighlight
 
 # -----------------------------------------------------------------------------
 # Widgets
 # -----------------------------------------------------------------------------
 # Widgets are feautures inside the main editor eg: Find/Replace dialog, the
 # suggestion widget, and the editor hover
-editorWidget.background: $editorBackground
-editorWidget.border: $primaryBorder
+editorWidget.background: $bgEditor
+editorWidget.border: $border
 # This sets the background for suggestions complete currently selected element
-editorSuggestWidget.background: $editorBackground
-editorSuggestWidget.border: $primaryBorder
-editorSuggestWidget.foreground: $editorForeground
-editorSuggestWidget.selectedBackground: $actionableHoverBackground
+editorSuggestWidget.background: $bgEditor
+editorSuggestWidget.border: $border
+editorSuggestWidget.foreground: $fgPrimary
+editorSuggestWidget.selectedBackground: $actionHoverBackground
 editorSuggestWidget.highlightForeground: $info
 # Hover widget appears on hover of methods, vars, etc.
-editorHoverWidget.background: $editorBackground
-editorHoverWidget.border: $primaryBorder
+editorHoverWidget.background: $bgEditor
+editorHoverWidget.border: $border
 # debugExceptionWidget.background: TODO
 # debugExceptionWidget.border: TODO
 # editorMarkerNavigation.background TODO
@@ -189,7 +191,7 @@ editorHoverWidget.border: $primaryBorder
 editorOverviewRuler.modifiedForeground: $gitModified
 editorOverviewRuler.addedForeground: $gitAdded
 editorOverviewRuler.deletedForeground: $gitRemoved
-editorOverviewRuler.errorForeground: $error
+editorOverviewRuler.errorForeground: $danger
 editorOverviewRuler.warningForeground: $warning
 editorOverviewRuler.infoForeground: $info
 
@@ -198,8 +200,8 @@ editorOverviewRuler.infoForeground: $info
 # -----------------------------------------------------------------------------
 # Themes the squiggly+borders underneath linter errors, foreground is the squiggly
 # lines, use just the borders, it looks nicer
-editorError.foreground: $error
-editorError.border: $error
+editorError.foreground: $danger
+editorError.border: $danger
 editorWarning.foreground: $warning
 editorWarning.border: $warning
 editorInfo.foreground: $info
@@ -224,18 +226,18 @@ gitDecoration.untrackedResourceForeground: $gitAdded
 # -----------------------------------------------------------------------------
 # List elements are inside the sidebar + command dropdown
 # Mouse hover
-list.hoverBackground: $wellBackground
+list.hoverBackground: $bgWell
 list.hoverForeground: $info
 # Keyboard focus
-list.focusBackground: $wellBackground
-list.focusForeground: $subtleThemeContrast
+list.focusBackground: $bgWell
+list.focusForeground: $fgContrast
 # Drag and drop background, shows when you hover a drag item over a droppable area
-list.dropBackground: $actionableBackground
+list.dropBackground: $actionBackground
 # Selected item when the list container is in focus
-list.activeSelectionBackground: $wellBackground
+list.activeSelectionBackground: $bgWell
 list.activeSelectionForeground: $info
 # Selected item when the list container is NOT in focus
-list.inactiveSelectionBackground: $wellBackground
+list.inactiveSelectionBackground: $bgWell
 list.inactiveSelectionForeground: $info
 # The text that matches a search term inside of lists
 list.highlightForeground: $info
@@ -245,88 +247,78 @@ list.highlightForeground: $info
 # -----------------------------------------------------------------------------
 # The side bar includes the file tree, search interface, git status and debug
 # interfaces. It is located between the Activity Bar and the Editor.
-sideBar.background: $wellBackground
-sideBar.foreground: $wellForeground
+sideBar.background: $bgWell
+sideBar.foreground: $fgHeader
 # sideBar.border: NONE
 # Use gray on grays for sidebar headers, the title is 'Explorer' or 'Debug' at
 # top, the section headers are internal headers like 'Commits' or 'Git Stashes'
 # Title is at top of sidebar, eg 'Explorer' or 'Debug'.
-sideBarTitle.foreground: $wellUltimateSubtleForeground
+sideBarTitle.foreground: $fgContrast
 # Section Headers group sidebar features like 'Docker', 'Open Editors'. 'Commits'.
 # Use the same background as side bar for subtler headers
-sideBarSectionHeader.background: $wellBackground
-sideBarSectionHeader.foreground: $wellSubtleForeground
+sideBarSectionHeader.background: $bgWell
+sideBarSectionHeader.foreground: $fgHeader
 
 # -----------------------------------------------------------------------------
 # Editor Groups and Tabs
 # -----------------------------------------------------------------------------
 # TODO: what are editor groups??
 # editorGroup.background: This doesn't appear to do anything
-editorGroup.border: $primaryBorder
-editorGroupHeader.tabsBackground: $editorBackground
-editorGroupHeader.tabsBorder: $gray300
+editorGroup.border: $border
+editorGroupHeader.tabsBackground: $bgEditor
+editorGroupHeader.tabsBorder: $border
 # Use primary text and border to highlight active tabs, keep bg the same
-tab.activeBackground: $editorBackground
-tab.activeForeground: $primary
-tab.border: $editorBackground
-tab.activeBorder: $primary
-tab.inactiveBackground: $editorBackground
-tab.inactiveForeground: $editorSubtleForeground
-tab.unfocusedActiveBorder: $wellBackground
-tab.unfocusedActiveForeground: $editorBackground
-tab.unfocusedInactiveForeground: $editorSubtleForeground
+tab.activeBackground: $bgEditor
+tab.activeForeground: $fgContrast
+tab.border: $bgEditor
+tab.activeBorder: $fgContrast
+tab.inactiveBackground: $bgEditor
+tab.inactiveForeground: $fgHeader
+tab.unfocusedActiveBorder: $bgWell
+tab.unfocusedActiveForeground: $bgEditor
+tab.unfocusedInactiveForeground: $fgHeader
 
 # -----------------------------------------------------------------------------
 # Status Bar
 # -----------------------------------------------------------------------------
 # Bar at bottom of editor with status updates
-statusBar.background: $editorBackground
-statusBar.foreground: $wellForeground
-statusBar.border: $backgroundContrast
-statusBar.debuggingBackground: $actionableBackground
-statusBar.debuggingForeground: $editorSubtleForeground
-statusBar.debuggingBorder: $backgroundContrast
-statusBar.noFolderBackground: $wellBackground
-statusBar.noFolderForeground: $wellForeground
-statusBar.noFolderBorder: $backgroundContrast
-statusBarItem.activeBackground: $primary
-statusBarItem.hoverBackground: $contrast
-statusBarItem.prominentBackground: $primary
-statusBarItem.prominentHoverBackground: $contrast
+statusBar.background: $statusBarBg
+statusBar.foreground: $statusBarFg
+statusBar.border: $statusBarBorder
+statusBar.debuggingBackground: $statusBarDebuggingBg
+statusBar.debuggingForeground: $statusBarFg
+statusBar.debuggingBorder: $statusBarBorder
+statusBar.noFolderBackground: $statusBarNoFolderBg
+statusBar.noFolderForeground: $statusBarFg
+statusBar.noFolderBorder: $statusBarBorder
+statusBarItem.activeBackground: $statusBarActiveItemBg
+statusBarItem.hoverBackground: $statusBarActiveItemBg
+statusBarItem.prominentBackground: $statusBarActiveItemBg
+statusBarItem.prominentHoverBackground: $statusBarActiveItemBg
 
 # -----------------------------------------------------------------------------
 # Title Bar
 # -----------------------------------------------------------------------------
-titleBar.activeBackground: $ultimateBackground
-titleBar.activeForeground: $ultimateForeground
-titleBar.inactiveBackground: $ultimateBackground
-titleBar.inactiveForeground: $ultimateForeground
-titleBar.border: $primaryBorder
+titleBar.activeBackground: $bgTitle
+titleBar.activeForeground: $fgContrast
+titleBar.inactiveBackground: $bgTitle
+titleBar.inactiveForeground: $fgContrast
+titleBar.border: $border
 
 # -----------------------------------------------------------------------------
 # Notification Dialog
 # -----------------------------------------------------------------------------
-notification.background: $wellBackground
-notification.foreground: $wellForeground
-notification.buttonBackground: $actionableBackground
-notification.buttonHoverBackground: $actionableHoverBackground
-notification.buttonForeground: $editorForeground
-notification.infoBackground: $wellBackground
-notification.infoForeground: $info
-notification.warningBackground: $wellBackground
-notification.warningForeground: $warning
-notification.errorBackground: $wellBackground
-notification.errorForeground: $error
+# https://code.visualstudio.com/docs/getstarted/theme-color-reference#_notification-colors
 
 # -----------------------------------------------------------------------------
 # Extensions
 # -----------------------------------------------------------------------------
-extensionButton.prominentBackground: $actionableBackground
-extensionButton.prominentForeground: $actionableForeground
-extensionButton.prominentHoverBackground: $actionableHoverBackground
+extensionButton.prominentBackground: $actionBackground
+extensionButton.prominentForeground: $actionForeground
+extensionButton.prominentHoverBackground: $actionHoverBackground
 
 # -----------------------------------------------------------------------------
 # Debug
 # -----------------------------------------------------------------------------
 # Debug toolbar
-debugToolBar.background: $wellBackground
+debugToolBar.background: $bgWell

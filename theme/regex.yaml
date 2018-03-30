@@ -9,7 +9,7 @@
 - scope: string.regexp keyword, string.regexp keyword.control
   settings:
     foreground: $boldMagenta
-    fontStyle: normal
+    fontStyle: ''
 # Operators like +, ?
 - scope: string.regexp keyword.operator
   settings:

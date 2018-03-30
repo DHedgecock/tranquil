@@ -10,10 +10,16 @@
  *
  * Ideally it should be possible to see the overall theming for everything in this
  * file and only this file would be updated when changing theme color values.
+ *
+ * Transparent Hex:
+ * https://stackoverflow.com/questions/23201134/transparent-argb-hex-value
  */
 
-// Base color definitions, use in this file to create assign element theming
-const VALENTINE = '#FF4B82'
+// Theme Colors
+// ---------------------------------------------------------------------------
+
+const LAVENDER = '#9d58b1'
+const PLUM = '#8c5685'
 const ANGRY = '#FF2C6D'
 const APPLE = '#e2366b'
 const SALMON = '#FF9AC1'
@@ -32,132 +38,131 @@ const ELECTRIC_LEAF = '#3ed1bb'
 const AQUAMARINE = '#2AA198'
 const ARCTIC = '#93E0E3'
 const SKY = '#58BED8'
+const NEON_ICE = '#60cbdb'
+
 const LAPIS = '#2980B9'
 
-// Background Colors
+const ULTRA_RED = '#FF4B82'
+
+// Grayscale
+
+// Lightest grays used for font color's of elements
+const GRAY_100 = '#f8f7f8'
+const GRAY_200 = '#dbd9db'
+const GRAY_300 = '#b7b3b6'
+
+const GRAY_500 = '#474949'
+const GRAY_600 = '#2b3d40'
+
+// Darkest grays used for background's of elements
+const GRAY_700 = '#172b2e'
+const GRAY_800 = '#0d2225'
+const GRAY_900 = '#061b1e'
+
+// Utility colors
+
+const $transparent = '#00000000'
+const $translucent = '#373B4199'
+
+// Theme elements
 // ---------------------------------------------------------------------------
-const COBALT = '#1a2937' // Editor BG
-const MIDNIGHT = '#101c29' // Well BG
-const SPACE = '#0a121b' // Ultimate BG
 
-// Foreground+Border Colors
-// ---------------------------------------------------------------------------
+//
+// Backgrounds
+//
 
-// Aluminum is a lighter blue gray used for headers and git ignored files in the
-// side bar, it's light enought that it's a readable text
-const ALUMINUM = '#7D8DA4' // Not-subtle well headers
-const WHALE = '#35405b' // Use for subtle well headers
-const PLEASANT_RUST = '#7e6c88' // Use with ultimate bg
-const STEEL = '#506070' // Alpha border
+const $bgEditor = GRAY_700
+const $bgWell = GRAY_800
+const $bgTitle = GRAY_900
 
-// Contrasting Purples
+//
+// Foreground + fonts
+//
 
-const LAVENDER = '#9d58b1'
-const PLUM = '#8c5685'
-const FUCHSIA = '#FC54FC'
+const $fgPrimary = GRAY_100
+const $fgHeader = GRAY_200
+const $fgTitle = GRAY_300
 
-// Gray spectrum is shaded with: #93E0E3
-const $gray200 = '#2e3030'
-const $gray300 = '#474949'
-const $gray500 = '#7b7d7d'
-const $gray600 = '#b4b5b5'
-const $gray700 = '#c3c4c4'
-const $gray900 = '#e7e8e8'
+const $fgContrast = '#b978a4'
+// Used with text like code complexity and git lens
+const $fgTranslucent = '#BCAAFE60'
 
+//
+// Components
+//
+
+const $border = GRAY_600 // Regular border for use creating containers
+const $themeBorder = NEON_ICE // Themed border to add visual change
+const $cursor = ULTRA_RED
+const $lineHighlight = '#FC54FC1A'
+
+//
+// Statuses
+//
+
+const $danger = ANGRY
+const $warning = MELON
+const $info = ARCTIC
+const $success = LIME
+
+//
+// Action + decorations
+//
+
+// Elements that are the targets of actions, or provide decorations that provide
+// feedback on actions taken
+const $actionBackground = '#78bcd3'
+const $actionHoverBackground = '#3A7B91'
+const $actionForeground = $fgPrimary
+
+//
+// Inputs
+//
+const $inputBorder = '#b978a4'
+
+//
+// Scrollbars
+//
+
+// Scrollbars should use transparent colors so that mini-map is visible underneath
+const $scrollbar = $translucent
+const $scrollbarHover = '#FC54FC4D'
+
+// The scrolled indicator is shown in elements that have been scrolled, theme uses a
+// very subtle color mix
+const $scrollbarScrolledIndicator = '#FC54FC33'
+
+//
+// Highlighting and selections
+//
+
+const $selection = '#93E0E360'
+
+//
 // Token Variables
-// ---------------------------------------------------------------------------
-// TODO: Any token variables should be organized by token type and declared here.
-const $comment = $gray500
+//
+
+// ℹ️ All token variables should be organized by token type and declared here.
+const $comment = $fgTitle
 const $constant = BANANA
 const $entity = POLLEN
 const $invalid = ANGRY
 const $keyword = PEPTO
-const $markup = $gray900
+const $markup = $fgPrimary
 const $storage = CARROT
 const $string = ICE
 const $support = PEACH
-const $variable = $gray700
+const $variable = $fgHeader
 
-// VSCode Editor Variables
-// ---------------------------------------------------------------------------
-// Transparent Hex: https://stackoverflow.com/questions/23201134/transparent-argb-hex-value
+//
+// Git
+//
 
-/**
- * Primary and Accent
- */
-const $primary = ELECTRIC_LEAF
-const $contrast = AQUAMARINE
-const $primaryBorder = STEEL
-
-/**
- * Fonts
- * For the editor and well elements there is a font for maximum readability and a
- * de-emphasized font color
- */
-const $editorForeground = $gray900 // Best readability (editor)
-const $editorSubtleForeground = $gray700 // De-emphasized elements
-
-const $wellForeground = $gray900 // Best readability (well)
-const $wellSubtleForeground = ALUMINUM // De-emphasized elements
-const $wellUltimateSubtleForeground = WHALE // MORE de-emphasized!
-
-const $ultimateForeground = PLEASANT_RUST
-const $inverseForeground = $gray200 // For use with light background colors
-
-/**
- * ## Backgrounds
- * There are three types of background colors:
- * 1. 'editor' backgrounds are the lightest, use for backgrounds with code
- * 2. 'well' backgrounds are an intermediate dark for contrast with frequently used
- *    elements like the sidebar
- * 3. 'ultimate' backgrounds are the darkest and should be used for accessory
- *    elements
- */
-const $editorBackground = COBALT
-const $wellBackground = MIDNIGHT
-const $ultimateBackground = SPACE
-
-/**
- * Colors for adding 🎉 to the theme
- */
-const $subtleThemeContrast = PLEASANT_RUST
-const $boldThemeContrast = ELECTRIC_LEAF
-const $ultraContrast = FUCHSIA
-const $backgroundContrast = WHALE // For specific bg contrast elements
-
-/**
- * Action Items
- * Actionable items should pop a bit to provide some appropriate variety
- */
-const $actionableBackground = PLUM
-const $actionableHoverBackground = PLEASANT_RUST
-const $actionableForeground = $editorForeground
-
-/**
- * General
- */
-const $cursor = VALENTINE
-const $violetFade = '#BCAAFE60' // TODO rename
-const $selection = '#93E0E360'
-
-// Transparencies
-const $shadow = '#b4b5b51a'
-const $transparent = '#00000000'
-const $translucent = '#373B4199'
-
-/**
- * Status+Information
- */
-// Linter Colors
-const $error = ANGRY
-const $warning = MELON
-const $info = ARCTIC
-// Git Colors
-const $gitAdded = LIME
-const $gitRemoved = ANGRY
-const $gitModified = MELON
-const $gitIgnored = ALUMINUM
-const $gitConflicted = ANGRY
+const $gitAdded = $success
+const $gitModified = $warning
+const $gitRemoved = $danger
+const $gitConflicted = $danger
+const $gitIgnored = '#999498'
 
 const $diffGreen = '#94d53318'
 const $diffRed = '#ff2c7218'
@@ -167,10 +172,25 @@ const $mergeCurrentContent = '#8c568648'
 const $mergeIncomingHeader = '#1E4751'
 const $mergeIncomingContent = '#5c9fcb33'
 
-// Terminal
-// ---------------------------------------------------------------------------
+//
+// Status bar
+//
 
-// Terminal: 'bold' colors are based on terminal emulators and are 'brighter'
+const $statusBarBg = $bgEditor
+const $statusBarFg = $fgPrimary
+const $statusBarBorder = $border
+// 😢 Unfortunately, you can only style the background of status bar items, it would
+// nice to instead style the foreground, but until then, use XXX as color.
+const $statusBarActiveItemBg = NEON_ICE
+
+const $statusBarDebuggingBg = '#b978a4'
+const $statusBarNoFolderBg = GRAY_800
+
+//
+// Terminal
+//
+
+// ℹ️ Terminal: 'bold' colors are based on terminal emulators and are 'brighter'
 // versions of that color
 const $red = SALMON
 const $boldRed = APPLE
@@ -188,14 +208,23 @@ const $cyan = ARCTIC
 const $boldCyan = ELECTRIC_LEAF
 const $green = ICE
 const $boldGreen = AQUAMARINE
+const $boldBlack = GRAY_500
+const $boldWhite = GRAY_300
+
+// Element variable exports
+// ---------------------------------------------------------------------------
 
 module.exports = {
-  // Grays TODO: refactor to elements
-  $gray300,
-  $gray500,
-  $gray600,
-  $gray700,
-  // Syntax Tokens
+  // Background + foreground
+  $bgEditor,
+  $bgWell,
+  $bgTitle,
+  $fgPrimary,
+  $fgHeader,
+  $fgTitle,
+  $fgContrast,
+  $fgTranslucent,
+  // Syntax tokens
   $comment,
   $constant,
   $entity,
@@ -206,37 +235,28 @@ module.exports = {
   $string,
   $support,
   $variable,
-  // Editor Elements
-  $primary,
-  $contrast,
-  $editorForeground,
-  $editorSubtleForeground,
-  $wellForeground,
-  $wellSubtleForeground,
-  $wellUltimateSubtleForeground,
-  $ultimateForeground,
-  $inverseForeground,
-  $editorBackground,
-  $wellBackground,
-  $ultimateBackground,
-  // Contrast
-  $subtleThemeContrast,
-  $boldThemeContrast,
-  $ultraContrast,
-  $backgroundContrast,
-  $primaryBorder,
+  // Editor elements
+  $border,
+  $themeBorder,
   $cursor,
-  $actionableBackground,
-  $actionableHoverBackground,
-  $actionableForeground,
-  $violetFade,
   $selection,
-  $shadow,
-  $transparent,
-  $translucent,
-  $error,
+  $lineHighlight,
+
+  // Action + decoration
+  $actionForeground,
+  $actionBackground,
+  $actionHoverBackground,
+  // Inputs
+  $inputBorder,
+  // Scrollbars
+  $scrollbar,
+  $scrollbarHover,
+  $scrollbarScrolledIndicator,
+  // Status
+  $danger,
   $warning,
   $info,
+  // Git
   $gitAdded,
   $gitRemoved,
   $gitModified,
@@ -264,5 +284,16 @@ module.exports = {
   $cyan,
   $boldCyan,
   $green,
-  $boldGreen
+  $boldGreen,
+  $boldBlack,
+  $boldWhite,
+  // Status bar
+  $statusBarBg,
+  $statusBarFg,
+  $statusBarBorder,
+  $statusBarActiveItemBg,
+  $statusBarDebuggingBg,
+  $statusBarNoFolderBg,
+  // Utility
+  $transparent
 }

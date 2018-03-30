@@ -4,11 +4,11 @@
 - scope: markup.bold
   settings:
     foreground: $boldYellow
-    font-weight: bold
+    fontStyle: bold
 - scope: punctuation.definition.bold.markdown
   settings:
     foreground: $yellow
-    font-weight: bold
+    fontStyle: bold
 - scope: markup.changed
   settings:
     foreground: $boldMagenta
@@ -34,7 +34,7 @@
 # Headings Text
 - scope: entity.name.section.markdown
   settings:
-    foreground: $gray600
+    foreground: $fgHeader
 # Block Quotes
 - scope: markup.quote
   settings:
@@ -51,16 +51,16 @@
 # Fenced code blocks
 - scope: markup.fenced_code.block.markdown punctuation.definition.markdown
   settings:
-    foreground: $gray700
+    foreground: $fgHeader
 - scope: fenced_code.block.language
   settings:
-    foreground: $gray600
+    foreground: $border
     fontStyle: italic
 ######################################################## Links
 - scope: string.other.link
   settings:
-    foreground: $gray500
-    fontStyle: normal
+    foreground: $comment
+    fontStyle: ''
 - scope: meta.link.inline.markdown
   settings:
     foreground: $boldCyan
