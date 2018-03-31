@@ -4,6 +4,7 @@
     "description": "Calm dark theme",
     "version": "0.16.0",
     "publisher": "dhedgecock",
+    "license": "ISC",
     "engines": {
         "vscode": "^1.19.0"
     },
@@ -19,7 +20,7 @@
     },
     "icon": "assets/icon.jpg",
     "galleryBanner": {
-        "color": "#2a2c2d",
+        "color": "#172b2e",
         "theme": "dark"
     },
     "categories": [
@@ -36,6 +37,7 @@
     },
     "devDependencies": {
         "@crystal-ball/eslint-config-eloquence": "^6.3.0",
+        "chroma-js": "^1.3.6",
         "js-yaml": "^3.10.0",
         "prettier": "^1.10.2"
     }

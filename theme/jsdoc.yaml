@@ -13,7 +13,7 @@
 # Type def and method/prop NAMES
 - scope: entity.name.type.instance.jsdoc
   settings:
-    foreground: $fgHeader
+    foreground: $header
     fontStyle: italic
 # Built in JSdoc block tags
 - scope: comment.block storage

@@ -4,7 +4,40 @@ const yaml = require('js-yaml')
 const load = path => yaml.safeLoad(readFileSync(path, 'utf-8'))
 
 // Load theme color variables
-const colors = require('./theme/colors')
+const {
+  variables,
+  // Defaults
+  text,
+  base,
+  // Shared elements
+  buttons,
+  dropdowns,
+  inputs,
+  scrollbar,
+  badges,
+  progressBars,
+  listsAndTrees,
+  // Git elements
+  git,
+  diff,
+  merge,
+  // Editor elements
+  editor,
+  editorOverviewRuler,
+  editorGroupsTabs,
+  editorGutter,
+  editorWidgets,
+  editorStatus,
+  // Bars
+  titleBar,
+  sideBar,
+  activityBar,
+  statusBar,
+  // Misc elements
+  terminal,
+  extensions,
+  debug
+} = require('./theme/colors')
 
 // Load the base theme definition
 let theme = load('theme/base.yaml')
@@ -12,8 +45,32 @@ let theme = load('theme/base.yaml')
 // Add Editor theming (VSCode elements) rules
 Object.assign(
   theme.colors,
-  load('theme/workbench.yaml'),
-  load('theme/terminal.yaml')
+  // Editor theme styles
+  text,
+  base,
+  buttons,
+  dropdowns,
+  inputs,
+  badges,
+  progressBars,
+  listsAndTrees,
+  git,
+  diff,
+  merge,
+  editor,
+  editorOverviewRuler,
+  editorGutter,
+  editorGroupsTabs,
+  editorWidgets,
+  editorStatus,
+  scrollbar,
+  titleBar,
+  sideBar,
+  activityBar,
+  statusBar,
+  terminal,
+  extensions,
+  debug
 )
 
 // Add language highlighting (syntax tokens) rules
@@ -32,9 +89,9 @@ theme.tokenColors = [
 // replace color variables with color values
 theme = JSON.stringify(theme, null, 2)
 
-Object.keys(colors).forEach(color => {
+Object.keys(variables).forEach(color => {
   // Include a " prevents blue from matching in light-blue or blue-sky
-  theme = theme.replace(new RegExp(`"\\${color}"`, 'g'), `"${colors[color]}"`)
+  theme = theme.replace(new RegExp(`"\\${color}"`, 'g'), `"${variables[color]}"`)
 })
 
 // Base file has been extended with additional theme styles and color variables have

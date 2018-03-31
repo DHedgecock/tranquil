@@ -34,7 +34,7 @@
 # Headings Text
 - scope: entity.name.section.markdown
   settings:
-    foreground: $fgHeader
+    foreground: $header
 # Block Quotes
 - scope: markup.quote
   settings:
@@ -51,10 +51,10 @@
 # Fenced code blocks
 - scope: markup.fenced_code.block.markdown punctuation.definition.markdown
   settings:
-    foreground: $fgHeader
+    foreground: $header
 - scope: fenced_code.block.language
   settings:
-    foreground: $border
+    foreground: $gray
     fontStyle: italic
 ######################################################## Links
 - scope: string.other.link

@@ -1,11 +1,14 @@
 # The Color Safe
+
 _Safe keeping for potential colors_
 
 ## Notes
+
 Use Docker blues for reg background && Calamity purple for peak?
 USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 
 ## Docker
+
 #d3d4d4
 #7D8DA4
 #64749A
@@ -18,6 +21,7 @@ USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 #1dd09b
 
 ## Calamity
+
 #2a242d
 #2f2833
 #372f3c
@@ -27,16 +31,20 @@ USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 #A569BD
 
 ## Rainbow
+
 #cf03cf
 #c775f0
+#841160
 
 ## Solarized Dark
+
 #c5c5c5
 #004052
 #002c39
 #00212b
 
 ## Blues!
+
 #1c2e36 // Border
 #0e687a
 #1a9dae
@@ -49,6 +57,7 @@ USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 #58BED8
 
 ## Favorites
+
 #DE68A1
 #D33682
 #F92672
@@ -71,6 +80,7 @@ USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 #201c1c
 
 ## Panda
+
 #45A9F9
 #6FC1FF
 #B084EB
@@ -89,26 +99,28 @@ USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
 #2e3030
 
 ## Zenburn
-$black:        #3F3F3F;
-$steel:        #506070;
-$smoke:        #BFBFBF;
-$white:        #DCDCCC;
 
-$rust:         #705050;
-$pepto:        #EC93D3;
-$salmon:       #DC8CC3;
-$grapefruit:   #DCA3A3;
-$peach:        #DFAF8F;
-$puke:         #C3BF9F;
-$yellow:       #F0DFAF;
+$black: #3F3F3F;
+$steel: #506070;
+$smoke: #BFBFBF;
+$white: #DCDCCC;
 
-$turtle:       #709080;
-$whale:        #94BFF3;
-$cyan:         #8CD0D3;
-$sky:          #93E0E3;
-$seafoam:      #60B48A;
+$rust: #705050;
+$pepto: #EC93D3;
+$salmon: #DC8CC3;
+$grapefruit: #DCA3A3;
+$peach: #DFAF8F;
+$puke: #C3BF9F;
+$yellow: #F0DFAF;
+
+$turtle: #709080;
+$whale: #94BFF3;
+$cyan: #8CD0D3;
+$sky: #93E0E3;
+$seafoam: #60B48A;
 
 ## Ambiance
+
 #B7CE42
 #66AABB
 #B7416E
