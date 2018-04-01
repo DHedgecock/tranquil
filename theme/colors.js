@@ -1,4 +1,4 @@
-const { alpha, shade, tint } = require('./color-utils')
+const { alpha, darken, shade, tint } = require('./color-utils')
 
 /**
  * Tranquil Color Variables
@@ -24,14 +24,13 @@ const { alpha, shade, tint } = require('./color-utils')
 // Theme base colors
 // ========================================================
 
+// Bright colors for contrast
 const FUCHSIA = '#FC54FC'
 const ELECTRIC_BLUE = '#31DFF9'
 const ULTRA_RED = '#FF4B82'
 
 const LAVENDER = '#9d58b1'
-const PLUM = '#8c5685'
 const RUST_PURPLE = '#b978a4'
-const LILAC = '#BCAAFE'
 const ANGRY = '#FF2C6D'
 const APPLE = '#e2366b'
 const SALMON = '#FF9AC1'
@@ -49,100 +48,133 @@ const ICE = '#a6dcd0'
 const ELECTRIC_LEAF = '#3ed1bb'
 const AQUAMARINE = '#2AA198'
 const ARCTIC = '#93E0E3'
-const SKY = '#58BED8'
 const NEON_ICE = '#60cbdb'
 const OCEAN = '#3A7B91'
 const LAPIS = '#2980B9'
 
+// #93E0E3
+// #A781AB #A081AB #CA62B9 #C274A8 #b978a4
+
 // Theme color types
 
-const primary = FUCHSIA
-const secondary = ELECTRIC_BLUE
+const PRIMARY = '#A781AB'
+const SECONDARY = '#93E0E3'
 
+const INFO = ARCTIC
+const SUCCESS = LIME
+const WARNING = MELON
+const DANGER = ANGRY
+
+//
 // Grayscale
+//
 
-// Create tinted gray base colors using theme primary and secondary colors
+// Create tinted gray base colors using theme PRIMARY and SECONDARY colors
 
-// ℹ️ The background is tinted with the theme secondary color and the font tinted
-// with the theme primary color, this provides a nice subtle contrast
+// ℹ️ The background is tinted with the theme SECONDARY color and the font tinted
+// with the theme PRIMARY color, this provides a nice subtle contrast
 
-const grayedPrimary = shade(primary, 0.88).hex() // foregrounds #1e0a1e
-const grayedSecondary = shade(secondary, 0.88).hex() // backgrounds #061b1e
+const grayedPrimary = shade(PRIMARY, 0.85).hex() // foregrounds #1e0a1e
+// const grayedSecondary = shade(SECONDARY, 0.88).hex() // backgrounds #061b1e
+const bgBase = shade(SECONDARY, 0.7).hex() // #2c4344
 
 // Lightest grays used for font color's of elements
 const GRAY_100 = tint(grayedPrimary, 0.97).hex() // #f8f8f8
-const GRAY_200 = tint(grayedPrimary, 0.94).hex() // #f2f0f2
+const GRAY_200 = tint(grayedPrimary, 0.85).hex() // #f2f0f2
 const GRAY_300 = tint(grayedPrimary, 0.75).hex() // #c7c2c7
 const GRAY_400 = tint(grayedPrimary, 0.45).hex() // #837883
 const GRAY_500 = tint(grayedPrimary, 0.25).hex() // #564756
 
-const GRAY_600 = tint(grayedSecondary, 0.15).hex() // #2b3d40
-const GRAY_700 = tint(grayedSecondary, 0.07).hex() // #172b2e
-const GRAY_800 = tint(grayedSecondary, 0.03).hex() // #0d2225
-const GRAY_900 = tint(grayedSecondary, 0.0).hex() // #061b1e
+// const GRAY_600 = tint(grayedSecondary, 0.15).hex() // #2b3d40
+// const GRAY_700 = tint(grayedSecondary, 0.07).hex() // #172b2e
+// const GRAY_800 = tint(grayedSecondary, 0.03).hex() // #0d2225
+// const GRAY_900 = tint(grayedSecondary, 0.0).hex() // #061b1e
+
+const GRAY_600 = darken(bgBase, 0).hex() // #2b3d40
+const GRAY_700 = darken(bgBase, 0.45).hex() // #1a3132
+const GRAY_800 = darken(bgBase, 0.75).hex() // #0f2526
+const GRAY_900 = darken(bgBase, 0.9).hex() // #092021
+
+console.log(GRAY_900)
 
 // Utility colors
 
-const $transparent = alpha('#000000', 0.0) // #00000000
+const TRANSPARENT = alpha('#000000', 0.0) // #00000000
 // const GRAY_TRANSLUCENT = alpha(GRAY_500, 0.45) // #56475673
 
-const PRIMARY_TRANSLUCENT_100 = alpha(primary, 0.15) // #FC54FC26
-const PRIMARY_TRANSLUCENT_200 = alpha(primary, 0.2) // #FC54FC33
-const PRIMARY_TRANSLUCENT_300 = alpha(primary, 0.3) // #FC54FC4D
+const PRIMARY_TRANSLUCENT_100 = alpha(PRIMARY, 0.1) // #FC54FC26
+const PRIMARY_TRANSLUCENT_200 = alpha(PRIMARY, 0.2) // #FC54FC33
+const PRIMARY_TRANSLUCENT_300 = alpha(PRIMARY, 0.3) // #FC54FC4D
+
+// const SECONDARY_TRANSLUCENT_100 = alpha(SECONDARY, 0.1) // #31DFF926
+const SECONDARY_TRANSLUCENT_200 = alpha(SECONDARY, 0.2) // #31DFF933
+// const SECONDARY_TRANSLUCENT_300 = alpha(SECONDARY, 0.3) // #31DFF94D
 
 // ========================================================
 // Theme component colors
 // ========================================================
 
+// Text
+
+// Primary font color used for non themed tokens, and essentially any regular text
+const TEXT_PRIMARY = GRAY_100
+// Use secondary font color for elements like headers and placeholders to slightly
+// de-emphasize the text
+const TEXT_SECONDARY = GRAY_200
+
+// Use with links
+const TEXT_ANCHOR = PRIMARY
+// Use text subtle for very low contrast content that provides unimportant info
+const TEXT_SUBTLE = GRAY_300
+// Use text themed to provide a nice theme accent with some content
+const TEXT_THEMED = PRIMARY
+// Use translucent text with text content that only provides ancillary information
+// like code complexity and git lens
+const TEXT_TRANSLUCENT = PRIMARY_TRANSLUCENT_300 // alpha(LILAC, 0.5)
+
 // Backgrounds
 
-const $bgEditor = GRAY_700
-const $bgWell = GRAY_800
-const $bgTitle = GRAY_900
+const BG_DRAG_DROP = PRIMARY_TRANSLUCENT_200
 
-const bgDragAndDrop = PRIMARY_TRANSLUCENT_200
+// ========================================================
+// Elements, Controls, Components
+// ========================================================
 
-// Foreground + fonts
+// Editor
+const EDITOR_BG = GRAY_700
+const EDITOR_FG = TEXT_PRIMARY
 
-const $fgPrimary = GRAY_100
-const $fgHeader = GRAY_200
-const $fgTitle = GRAY_300
+// Wells
+const WELL_BG = GRAY_800
+const WELL_FG = TEXT_SECONDARY
 
-const $fgContrast = RUST_PURPLE
-const $fgTranslucent = alpha(LILAC, 0.5) // Used with text like code complexity and git lens
+// Titles
+const TITLE_BG = GRAY_900
+const TITLE_FG = TEXT_THEMED
 
-// Components
+// Component decorations
+const BORDER = GRAY_600 // Regular border for use creating containers
+const BORDER_THEMED = NEON_ICE // Themed border to add visual change
 
-const $border = GRAY_600 // Regular border for use creating containers
-const $themeBorder = NEON_ICE // Themed border to add visual change
-const $cursor = ULTRA_RED
-const $lineHighlight = alpha(primary, 0.1)
-const $selection = alpha(ARCTIC, 0.4)
+const CURSOR = ULTRA_RED
+const HIGHLIGHT_LINE = PRIMARY_TRANSLUCENT_100
+const HIGHLIGHT_SELECTION = SECONDARY_TRANSLUCENT_200
 
-// Statuses
+// Git- status colors for git states
+const GIT_ADDED = SUCCESS
+const GIT_MODIFIED = WARNING
+const GIT_REMOVED = DANGER
+const GIT_CONFLICTED = DANGER
+const GIT_IGNORED = TEXT_SUBTLE
 
-const $danger = ANGRY
-const $warning = MELON
-const $info = ARCTIC
-const $success = LIME
+// Actions - elements that can be interacted with, eg buttons
+const ACTION_BG = ICE
+const ACTION_HOVER_BG = OCEAN
+const ACTION_FG = TEXT_PRIMARY
 
-const gitAdded = $success
-const gitModified = $warning
-const gitRemoved = $danger
-const gitConflicted = $danger
-
-// Actions
-
-// Elements that can be interacted with to trigger general actions, eg buttons
-const actionBackground = ICE
-const actionHoverBackground = OCEAN
-const actionForeground = $fgPrimary
-
-// Decorations
-
-// Elements that provide decoration, including informational decoration, eg badges
-const decorationBg = ICE
-const decorationFg = GRAY_400
+// Decorations - elements that provide decoration, eg badges
+const DECORATION_BG = PRIMARY
+const DECORATION_FG = GRAY_700
 
 // ---------------------------------------------------------------------------
 // Theme controls and elements
@@ -163,13 +195,13 @@ const decorationFg = GRAY_400
 // Styles for text documents, eg extension pages, welcome page
 // 🤔 Most of these don't seem to do anything...
 module.exports.text = {
-  'textBlockQuote.background': $bgEditor,
-  'textBlockQuote.border': primary,
-  'textCodeBlock.background': $bgEditor,
-  'textLink.activeForeground': primary,
-  'textLink.foreground': primary
-  // 'textPreformat.foreground': $fgPrimary,
-  // 'textSeparator.foreground': $fgPrimary,
+  'textBlockQuote.background': EDITOR_BG,
+  'textBlockQuote.border': PRIMARY,
+  'textCodeBlock.background': EDITOR_BG,
+  'textLink.activeForeground': PRIMARY,
+  'textLink.foreground': PRIMARY
+  // 'textPreformat.foreground': EDITOR_FG,
+  // 'textSeparator.foreground': EDITOR_FG,
 }
 
 // ========================================================
@@ -178,12 +210,12 @@ module.exports.text = {
 
 // ℹ️ Defaults for editor elements, will be used if not set by a specific component
 module.exports.base = {
-  focusBorder: $border,
-  foreground: $fgPrimary,
-  'widget.shadow': $transparent,
-  'selection.background': $selection, // Selection background inside text inputs
-  descriptionForeground: $info,
-  errorForeground: $danger
+  focusBorder: BORDER,
+  foreground: TEXT_PRIMARY,
+  'widget.shadow': TRANSPARENT,
+  'selection.background': HIGHLIGHT_SELECTION, // Selection background inside text inputs
+  descriptionForeground: INFO,
+  errorForeground: DANGER
 }
 
 // ========================================================
@@ -191,9 +223,9 @@ module.exports.base = {
 // ========================================================
 
 module.exports.buttons = {
-  'button.background': actionBackground,
-  'button.foreground': actionForeground,
-  'button.hoverBackground': actionHoverBackground
+  'button.background': ACTION_BG,
+  'button.foreground': ACTION_FG,
+  'button.hoverBackground': ACTION_HOVER_BG
 }
 
 // ========================================================
@@ -201,10 +233,10 @@ module.exports.buttons = {
 // ========================================================
 
 module.exports.dropdowns = {
-  'dropdown.background': $bgEditor,
-  'dropdown.listBackground': $bgEditor,
-  'dropdown.border': $border,
-  'dropdown.foreground': $fgPrimary
+  'dropdown.background': EDITOR_BG,
+  'dropdown.listBackground': EDITOR_BG,
+  'dropdown.foreground': EDITOR_FG,
+  'dropdown.border': BORDER
 }
 
 // ========================================================
@@ -212,19 +244,19 @@ module.exports.dropdowns = {
 // ========================================================
 
 module.exports.inputs = {
-  'input.background': $bgEditor,
-  'input.border': $transparent,
-  'input.foreground': $fgPrimary,
-  'input.placeholderForeground': $fgHeader,
+  'input.background': EDITOR_BG,
+  'input.foreground': EDITOR_FG,
+  'input.border': TRANSPARENT,
+  'input.placeholderForeground': TEXT_SECONDARY,
   // Border around input options being used, eg regex or case sensitive
-  'inputOption.activeBorder': RUST_PURPLE,
+  'inputOption.activeBorder': BORDER_THEMED,
   // Validtions
-  'inputValidation.errorBackground': $danger,
-  'inputValidation.errorBorder': $danger,
-  'inputValidation.infoBackground': $info,
-  'inputValidation.infoBorder': $info,
-  'inputValidation.warningBackground': $warning,
-  'inputValidation.warningBorder': $warning
+  'inputValidation.errorBackground': DANGER,
+  'inputValidation.errorBorder': DANGER,
+  'inputValidation.infoBackground': INFO,
+  'inputValidation.infoBorder': INFO,
+  'inputValidation.warningBackground': WARNING,
+  'inputValidation.warningBorder': WARNING
 }
 
 // ========================================================
@@ -232,8 +264,8 @@ module.exports.inputs = {
 // ========================================================
 
 module.exports.badges = {
-  'badge.background': decorationBg,
-  'badge.foreground': decorationFg
+  'badge.background': DECORATION_BG,
+  'badge.foreground': DECORATION_FG
 }
 
 // ========================================================
@@ -242,7 +274,7 @@ module.exports.badges = {
 
 // Shown for long running operations
 module.exports.progressBars = {
-  'progressBar.background': primary
+  'progressBar.background': PRIMARY
 }
 
 // ========================================================
@@ -252,21 +284,21 @@ module.exports.progressBars = {
 // Lists and trees include file explorer and ....
 module.exports.listsAndTrees = {
   // Mouse hover
-  'list.hoverBackground': $bgWell,
-  'list.hoverForeground': $info,
+  'list.hoverBackground': WELL_BG,
+  'list.hoverForeground': INFO,
   // Keyboard focus
-  'list.focusBackground': $bgWell,
-  'list.focusForeground': $fgContrast,
+  'list.focusBackground': WELL_BG,
+  'list.focusForeground': TEXT_THEMED,
   // Drag and drop background, shows when you hover a drag item over a droppable area
-  'list.dropBackground': bgDragAndDrop,
+  'list.dropBackground': BG_DRAG_DROP,
   // Selected item when the list container is in focus
-  'list.activeSelectionBackground': $bgWell,
-  'list.activeSelectionForeground': $info,
+  'list.activeSelectionBackground': WELL_BG,
+  'list.activeSelectionForeground': INFO,
   // Selected item when the list container is NOT in focus
-  'list.inactiveSelectionBackground': $bgWell,
-  'list.inactiveSelectionForeground': $info,
+  'list.inactiveSelectionBackground': WELL_BG,
+  'list.inactiveSelectionForeground': INFO,
   // The text that matches a search term inside of lists
-  'list.highlightForeground': $info
+  'list.highlightForeground': INFO
 }
 
 // ========================================================
@@ -276,7 +308,7 @@ module.exports.listsAndTrees = {
 // Scrollbars should use transparent colors so that mini-map is visible underneath
 module.exports.scrollbar = {
   // The scrollbar shadow is and decorative info indicator shown in elements that have
-  // been scrolled, theme uses a very subtle translucent primary
+  // been scrolled, theme uses a very subtle translucent PRIMARY
   'scrollbar.shadow': PRIMARY_TRANSLUCENT_100,
   // The slider control element
   'scrollbarSlider.background': PRIMARY_TRANSLUCENT_100,
@@ -289,22 +321,22 @@ module.exports.scrollbar = {
 // ========================================================
 
 module.exports.git = {
-  'gitDecoration.untrackedResourceForeground': gitAdded,
-  'gitDecoration.modifiedResourceForeground': gitModified,
-  'gitDecoration.deletedResourceForeground': gitRemoved,
-  'gitDecoration.conflictingResourceForeground': gitConflicted,
-  'gitDecoration.ignoredResourceForeground': $bgTitle
+  'gitDecoration.untrackedResourceForeground': GIT_ADDED,
+  'gitDecoration.modifiedResourceForeground': GIT_MODIFIED,
+  'gitDecoration.deletedResourceForeground': GIT_REMOVED,
+  'gitDecoration.conflictingResourceForeground': GIT_CONFLICTED,
+  'gitDecoration.ignoredResourceForeground': GIT_IGNORED
 }
 
 module.exports.diff = {
   'diffEditor.insertedTextBackground': '#94d53318',
-  'diffEditor.insertedTextBorder': $transparent,
-  'diffEditor.removedTextBackground': '#ff2c7218',
-  'diffEditor.removedTextBorder': $transparent
+  // diffEditor.insertedTextBorder
+  'diffEditor.removedTextBackground': '#ff2c7218'
+  // diffEditor.removedTextBorder
 }
 
 module.exports.merge = {
-  'merge.border': $bgEditor,
+  'merge.border': EDITOR_BG,
   'merge.currentHeaderBackground': '#703268',
   'merge.currentContentBackground': '#8c568648',
   'merge.incomingHeaderBackground': '#1E4751',
@@ -326,30 +358,30 @@ module.exports.merge = {
 
 module.exports.editorGroupsTabs = {
   // EDITOR GROUPS
-  'editorGroup.background': $bgWell,
-  'editorGroup.border': $border,
-  'editorGroup.dropBackground': bgDragAndDrop,
+  'editorGroup.background': WELL_BG,
+  'editorGroup.border': BORDER,
+  'editorGroup.dropBackground': BG_DRAG_DROP,
   // The header containing all the editor tabs at the top of an editor group
-  'editorGroupHeader.tabsBackground': $bgEditor,
-  'editorGroupHeader.tabsBorder': $border,
+  'editorGroupHeader.tabsBackground': EDITOR_BG,
+  'editorGroupHeader.tabsBorder': BORDER,
   // 'editorGroupHeader.noTabsBackground' set 'showTabs' false to see this, it's v confusing
 
   // EDITOR TABS
-  'tab.border': $bgEditor,
-  'tab.activeBorder': $fgContrast,
-  'tab.hoverBackground': $bgEditor,
+  'tab.border': EDITOR_BG,
+  'tab.activeBorder': TEXT_THEMED,
+  'tab.hoverBackground': EDITOR_BG,
   // Currently active tab
-  'tab.activeBackground': $bgEditor,
-  'tab.activeForeground': $fgContrast,
+  'tab.activeBackground': EDITOR_BG,
+  'tab.activeForeground': TEXT_THEMED,
   // Remaining tabs inside active editor group
-  'tab.inactiveBackground': $bgEditor,
-  'tab.inactiveForeground': $fgHeader,
+  'tab.inactiveBackground': EDITOR_BG,
+  'tab.inactiveForeground': TEXT_SECONDARY,
   // Tabs within an inactive editor group
-  'tab.unfocusedActiveBorder': $bgWell,
-  'tab.unfocusedActiveForeground': $bgEditor,
-  'tab.unfocusedHoverBackground': $bgWell,
-  'tab.unfocusedHoverBorder': $bgWell,
-  'tab.unfocusedInactiveForeground': $fgHeader
+  'tab.unfocusedActiveBorder': WELL_BG,
+  'tab.unfocusedActiveForeground': EDITOR_BG,
+  'tab.unfocusedHoverBackground': WELL_BG,
+  'tab.unfocusedHoverBorder': WELL_BG,
+  'tab.unfocusedInactiveForeground': WELL_FG
 }
 
 // ========================================================
@@ -357,29 +389,29 @@ module.exports.editorGroupsTabs = {
 // ========================================================
 
 module.exports.editor = {
-  'editor.background': $bgEditor,
-  'editor.foreground': $fgPrimary,
+  'editor.background': EDITOR_BG,
+  'editor.foreground': EDITOR_FG,
 
   // DECORATIONS
-  'editorLineNumber.foreground': $fgContrast,
+  'editorLineNumber.foreground': TEXT_THEMED,
   /* editorCursor.background */
-  'editorCursor.foreground': $cursor,
-  'editorRuler.foreground': $fgTranslucent,
-  'editor.lineHighlightBackground': $lineHighlight, // Currently active line background
+  'editorCursor.foreground': CURSOR,
+  'editorRuler.foreground': TEXT_TRANSLUCENT,
+  'editor.lineHighlightBackground': HIGHLIGHT_LINE, // Currently active line background
   /* editor.lineHighlightBorder */
   /* editorBracketMatch.background */
-  'editorBracketMatch.border': $fgContrast,
-  'editorCodeLens.foreground': $fgTranslucent,
+  'editorBracketMatch.border': TEXT_THEMED,
+  'editorCodeLens.foreground': TEXT_TRANSLUCENT,
   /* editorWhitespace.foreground */
-  'editorIndentGuide.background': $fgTranslucent,
+  'editorIndentGuide.background': TEXT_TRANSLUCENT,
 
   // SELECTIONS
   // When selecting characters the selection highlights are applied, all matching
   // characters in editor are also highlighted
-  'editor.selectionBackground': $selection,
+  'editor.selectionBackground': HIGHLIGHT_SELECTION,
   /* editor.selectionForeground */
-  'editor.inactiveSelectionBackground': $selection,
-  'editor.selectionHighlightBackground': $selection,
+  'editor.inactiveSelectionBackground': HIGHLIGHT_SELECTION,
+  'editor.selectionHighlightBackground': HIGHLIGHT_SELECTION,
   /* editor.selectionHighlightBorder */
 
   // WORD HIGHLIGHT
@@ -389,16 +421,16 @@ module.exports.editor = {
   // the selection background after double clicking a symbol to select, but not when
   // selecting with keyboard
   // TODO: Make these more subtle, they're distracting
-  'editor.wordHighlightBackground': $fgTranslucent, // During read access, like console.log
+  'editor.wordHighlightBackground': TEXT_TRANSLUCENT, // During read access, like console.log
   /* editor.wordHighlightBorder */
-  'editor.wordHighlightStrongBackground': $selection, // During write access, like const =
+  'editor.wordHighlightStrongBackground': HIGHLIGHT_SELECTION, // During write access, like const =
   /* editor.wordHighlightStrongBorder */
 
   // FIND MATCH
   // Find match settings are triggered by current find/replace dialong in top right
-  'editor.findMatchBackground': $fgTranslucent,
+  'editor.findMatchBackground': TEXT_TRANSLUCENT,
   /* editor.findMatchBorder */
-  'editor.findMatchHighlightBackground': $selection,
+  'editor.findMatchHighlightBackground': HIGHLIGHT_SELECTION,
   /* editor.findMatchHighlightBorder */
 
   // RANGES
@@ -412,7 +444,7 @@ module.exports.editor = {
 
   // LINKS
   // Visible when clicking on a link in the editor (hold cmd)
-  'editorLink.activeForeground': primary
+  'editorLink.activeForeground': TEXT_ANCHOR
 }
 
 // ========================================================
@@ -421,10 +453,10 @@ module.exports.editor = {
 
 // The gutter contains the glyph margins and the line numbers
 module.exports.editorGutter = {
-  'editorGutter.background': $bgEditor,
-  'editorGutter.addedBackground': gitAdded,
-  'editorGutter.modifiedBackground': gitModified,
-  'editorGutter.deletedBackground': gitRemoved
+  'editorGutter.background': EDITOR_BG,
+  'editorGutter.addedBackground': GIT_ADDED,
+  'editorGutter.modifiedBackground': GIT_MODIFIED,
+  'editorGutter.deletedBackground': GIT_REMOVED
 }
 
 // ========================================================
@@ -435,19 +467,19 @@ module.exports.editorGutter = {
 // decorations for different editor statuses
 module.exports.editorOverviewRuler = {
   // Linter status decorations
-  'editorOverviewRuler.errorForeground': $danger,
-  'editorOverviewRuler.warningForeground': $warning,
-  'editorOverviewRuler.infoForeground': $info,
+  'editorOverviewRuler.errorForeground': DANGER,
+  'editorOverviewRuler.warningForeground': WARNING,
+  'editorOverviewRuler.infoForeground': INFO,
 
   // Git status decorations
-  'editorOverviewRuler.addedForeground': gitAdded,
-  'editorOverviewRuler.modifiedForeground': gitModified,
-  'editorOverviewRuler.deletedForeground': gitRemoved,
+  'editorOverviewRuler.addedForeground': GIT_ADDED,
+  'editorOverviewRuler.modifiedForeground': GIT_MODIFIED,
+  'editorOverviewRuler.deletedForeground': GIT_REMOVED,
 
   // Merge conflict decorations
   'editorOverviewRuler.currentContentForeground': '#703268', // TODO: variable
-  'editorOverviewRuler.incomingContentForeground': '#1E4751', // TODO: variable
-  'editorOverviewRuler.commonContentForeground': '#ff0000' //  TODO: find example,
+  'editorOverviewRuler.incomingContentForeground': '#1E4751' // TODO: variable
+  // 'editorOverviewRuler.commonContentForeground':  //  TODO: find example,
 }
 
 // ========================================================
@@ -457,12 +489,12 @@ module.exports.editorOverviewRuler = {
 // Themes the squiggly+borders underneath linter errors, foreground is the squiggly
 // lines, use just the borders, it looks nicer
 module.exports.editorStatus = {
-  'editorError.foreground': $danger,
-  'editorError.border': $danger,
-  'editorWarning.foreground': $warning,
-  'editorWarning.border': $warning,
-  'editorInfo.foreground': $info,
-  'editorInfo.border': $info
+  'editorError.foreground': DANGER,
+  'editorError.border': DANGER,
+  'editorWarning.foreground': WARNING,
+  'editorWarning.border': WARNING,
+  'editorInfo.foreground': INFO,
+  'editorInfo.border': INFO
 }
 
 // ========================================================
@@ -473,26 +505,26 @@ module.exports.editorStatus = {
 // suggestions dropdown, and intellisense hover dialog
 module.exports.editorWidgets = {
   // General defaults for editor widgets
-  'editorWidget.background': $bgEditor,
-  'editorWidget.border': $border,
+  'editorWidget.background': EDITOR_BG,
+  'editorWidget.border': BORDER,
   // This sets the background for suggestions complete currently selected element
-  'editorSuggestWidget.background': $bgEditor,
-  'editorSuggestWidget.border': $border,
-  'editorSuggestWidget.foreground': $fgPrimary,
-  'editorSuggestWidget.selectedBackground': actionHoverBackground, // line that has active focus
-  'editorSuggestWidget.highlightForeground': $info, // text that matches what was typed
+  'editorSuggestWidget.background': EDITOR_BG,
+  'editorSuggestWidget.border': BORDER,
+  'editorSuggestWidget.foreground': EDITOR_FG,
+  'editorSuggestWidget.selectedBackground': ACTION_HOVER_BG, // line that has active focus
+  'editorSuggestWidget.highlightForeground': INFO, // text that matches what was typed
   // Intellisense dialog that appears on hover of methods, vars, etc.
-  'editorHoverWidget.background': $bgEditor,
-  'editorHoverWidget.border': $border,
+  'editorHoverWidget.background': EDITOR_BG,
+  'editorHoverWidget.border': BORDER,
   // Peek view shown when editor stops at an exception
-  'debugExceptionWidget.background': $bgEditor,
-  'debugExceptionWidget.border': $border,
+  'debugExceptionWidget.background': EDITOR_BG,
+  'debugExceptionWidget.border': BORDER,
   // View shows when navigating to errors/warnings/info in the editor (using f8 key
   // command). The backgrounds are actually border colors of the view
-  'editorMarkerNavigation.background': $bgEditor,
-  'editorMarkerNavigationError.background': $danger,
-  'editorMarkerNavigationWarning.background': $warning,
-  'editorMarkerNavigationInfo.background': $info
+  'editorMarkerNavigation.background': EDITOR_BG,
+  'editorMarkerNavigationError.background': DANGER,
+  'editorMarkerNavigationWarning.background': WARNING,
+  'editorMarkerNavigationInfo.background': INFO
 }
 
 // ========================================================
@@ -502,13 +534,13 @@ module.exports.editorWidgets = {
 // The panel is shown below the editor and contains views like Output and Integrated
 // Terminal
 module.exports.panel = {
-  'panel.background': $bgEditor,
-  'panel.border': $border,
-  'panel.dropBackground': bgDragAndDrop,
+  'panel.background': EDITOR_BG,
+  'panel.border': BORDER,
+  'panel.dropBackground': BG_DRAG_DROP,
   // Panel title
-  'panelTitle.activeBorder': $fgContrast,
-  'panelTitle.activeForeground': $fgContrast,
-  'panelTitle.inactiveForeground': $fgHeader
+  'panelTitle.activeBorder': TEXT_THEMED,
+  'panelTitle.activeForeground': TEXT_THEMED,
+  'panelTitle.inactiveForeground': TEXT_SECONDARY
 }
 
 // ========================================================
@@ -517,11 +549,11 @@ module.exports.panel = {
 
 // The title bar is the bar at the top of the editor
 module.exports.titleBar = {
-  'titleBar.activeBackground': $bgTitle,
-  'titleBar.activeForeground': $fgContrast,
-  'titleBar.inactiveBackground': $bgTitle,
-  'titleBar.inactiveForeground': $fgContrast,
-  'titleBar.border': $border
+  'titleBar.activeBackground': TITLE_BG,
+  'titleBar.activeForeground': TITLE_FG,
+  'titleBar.inactiveBackground': TITLE_BG,
+  'titleBar.inactiveForeground': TITLE_FG,
+  'titleBar.border': BORDER
 }
 
 // ========================================================
@@ -530,13 +562,13 @@ module.exports.titleBar = {
 
 // The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility)
 module.exports.activityBar = {
-  'activityBar.background': $bgWell,
-  'activityBar.dropBackground': bgDragAndDrop,
-  'activityBar.foreground': $fgHeader, // Well headers for subtlety
-  'activityBar.border': $themeBorder, // When it's open, it pops!
+  'activityBar.background': WELL_BG,
+  'activityBar.dropBackground': BG_DRAG_DROP,
+  'activityBar.foreground': WELL_FG,
+  'activityBar.border': BORDER_THEMED, // When it's open, it pops!
   // Badges
-  'activityBarBadge.background': decorationBg,
-  'activityBarBadge.foreground': decorationFg
+  'activityBarBadge.background': DECORATION_BG,
+  'activityBarBadge.foreground': DECORATION_FG
 }
 
 // ========================================================
@@ -546,15 +578,15 @@ module.exports.activityBar = {
 // ℹ️ The side bar is inbetween the activity bar and editor, and contains the file
 // tree, search interface, git status and debug views
 module.exports.sideBar = {
-  'sideBar.background': $bgWell,
-  'sideBar.dropBackground': bgDragAndDrop,
-  'sideBar.foreground': $fgHeader,
+  'sideBar.background': WELL_BG,
+  'sideBar.dropBackground': BG_DRAG_DROP,
+  'sideBar.foreground': WELL_FG,
   // sideBar.border
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
-  'sideBarTitle.foreground': $fgContrast,
+  'sideBarTitle.foreground': TEXT_THEMED,
   // Side bar sections for features
-  'sideBarSectionHeader.background': $bgWell, // same bg for subtler headers
-  'sideBarSectionHeader.foreground': $fgHeader
+  'sideBarSectionHeader.background': WELL_BG, // same bg for subtler headers
+  'sideBarSectionHeader.foreground': WELL_FG
 }
 
 // ========================================================
@@ -563,21 +595,23 @@ module.exports.sideBar = {
 
 // The status bar is the bar at bottom of editor with status updates
 module.exports.statusBar = {
-  'statusBar.background': $bgEditor,
-  'statusBar.foreground': $fgPrimary,
-  'statusBar.border': $border,
-  'statusBar.debuggingBackground': PLUM,
-  'statusBar.debuggingForeground': $fgPrimary,
-  'statusBar.debuggingBorder': $border,
-  'statusBar.noFolderBackground': GRAY_800,
-  'statusBar.noFolderForeground': $fgPrimary,
-  'statusBar.noFolderBorder': $border,
+  'statusBar.background': EDITOR_BG,
+  'statusBar.foreground': EDITOR_FG,
+  'statusBar.border': BORDER,
   // 😢 Unfortunately, you can only style the background of status bar items, it
   // would nice to instead style the foreground, but until then style background
-  'statusBarItem.activeBackground': NEON_ICE,
-  'statusBarItem.hoverBackground': NEON_ICE,
-  'statusBarItem.prominentBackground': NEON_ICE,
-  'statusBarItem.prominentHoverBackground': NEON_ICE
+  'statusBarItem.activeBackground': DECORATION_BG,
+  'statusBarItem.hoverBackground': DECORATION_BG,
+  'statusBarItem.prominentBackground': DECORATION_BG,
+  'statusBarItem.prominentHoverBackground': DECORATION_BG,
+  // DEBUGGING MODE
+  'statusBar.debuggingBackground': PRIMARY_TRANSLUCENT_300,
+  'statusBar.debuggingForeground': TEXT_PRIMARY,
+  'statusBar.debuggingBorder': BORDER,
+  // NO FOLDER MODE
+  'statusBar.noFolderBackground': WELL_BG,
+  'statusBar.noFolderForeground': TEXT_PRIMARY,
+  'statusBar.noFolderBorder': BORDER
 }
 
 // ========================================================
@@ -587,20 +621,20 @@ module.exports.statusBar = {
 // ℹ️ Terminal: 'bold' colors are based on terminal emulators and are 'brighter'
 // versions of that color
 module.exports.terminal = {
-  'terminalCursor.background': $fgPrimary,
-  'terminalCursor.foreground': $cursor,
-  'terminal.background': $bgEditor,
-  'terminal.foreground': $fgPrimary,
-  'terminal.ansiBlack': $bgEditor,
+  'terminalCursor.background': TEXT_PRIMARY,
+  'terminalCursor.foreground': CURSOR,
+  'terminal.background': EDITOR_BG,
+  'terminal.foreground': EDITOR_FG,
+  'terminal.ansiBlack': EDITOR_BG,
   'terminal.ansiBlue': LAPIS,
   'terminal.ansiCyan': ELECTRIC_LEAF, // ampersand, file path and arrow
   'terminal.ansiGreen': ICE, // branch name
   'terminal.ansiMagenta': PEPTO, // name
   'terminal.ansiRed': APPLE,
-  'terminal.ansiWhite': $fgPrimary,
+  'terminal.ansiWhite': TEXT_PRIMARY,
   'terminal.ansiYellow': PEACH, // computer name
   'terminal.ansiBrightBlack': GRAY_500,
-  'terminal.ansiBrightBlue': SKY,
+  'terminal.ansiBrightBlue': NEON_ICE,
   'terminal.ansiBrightCyan': ARCTIC,
   'terminal.ansiBrightGreen': AQUAMARINE,
   'terminal.ansiBrightMagenta': PEPTO,
@@ -614,9 +648,9 @@ module.exports.terminal = {
 // ========================================================
 
 module.exports.extensions = {
-  'extensionButton.prominentBackground': actionBackground,
-  'extensionButton.prominentForeground': actionForeground,
-  'extensionButton.prominentHoverBackground': actionHoverBackground
+  'extensionButton.prominentBackground': ACTION_BG,
+  'extensionButton.prominentForeground': ACTION_FG,
+  'extensionButton.prominentHoverBackground': ACTION_HOVER_BG
 }
 
 // ========================================================
@@ -624,7 +658,7 @@ module.exports.extensions = {
 // ========================================================
 
 module.exports.debug = {
-  'debugToolBar.background': $bgWell // TODO: WIT?
+  'debugToolBar.background': WELL_BG // TODO: WIT?
 }
 
 // ---------------------------------------------------------------------------
@@ -634,18 +668,18 @@ module.exports.debug = {
 // Token Variables
 // ℹ️ All token variables should be organized by token type and declared here.
 
-const $comment = $fgTitle
+const $comment = TEXT_SUBTLE
 const $constant = BANANA
 const $entity = POLLEN
 const $invalid = ANGRY
 const $keyword = PEPTO
-const $markup = $fgPrimary
+const $markup = TEXT_PRIMARY
 const $storage = CARROT
 const $string = ICE
 const $support = PEACH
-const $variable = $fgHeader
+const $variable = TEXT_SECONDARY
 // MARKUP
-const $header = $fgHeader
+const $header = TEXT_SECONDARY
 
 //
 // Ungrouped colors - DEPRECATED
@@ -660,7 +694,7 @@ const $violet = LAVENDER
 const $yellow = POLLEN
 const $boldYellow = BANANA
 const $orange = PEACH
-const $blue = SKY
+const $blue = NEON_ICE
 const $boldBlue = LAPIS
 const $cyan = ARCTIC
 const $boldCyan = ELECTRIC_LEAF

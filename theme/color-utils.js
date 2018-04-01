@@ -10,5 +10,6 @@ const alphaHex = ratio =>
     .toUpperCase()
 
 module.exports.alpha = (color, ratio) => color + alphaHex(ratio)
+module.exports.darken = (color, ratio) => chroma(color).darken(ratio)
 module.exports.shade = (color, ratio) => mix(color, '#000', ratio)
 module.exports.tint = (color, ratio) => mix(color, '#fff', ratio)
