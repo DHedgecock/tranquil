@@ -36,7 +36,7 @@
 # Unescaped value
 - scope: entity.unescaped.expression
   settings:
-    foreground: $violet
+    foreground: $boldMagenta
 # Matches pipes in as expressions
 - scope: constant.other.symbol
   settings:

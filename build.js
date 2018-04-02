@@ -34,6 +34,7 @@ const {
   activityBar,
   statusBar,
   // Misc elements
+  panel,
   terminal,
   extensions,
   debug
@@ -68,6 +69,7 @@ Object.assign(
   sideBar,
   activityBar,
   statusBar,
+  panel,
   terminal,
   extensions,
   debug

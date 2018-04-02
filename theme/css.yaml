@@ -23,7 +23,7 @@
 # Expressions like @import
 - scope: keyword.control.at-rule
   settings:
-    foreground: $violet
+    foreground: $boldMagenta
 # Style !important declarations
 - scope: keyword.other.important
   settings:

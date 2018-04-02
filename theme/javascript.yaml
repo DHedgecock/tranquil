@@ -75,7 +75,7 @@
 # Matches: MODULE, MODULE.EXPORTS
 - scope: support.type.object.module.js
   settings:
-    foreground: $violet
+    foreground: $boldMagenta
 # Matches: console.<LOG>
 - scope: support.function
   settings:

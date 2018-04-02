@@ -25,45 +25,42 @@ const { alpha, darken, shade, tint } = require('./color-utils')
 // ========================================================
 
 // Bright colors for contrast
-const FUCHSIA = '#FC54FC'
-const ELECTRIC_BLUE = '#31DFF9'
 const ULTRA_RED = '#FF4B82'
 
-const LAVENDER = '#9d58b1'
-const RUST_PURPLE = '#b978a4'
-const ANGRY = '#FF2C6D'
+// Reds
 const APPLE = '#e2366b'
 const SALMON = '#FF9AC1'
+// Magenta
 const PEPTO = '#FF75B5'
-
+const PLUM = '#8c5685'
+// Yellows
 const POLLEN = '#F0DFAF'
-const BANANA = '#FFCA58'
-const MELON = '#FFC300'
-
 const PEACH = '#FFCC95'
+// Oranges (not in terminal)
+const BANANA = '#FFCA58'
 const CARROT = '#FFB86C'
-
-const LIME = '#94D533'
+// Greens
 const ICE = '#a6dcd0'
-const ELECTRIC_LEAF = '#3ed1bb'
 const AQUAMARINE = '#2AA198'
+// Cyans
+const ELECTRIC_LEAF = '#3ed1bb'
 const ARCTIC = '#93E0E3'
+// Blues
 const NEON_ICE = '#60cbdb'
 const OCEAN = '#3A7B91'
-const LAPIS = '#2980B9'
-
-// #93E0E3
-// #A781AB #A081AB #CA62B9 #C274A8 #b978a4
 
 // Theme color types
 
-const PRIMARY = '#A781AB'
+const PRIMARY = '#8c5685'
 const SECONDARY = '#93E0E3'
 
-const INFO = ARCTIC
-const SUCCESS = LIME
-const WARNING = MELON
-const DANGER = ANGRY
+const PRIMARY_ACCENT_LIGHTER = '#cea0bf'
+const PRIMARY_ACCENT_LIGHT = '#7e6c88'
+
+const INFO = '#93E0E3'
+const SUCCESS = '#94D533'
+const WARNING = '#FFC300'
+const DANGER = '#FF2C6D'
 
 //
 // Grayscale
@@ -74,33 +71,24 @@ const DANGER = ANGRY
 // ℹ️ The background is tinted with the theme SECONDARY color and the font tinted
 // with the theme PRIMARY color, this provides a nice subtle contrast
 
-const grayedPrimary = shade(PRIMARY, 0.85).hex() // foregrounds #1e0a1e
-// const grayedSecondary = shade(SECONDARY, 0.88).hex() // backgrounds #061b1e
+const textBase = shade(PRIMARY, 0.85).hex() // #131014
 const bgBase = shade(SECONDARY, 0.7).hex() // #2c4344
 
 // Lightest grays used for font color's of elements
-const GRAY_100 = tint(grayedPrimary, 0.97).hex() // #f8f8f8
-const GRAY_200 = tint(grayedPrimary, 0.85).hex() // #f2f0f2
-const GRAY_300 = tint(grayedPrimary, 0.75).hex() // #c7c2c7
-const GRAY_400 = tint(grayedPrimary, 0.45).hex() // #837883
-const GRAY_500 = tint(grayedPrimary, 0.25).hex() // #564756
+const GRAY_100 = tint(textBase, 0.97).hex() // #f8f8f8
+const GRAY_200 = tint(textBase, 0.83).hex() // #d7d6d7
+const GRAY_300 = tint(textBase, 0.7).hex() // #b8b7b9
+const GRAY_400 = tint(textBase, 0.45).hex() // #7d7c7e
+const GRAY_500 = tint(textBase, 0.25).hex() // #504a4f
 
-// const GRAY_600 = tint(grayedSecondary, 0.15).hex() // #2b3d40
-// const GRAY_700 = tint(grayedSecondary, 0.07).hex() // #172b2e
-// const GRAY_800 = tint(grayedSecondary, 0.03).hex() // #0d2225
-// const GRAY_900 = tint(grayedSecondary, 0.0).hex() // #061b1e
-
-const GRAY_600 = darken(bgBase, 0).hex() // #2b3d40
+const GRAY_600 = darken(bgBase, 0).hex() // #2c4344
 const GRAY_700 = darken(bgBase, 0.45).hex() // #1a3132
 const GRAY_800 = darken(bgBase, 0.75).hex() // #0f2526
 const GRAY_900 = darken(bgBase, 0.9).hex() // #092021
 
-console.log(GRAY_900)
-
 // Utility colors
 
 const TRANSPARENT = alpha('#000000', 0.0) // #00000000
-// const GRAY_TRANSLUCENT = alpha(GRAY_500, 0.45) // #56475673
 
 const PRIMARY_TRANSLUCENT_100 = alpha(PRIMARY, 0.1) // #FC54FC26
 const PRIMARY_TRANSLUCENT_200 = alpha(PRIMARY, 0.2) // #FC54FC33
@@ -120,17 +108,19 @@ const SECONDARY_TRANSLUCENT_200 = alpha(SECONDARY, 0.2) // #31DFF933
 const TEXT_PRIMARY = GRAY_100
 // Use secondary font color for elements like headers and placeholders to slightly
 // de-emphasize the text
-const TEXT_SECONDARY = GRAY_200
+const TEXT_SECONDARY = GRAY_300
 
 // Use with links
 const TEXT_ANCHOR = PRIMARY
 // Use text subtle for very low contrast content that provides unimportant info
-const TEXT_SUBTLE = GRAY_300
+const TEXT_SUBTLE = GRAY_400
 // Use text themed to provide a nice theme accent with some content
-const TEXT_THEMED = PRIMARY
+const TEXT_THEMED = SECONDARY
+
+const TEXT_THEMED_SUBTLE = PRIMARY_ACCENT_LIGHT
 // Use translucent text with text content that only provides ancillary information
 // like code complexity and git lens
-const TEXT_TRANSLUCENT = PRIMARY_TRANSLUCENT_300 // alpha(LILAC, 0.5)
+const TEXT_TRANSLUCENT = PRIMARY_TRANSLUCENT_300
 
 // Backgrounds
 
@@ -174,7 +164,7 @@ const ACTION_FG = TEXT_PRIMARY
 
 // Decorations - elements that provide decoration, eg badges
 const DECORATION_BG = PRIMARY
-const DECORATION_FG = GRAY_700
+const DECORATION_FG = GRAY_200
 
 // ---------------------------------------------------------------------------
 // Theme controls and elements
@@ -393,17 +383,17 @@ module.exports.editor = {
   'editor.foreground': EDITOR_FG,
 
   // DECORATIONS
-  'editorLineNumber.foreground': TEXT_THEMED,
+  'editorLineNumber.foreground': TEXT_THEMED_SUBTLE,
   /* editorCursor.background */
   'editorCursor.foreground': CURSOR,
-  'editorRuler.foreground': TEXT_TRANSLUCENT,
+  'editorRuler.foreground': PRIMARY_TRANSLUCENT_200,
   'editor.lineHighlightBackground': HIGHLIGHT_LINE, // Currently active line background
   /* editor.lineHighlightBorder */
   /* editorBracketMatch.background */
-  'editorBracketMatch.border': TEXT_THEMED,
+  'editorBracketMatch.border': PRIMARY,
   'editorCodeLens.foreground': TEXT_TRANSLUCENT,
   /* editorWhitespace.foreground */
-  'editorIndentGuide.background': TEXT_TRANSLUCENT,
+  'editorIndentGuide.background': BORDER,
 
   // SELECTIONS
   // When selecting characters the selection highlights are applied, all matching
@@ -586,7 +576,7 @@ module.exports.sideBar = {
   'sideBarTitle.foreground': TEXT_THEMED,
   // Side bar sections for features
   'sideBarSectionHeader.background': WELL_BG, // same bg for subtler headers
-  'sideBarSectionHeader.foreground': WELL_FG
+  'sideBarSectionHeader.foreground': TEXT_SUBTLE
 }
 
 // ========================================================
@@ -626,7 +616,7 @@ module.exports.terminal = {
   'terminal.background': EDITOR_BG,
   'terminal.foreground': EDITOR_FG,
   'terminal.ansiBlack': EDITOR_BG,
-  'terminal.ansiBlue': LAPIS,
+  'terminal.ansiBlue': OCEAN,
   'terminal.ansiCyan': ELECTRIC_LEAF, // ampersand, file path and arrow
   'terminal.ansiGreen': ICE, // branch name
   'terminal.ansiMagenta': PEPTO, // name
@@ -671,13 +661,13 @@ module.exports.debug = {
 const $comment = TEXT_SUBTLE
 const $constant = BANANA
 const $entity = POLLEN
-const $invalid = ANGRY
+const $invalid = DANGER
 const $keyword = PEPTO
 const $markup = TEXT_PRIMARY
 const $storage = CARROT
 const $string = ICE
 const $support = PEACH
-const $variable = TEXT_SECONDARY
+const $variable = GRAY_200
 // MARKUP
 const $header = TEXT_SECONDARY
 
@@ -689,13 +679,12 @@ const $header = TEXT_SECONDARY
 const $red = SALMON
 const $boldRed = APPLE
 const $magenta = PEPTO
-const $boldMagenta = PEPTO
-const $violet = LAVENDER
+const $boldMagenta = PLUM
 const $yellow = POLLEN
 const $boldYellow = BANANA
 const $orange = PEACH
 const $blue = NEON_ICE
-const $boldBlue = LAPIS
+const $boldBlue = OCEAN
 const $cyan = ARCTIC
 const $boldCyan = ELECTRIC_LEAF
 const $green = ICE
@@ -719,7 +708,6 @@ module.exports.variables = {
   $boldRed,
   $magenta,
   $boldMagenta,
-  $violet,
   $yellow,
   $boldYellow,
   $orange,
