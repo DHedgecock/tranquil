@@ -2,10 +2,50 @@
 
 _Safe keeping for potential colors_
 
-## Notes
+#FF2C6D Old cursor/danger color
 
-Use Docker blues for reg background && Calamity purple for peak?
-USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
+.theme {
+background-color: #fc8c9a;
+}
+
+#5a1d47
+#693d4c
+
+#fbf4e1
+
+#fc8c9a
+#fbb494
+#f6b28f
+#f6c18b
+#f8c087
+
+#49addf
+#78bcd3
+#a3d3dd
+#c2d9c9
+#cad4bc
+#fae2b4
+
+#23B1E5
+#31DFF9
+#3ed1bb
+#FC54FC
+#522F5D
+#7e6c88
+#5a1d47
+#693d4c
+#8c5685
+#9d58b1
+#cea0bf
+
+#b978a4
+#bd7ea8
+#a8579d
+#841160
+
+#31DFF9
+#9d58b1
+#FC54FC
 
 ## Docker
 

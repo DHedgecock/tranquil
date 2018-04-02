@@ -41,51 +41,54 @@ const {
 } = require('./theme/colors')
 
 // Load the base theme definition
-let theme = load('theme/base.yaml')
-
-// Add Editor theming (VSCode elements) rules
-Object.assign(
-  theme.colors,
-  // Editor theme styles
-  text,
-  base,
-  buttons,
-  dropdowns,
-  inputs,
-  badges,
-  progressBars,
-  listsAndTrees,
-  git,
-  diff,
-  merge,
-  editor,
-  editorOverviewRuler,
-  editorGutter,
-  editorGroupsTabs,
-  editorWidgets,
-  editorStatus,
-  scrollbar,
-  titleBar,
-  sideBar,
-  activityBar,
-  statusBar,
-  panel,
-  terminal,
-  extensions,
-  debug
-)
-
-// Add language highlighting (syntax tokens) rules
-theme.tokenColors = [
-  ...theme.tokenColors,
-  ...load('theme/css.yaml'),
-  ...load('theme/docker.yaml'),
-  ...load('theme/javascript.yaml'),
-  ...load('theme/jsdoc.yaml'),
-  ...load('theme/markdown.yaml'),
-  ...load('theme/regex.yaml'),
-  ...load('theme/template.yaml')
-]
+let theme = {
+  $schema: 'vscode://schemas/color-theme',
+  author: 'Dan Hedgecock',
+  name: 'Tranquil',
+  colorSpaceName: 'sRGB',
+  semanticClass: 'theme.dark.tranquil',
+  // Set of editor theming values
+  colors: {
+    // Editor theme styles
+    ...text,
+    ...base,
+    ...buttons,
+    ...dropdowns,
+    ...inputs,
+    ...badges,
+    ...progressBars,
+    ...listsAndTrees,
+    ...git,
+    ...diff,
+    ...merge,
+    ...editor,
+    ...editorOverviewRuler,
+    ...editorGutter,
+    ...editorGroupsTabs,
+    ...editorWidgets,
+    ...editorStatus,
+    ...scrollbar,
+    ...titleBar,
+    ...sideBar,
+    ...activityBar,
+    ...statusBar,
+    ...panel,
+    ...terminal,
+    ...extensions,
+    ...debug
+  },
+  // List of syntax tokens theming editor language contents
+  tokenColors: [
+    ...load('theme/syntax-tokens.yaml'),
+    ...load('theme/css.yaml'),
+    ...load('theme/docker.yaml'),
+    ...load('theme/javascript.yaml'),
+    ...load('theme/jsdoc.yaml'),
+    ...load('theme/markdown.yaml'),
+    ...load('theme/regex.yaml'),
+    ...load('theme/template.yaml')
+  ]
+}
 
 // Stringify all of the combined theme styles so we can run string regexes on it to
 // replace color variables with color values
