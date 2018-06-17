@@ -16,6 +16,13 @@ const { alpha, darken, shade, tint } = require('./color-utils')
  * Theme Reference: https://code.visualstudio.com/docs/getstarted/theme-color-reference
  */
 
+// New stuff
+// #fe6083
+// #a9fef7
+// #515669
+// #474949
+// #7D8DA4
+
 // ---------------------------------------------------------------------------
 // Theme color variables
 // ---------------------------------------------------------------------------
@@ -52,15 +59,15 @@ const OCEAN = '#3A7B91'
 // Theme color types
 
 const PRIMARY = '#8c5685'
-const SECONDARY = '#93E0E3'
+const SECONDARY = '#fe6083' // '#93E0E3'
 
 const PRIMARY_ACCENT_LIGHTER = '#cea0bf'
 const PRIMARY_ACCENT_LIGHT = '#7e6c88'
 
 const INFO = '#93E0E3'
-const SUCCESS = '#94D533'
-const WARNING = '#FFC300'
-const DANGER = '#FF2C6D'
+const SUCCESS = '#9ed945'
+const WARNING = '#ffd54c'
+const DANGER = '#fc2869'
 
 //
 // Grayscale
@@ -72,7 +79,7 @@ const DANGER = '#FF2C6D'
 // with the theme PRIMARY color, this provides a nice subtle contrast
 
 const textBase = shade(PRIMARY, 0.85).hex() // #131014
-const bgBase = shade(SECONDARY, 0.7).hex() // #2c4344
+const bgBase = shade('#93E0E3', 0.7).hex() // #2c4344
 
 // Lightest grays used for font color's of elements
 const GRAY_100 = tint(textBase, 0.97).hex() // #f8f8f8
@@ -95,7 +102,7 @@ const PRIMARY_TRANSLUCENT_200 = alpha(PRIMARY, 0.2) // #FC54FC33
 const PRIMARY_TRANSLUCENT_300 = alpha(PRIMARY, 0.3) // #FC54FC4D
 
 // const SECONDARY_TRANSLUCENT_100 = alpha(SECONDARY, 0.1) // #31DFF926
-const SECONDARY_TRANSLUCENT_200 = alpha(SECONDARY, 0.2) // #31DFF933
+const SECONDARY_TRANSLUCENT_200 = alpha('#93E0E3', 0.2) // #31DFF933
 // const SECONDARY_TRANSLUCENT_300 = alpha(SECONDARY, 0.3) // #31DFF94D
 
 // ========================================================
@@ -115,7 +122,7 @@ const TEXT_ANCHOR = PRIMARY
 // Use text subtle for very low contrast content that provides unimportant info
 const TEXT_SUBTLE = GRAY_400
 // Use text themed to provide a nice theme accent with some content
-const TEXT_THEMED = SECONDARY
+const TEXT_THEMED = '#fe6083'
 
 const TEXT_THEMED_SUBTLE = PRIMARY_ACCENT_LIGHT
 // Use translucent text with text content that only provides ancillary information
@@ -131,20 +138,20 @@ const BG_DRAG_DROP = PRIMARY_TRANSLUCENT_200
 // ========================================================
 
 // Editor
-const EDITOR_BG = GRAY_700
+const EDITOR_BG = '#1c242c' // GRAY_700
 const EDITOR_FG = TEXT_PRIMARY
 
 // Wells
-const WELL_BG = GRAY_800
+const WELL_BG = '#121c26' // GRAY_800
 const WELL_FG = TEXT_SECONDARY
 
 // Titles
-const TITLE_BG = GRAY_900
+const TITLE_BG = '#0a121b' // GRAY_900
 const TITLE_FG = TEXT_THEMED
 
 // Component decorations
-const BORDER = GRAY_600 // Regular border for use creating containers
-const BORDER_THEMED = NEON_ICE // Themed border to add visual change
+const BORDER = '#1a2e42' //GRAY_600 // Regular border for use creating containers
+const BORDER_THEMED = '#a9fef7' // NEON_ICE // Themed border to add visual change
 
 const CURSOR = ULTRA_RED
 const HIGHLIGHT_LINE = PRIMARY_TRANSLUCENT_100
@@ -353,7 +360,7 @@ module.exports.editorGroupsTabs = {
   'editorGroup.dropBackground': BG_DRAG_DROP,
   // The header containing all the editor tabs at the top of an editor group
   'editorGroupHeader.tabsBackground': EDITOR_BG,
-  'editorGroupHeader.tabsBorder': BORDER,
+  'editorGroupHeader.tabsBorder': '#6d5f6b', // BORDER,
   // 'editorGroupHeader.noTabsBackground' set 'showTabs' false to see this, it's v confusing
 
   // EDITOR TABS
@@ -365,7 +372,7 @@ module.exports.editorGroupsTabs = {
   'tab.activeForeground': TEXT_THEMED,
   // Remaining tabs inside active editor group
   'tab.inactiveBackground': EDITOR_BG,
-  'tab.inactiveForeground': TEXT_SECONDARY,
+  'tab.inactiveForeground': '#948492', // TEXT_SECONDARY,
   // Tabs within an inactive editor group
   'tab.unfocusedActiveBorder': WELL_BG,
   'tab.unfocusedActiveForeground': EDITOR_BG,

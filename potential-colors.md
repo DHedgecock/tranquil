@@ -4,10 +4,6 @@ _Safe keeping for potential colors_
 
 #FF2C6D Old cursor/danger color
 
-.theme {
-background-color: #fc8c9a;
-}
-
 #5a1d47
 #693d4c
 
@@ -46,6 +42,12 @@ background-color: #fc8c9a;
 #31DFF9
 #9d58b1
 #FC54FC
+## Notes
+
+Use Docker blues for reg background && Calamity purple for peak?
+USE BRIGHT PINK FOR SIDEBAR LIKE NATURE RAINBOW THEME?
+
+// #b7e261 #a1da2f #aae633 #94D533
 
 ## Docker
 
@@ -104,14 +106,17 @@ background-color: #fc8c9a;
 #DE68A1
 #D33682
 #F92672
+#FF2C6D
 
 #A6E22E
+#94d533
 #BED300
 #DAF7A6
 #E6DB74
 #f5e57d
 
 #FD971F
+#FFC300
 #FFD858
 
 #DACDBB
@@ -121,6 +126,7 @@ background-color: #fc8c9a;
 #404C5B
 #282a2e
 #201c1c
+#2c4344
 
 ## Panda
 
