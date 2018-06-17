@@ -1,44 +1,44 @@
 {
-    "name": "tranquil-theme",
-    "displayName": "Tranquil",
-    "description": "Calm dark theme",
-    "version": "0.18.0",
-    "publisher": "dhedgecock",
-    "license": "ISC",
-    "engines": {
-        "vscode": "^1.19.0"
-    },
-    "bugs": {
-        "url": "https://github.com/DHedgecock/tranquil/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/DHedgecock/tranquil"
-    },
-    "scripts": {
-        "build": "node build.js"
-    },
-    "icon": "assets/icon.jpg",
-    "galleryBanner": {
-        "color": "#172b2e",
-        "theme": "dark"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Tranquil",
-                "uiTheme": "vs-dark",
-                "path": "./dist/Tranquil.json"
-            }
-        ]
-    },
-    "devDependencies": {
-        "@crystal-ball/eslint-config-eloquence": "^6.3.0",
-        "chroma-js": "^1.3.6",
-        "js-yaml": "^3.10.0",
-        "prettier": "^1.10.2"
-    }
+  "name": "tranquil-theme",
+  "displayName": "Tranquil",
+  "description": "Calm dark theme",
+  "version": "0.18.0",
+  "publisher": "dhedgecock",
+  "license": "ISC",
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "bugs": {
+    "url": "https://github.com/DHedgecock/tranquil/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DHedgecock/tranquil"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "icon": "assets/icon.jpg",
+  "galleryBanner": {
+    "color": "#1c242c",
+    "theme": "dark"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Tranquil",
+        "uiTheme": "vs-dark",
+        "path": "./dist/Tranquil.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-eloquence": "^7.4.0",
+    "chroma-js": "^1.3.7",
+    "js-yaml": "^3.12.0",
+    "prettier": "^1.13.5"
+  }
 }
