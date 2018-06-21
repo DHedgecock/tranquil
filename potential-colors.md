@@ -4,6 +4,41 @@ _Safe keeping for potential colors_
 
 #FF2C6D Old cursor/danger color
 
+#1b0824
+#310828
+#172d42
+
+#eeeeee
+#f5ebf7
+#f4e5c6
+#fdbec6
+#f6f155
+#f5ae6e
+#e25673
+#d5358f
+#00eed3
+#a9fef7
+
+#b60d70
+#e93fa9
+#152434
+#bf7ca7
+
+#fe6083
+#d84186
+#d5358f
+#ea3fad
+#a9fef7
+#515669
+#474949
+#7D8DA4
+
+a5ff1f0d
+
+befeee21
+
+00edaa2b
+
 #5a1d47
 #693d4c
 
@@ -42,6 +77,7 @@ _Safe keeping for potential colors_
 #31DFF9
 #9d58b1
 #FC54FC
+
 ## Notes
 
 Use Docker blues for reg background && Calamity purple for peak?

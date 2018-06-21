@@ -54,7 +54,7 @@
     foreground: $header
 - scope: fenced_code.block.language
   settings:
-    foreground: $gray
+    foreground: $comment
     fontStyle: italic
 ######################################################## Links
 - scope: string.other.link

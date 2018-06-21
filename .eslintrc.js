@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: '@crystal-ball/eloquence/node',
+  extends: 'eloquence',
   rules: {
     'import/no-extraneous-dependencies': 'off'
   }

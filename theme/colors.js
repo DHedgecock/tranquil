@@ -1,8 +1,7 @@
-const { alpha, darken, shade, tint } = require('./color-utils')
+const { alpha, darken } = require('./color-utils')
 
 /**
- * Tranquil Color Variables
- * **All color variables should be set here**
+ * Tranquil Theme Color Variables
  *
  * Theming with color variables should be handled by element groups. For example the
  * background value shouldn't be set individually for each option, instead theme
@@ -16,105 +15,61 @@ const { alpha, darken, shade, tint } = require('./color-utils')
  * Theme Reference: https://code.visualstudio.com/docs/getstarted/theme-color-reference
  */
 
-// New stuff
-// #fe6083
-// #a9fef7
-// #515669
-// #474949
-// #7D8DA4
+//
+// Theme colors
+//
 
-// ---------------------------------------------------------------------------
-// Theme color variables
-// ---------------------------------------------------------------------------
-
-// ========================================================
-// Theme base colors
-// ========================================================
-
-// Bright colors for contrast
-const ULTRA_RED = '#FF4B82'
-
-// Reds
-const APPLE = '#e2366b'
-const SALMON = '#FF9AC1'
-// Magenta
-const PEPTO = '#FF75B5'
-const PLUM = '#8c5685'
-// Yellows
-const POLLEN = '#F0DFAF'
-const PEACH = '#FFCC95'
-// Oranges (not in terminal)
-const BANANA = '#FFCA58'
-const CARROT = '#FFB86C'
-// Greens
-const ICE = '#a6dcd0'
-const AQUAMARINE = '#2AA198'
-// Cyans
-const ELECTRIC_LEAF = '#3ed1bb'
-const ARCTIC = '#93E0E3'
-// Blues
-const NEON_ICE = '#60cbdb'
-const OCEAN = '#3A7B91'
-
-// Theme color types
-
-const PRIMARY = '#8c5685'
-const SECONDARY = '#fe6083' // '#93E0E3'
-
-const PRIMARY_ACCENT_LIGHTER = '#cea0bf'
-const PRIMARY_ACCENT_LIGHT = '#7e6c88'
+const PRIMARY = '#fe6083'
+const SECONDARY = '#befeee'
+const ACCENT = '#b892f1'
 
 const INFO = '#93E0E3'
 const SUCCESS = '#9ed945'
-const WARNING = '#ffd54c'
-const DANGER = '#fc2869'
+const WARNING = '#FFC300'
+const DANGER = '#ff427b'
 
 //
-// Grayscale
+// Grays
 //
 
-// Create tinted gray base colors using theme PRIMARY and SECONDARY colors
+// Fonts
+const GRAY_100 = '#f0f0f0'
+const GRAY_200 = '#d4cbcc'
+const GRAY_300 = '#f5ebf7d9'
+const GRAY_400 = '#ab9bab'
+const GRAY_500 = '#7e6c88'
 
-// ℹ️ The background is tinted with the theme SECONDARY color and the font tinted
-// with the theme PRIMARY color, this provides a nice subtle contrast
+const GRAY_600 = '#2c4344' // Borders #1a2e42
 
-const textBase = shade(PRIMARY, 0.85).hex() // #131014
-const bgBase = shade('#93E0E3', 0.7).hex() // #2c4344
+// Backgrounds
+const GRAY_700 = '#1c242c' // Editor BG
+const GRAY_800 = '#121c26' // Well BG
+const GRAY_900 = '#0a121b' // App Title BG
 
-// Lightest grays used for font color's of elements
-const GRAY_100 = tint(textBase, 0.97).hex() // #f8f8f8
-const GRAY_200 = tint(textBase, 0.83).hex() // #d7d6d7
-const GRAY_300 = tint(textBase, 0.7).hex() // #b8b7b9
-const GRAY_400 = tint(textBase, 0.45).hex() // #7d7c7e
-const GRAY_500 = tint(textBase, 0.25).hex() // #504a4f
-
-const GRAY_600 = darken(bgBase, 0).hex() // #2c4344
-const GRAY_700 = darken(bgBase, 0.45).hex() // #1a3132
-const GRAY_800 = darken(bgBase, 0.75).hex() // #0f2526
-const GRAY_900 = darken(bgBase, 0.9).hex() // #092021
-
-// Utility colors
+//
+// Transparency colors
+//
 
 const TRANSPARENT = alpha('#000000', 0.0) // #00000000
 
-const PRIMARY_TRANSLUCENT_100 = alpha(PRIMARY, 0.1) // #FC54FC26
-const PRIMARY_TRANSLUCENT_200 = alpha(PRIMARY, 0.2) // #FC54FC33
-const PRIMARY_TRANSLUCENT_300 = alpha(PRIMARY, 0.3) // #FC54FC4D
+const PRIMARY_TRANSLUCENT_100 = alpha(ACCENT, 0.1)
+const PRIMARY_TRANSLUCENT_200 = alpha(ACCENT, 0.2)
+const PRIMARY_TRANSLUCENT_300 = alpha(ACCENT, 0.3)
 
-// const SECONDARY_TRANSLUCENT_100 = alpha(SECONDARY, 0.1) // #31DFF926
-const SECONDARY_TRANSLUCENT_200 = alpha('#93E0E3', 0.2) // #31DFF933
-// const SECONDARY_TRANSLUCENT_300 = alpha(SECONDARY, 0.3) // #31DFF94D
-
-// ========================================================
-// Theme component colors
-// ========================================================
+// Element grouping variables
+// ---------------------------------------------------------------------------
 
 // Text
+const CURSOR = '#FF4B82'
 
-// Primary font color used for non themed tokens, and essentially any regular text
-const TEXT_PRIMARY = GRAY_100
-// Use secondary font color for elements like headers and placeholders to slightly
-// de-emphasize the text
+// Borders
+const BORDER_GRAY = GRAY_600
+
+// Primary font color used for non themed tokens, and essentially any regular
+// text
+const TEXT_PRIMARY = GRAY_200
+// Use secondary font color for elements like headers and placeholders to
+// slightly de-emphasize the text
 const TEXT_SECONDARY = GRAY_300
 
 // Use with links
@@ -122,9 +77,9 @@ const TEXT_ANCHOR = PRIMARY
 // Use text subtle for very low contrast content that provides unimportant info
 const TEXT_SUBTLE = GRAY_400
 // Use text themed to provide a nice theme accent with some content
-const TEXT_THEMED = '#fe6083'
+const TEXT_THEMED = PRIMARY
 
-const TEXT_THEMED_SUBTLE = PRIMARY_ACCENT_LIGHT
+const TEXT_THEMED_SUBTLE = GRAY_500
 // Use translucent text with text content that only provides ancillary information
 // like code complexity and git lens
 const TEXT_TRANSLUCENT = PRIMARY_TRANSLUCENT_300
@@ -133,29 +88,28 @@ const TEXT_TRANSLUCENT = PRIMARY_TRANSLUCENT_300
 
 const BG_DRAG_DROP = PRIMARY_TRANSLUCENT_200
 
-// ========================================================
+//
 // Elements, Controls, Components
-// ========================================================
+//
 
 // Editor
-const EDITOR_BG = '#1c242c' // GRAY_700
+const EDITOR_BG = GRAY_700
 const EDITOR_FG = TEXT_PRIMARY
 
 // Wells
-const WELL_BG = '#121c26' // GRAY_800
+const WELL_BG = GRAY_800
 const WELL_FG = TEXT_SECONDARY
 
 // Titles
-const TITLE_BG = '#0a121b' // GRAY_900
+const TITLE_BG = GRAY_900
 const TITLE_FG = TEXT_THEMED
 
 // Component decorations
-const BORDER = '#1a2e42' //GRAY_600 // Regular border for use creating containers
-const BORDER_THEMED = '#a9fef7' // NEON_ICE // Themed border to add visual change
+const BORDER = BORDER_GRAY // Regular border for use creating containers
+const BORDER_THEMED = SECONDARY // Themed border to add visual change
 
-const CURSOR = ULTRA_RED
 const HIGHLIGHT_LINE = PRIMARY_TRANSLUCENT_100
-const HIGHLIGHT_SELECTION = SECONDARY_TRANSLUCENT_200
+const HIGHLIGHT_SELECTION = PRIMARY_TRANSLUCENT_300
 
 // Git- status colors for git states
 const GIT_ADDED = SUCCESS
@@ -165,29 +119,31 @@ const GIT_CONFLICTED = DANGER
 const GIT_IGNORED = TEXT_SUBTLE
 
 // Actions - elements that can be interacted with, eg buttons
-const ACTION_BG = ICE
-const ACTION_HOVER_BG = OCEAN
+const ACTION_BG = SECONDARY
+const ACTION_HOVER_BG = darken(SECONDARY, 35)
 const ACTION_FG = TEXT_PRIMARY
 
 // Decorations - elements that provide decoration, eg badges
 const DECORATION_BG = PRIMARY
-const DECORATION_FG = GRAY_200
+const DECORATION_FG = GRAY_100
 
-// ---------------------------------------------------------------------------
-// Theme controls and elements
+// VSCode Radical theme 🎉
 // ---------------------------------------------------------------------------
 
-// ========================================================
+//
 // Contrast
-// ========================================================
+//
 
 // High contrast theme options, this theme is not high contrast
-// contrastActiveBorder: NONE
-// contrastBorder: NONE
 
-// ========================================================
+module.exports.contrast = {
+  contrastActiveBorder: null,
+  contrastBorder: null
+}
+
+//
 // Text colors
-// ========================================================
+//
 
 // Styles for text documents, eg extension pages, welcome page
 // 🤔 Most of these don't seem to do anything...
@@ -197,13 +153,13 @@ module.exports.text = {
   'textCodeBlock.background': EDITOR_BG,
   'textLink.activeForeground': PRIMARY,
   'textLink.foreground': PRIMARY
-  // 'textPreformat.foreground': EDITOR_FG,
-  // 'textSeparator.foreground': EDITOR_FG,
+  // 'textPreformat.foreground': ???,
+  // 'textSeparator.foreground': ???,
 }
 
-// ========================================================
+//
 // Base colors
-// ========================================================
+//
 
 // ℹ️ Defaults for editor elements, will be used if not set by a specific component
 module.exports.base = {
@@ -215,9 +171,9 @@ module.exports.base = {
   errorForeground: DANGER
 }
 
-// ========================================================
+//
 // Buttons
-// ========================================================
+//
 
 module.exports.buttons = {
   'button.background': ACTION_BG,
@@ -225,9 +181,9 @@ module.exports.buttons = {
   'button.hoverBackground': ACTION_HOVER_BG
 }
 
-// ========================================================
+//
 // Dropdowns
-// ========================================================
+//
 
 module.exports.dropdowns = {
   'dropdown.background': EDITOR_BG,
@@ -236,9 +192,9 @@ module.exports.dropdowns = {
   'dropdown.border': BORDER
 }
 
-// ========================================================
+//
 // Inputs
-// ========================================================
+//
 
 module.exports.inputs = {
   'input.background': EDITOR_BG,
@@ -256,27 +212,27 @@ module.exports.inputs = {
   'inputValidation.warningBorder': WARNING
 }
 
-// ========================================================
+//
 // Badges
-// ========================================================
+//
 
 module.exports.badges = {
   'badge.background': DECORATION_BG,
   'badge.foreground': DECORATION_FG
 }
 
-// ========================================================
+//
 // Progress bars
-// ========================================================
+//
 
 // Shown for long running operations
 module.exports.progressBars = {
   'progressBar.background': PRIMARY
 }
 
-// ========================================================
+//
 // Lists and trees
-// ========================================================
+//
 
 // Lists and trees include file explorer and ....
 module.exports.listsAndTrees = {
@@ -298,9 +254,9 @@ module.exports.listsAndTrees = {
   'list.highlightForeground': INFO
 }
 
-// ========================================================
+//
 // Scrollbars
-// ========================================================
+//
 
 // Scrollbars should use transparent colors so that mini-map is visible underneath
 module.exports.scrollbar = {
@@ -313,9 +269,9 @@ module.exports.scrollbar = {
   'scrollbarSlider.hoverBackground': PRIMARY_TRANSLUCENT_200
 }
 
-// ========================================================
+//
 // Git
-// ========================================================
+//
 
 module.exports.git = {
   'gitDecoration.untrackedResourceForeground': GIT_ADDED,
@@ -326,10 +282,12 @@ module.exports.git = {
 }
 
 module.exports.diff = {
-  'diffEditor.insertedTextBackground': '#94d53318',
-  // diffEditor.insertedTextBorder
-  'diffEditor.removedTextBackground': '#ff2c7218'
-  // diffEditor.removedTextBorder
+  'diffEditor.insertedTextBackground': '#00eed32b',
+  'diffEditor.removedTextBackground': '#fc28692b',
+  // Diff borders get added around everything line by line and it's super
+  // overwhelming to look at, so we disable them
+  'diffEditor.insertedTextBorder': null,
+  'diffEditor.removedTextBorder': null
 }
 
 module.exports.merge = {
@@ -344,9 +302,9 @@ module.exports.merge = {
 // Editor
 // ---------------------------------------------------------------------------
 
-// ========================================================
+//
 // Editor groups and tabs
-// ========================================================
+//
 
 // Editor *groups* are containers of multiple editors, and multiple groups can be
 // created using the 'Split Editor' action.
@@ -372,7 +330,7 @@ module.exports.editorGroupsTabs = {
   'tab.activeForeground': TEXT_THEMED,
   // Remaining tabs inside active editor group
   'tab.inactiveBackground': EDITOR_BG,
-  'tab.inactiveForeground': '#948492', // TEXT_SECONDARY,
+  'tab.inactiveForeground': TEXT_SECONDARY,
   // Tabs within an inactive editor group
   'tab.unfocusedActiveBorder': WELL_BG,
   'tab.unfocusedActiveForeground': EDITOR_BG,
@@ -381,9 +339,9 @@ module.exports.editorGroupsTabs = {
   'tab.unfocusedInactiveForeground': WELL_FG
 }
 
-// ========================================================
+//
 // Editor controls
-// ========================================================
+//
 
 module.exports.editor = {
   'editor.background': EDITOR_BG,
@@ -444,9 +402,9 @@ module.exports.editor = {
   'editorLink.activeForeground': TEXT_ANCHOR
 }
 
-// ========================================================
+//
 // Editor gutter
-// ========================================================
+//
 
 // The gutter contains the glyph margins and the line numbers
 module.exports.editorGutter = {
@@ -456,9 +414,9 @@ module.exports.editorGutter = {
   'editorGutter.deletedBackground': GIT_REMOVED
 }
 
-// ========================================================
+//
 // Editor overview ruler
-// ========================================================
+//
 
 // The overview ruler is the thin bar at the far right of the editor, it shows
 // decorations for different editor statuses
@@ -479,9 +437,9 @@ module.exports.editorOverviewRuler = {
   // 'editorOverviewRuler.commonContentForeground':  //  TODO: find example,
 }
 
-// ========================================================
+//
 // Editor statuses
-// ========================================================
+//
 
 // Themes the squiggly+borders underneath linter errors, foreground is the squiggly
 // lines, use just the borders, it looks nicer
@@ -494,9 +452,9 @@ module.exports.editorStatus = {
   'editorInfo.border': INFO
 }
 
-// ========================================================
+//
 // Editor widgets
-// ========================================================
+//
 
 // Editor widgets are controls shown in front of the editor, eg find/replace dialog,
 // suggestions dropdown, and intellisense hover dialog
@@ -524,9 +482,9 @@ module.exports.editorWidgets = {
   'editorMarkerNavigationInfo.background': INFO
 }
 
-// ========================================================
+//
 // Panel
-// ========================================================
+//
 
 // The panel is shown below the editor and contains views like Output and Integrated
 // Terminal
@@ -540,9 +498,9 @@ module.exports.panel = {
   'panelTitle.inactiveForeground': TEXT_SECONDARY
 }
 
-// ========================================================
+//
 // Title bar
-// ========================================================
+//
 
 // The title bar is the bar at the top of the editor
 module.exports.titleBar = {
@@ -553,9 +511,9 @@ module.exports.titleBar = {
   'titleBar.border': BORDER
 }
 
-// ========================================================
+//
 // Activity bar
-// ========================================================
+//
 
 // The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility)
 module.exports.activityBar = {
@@ -568,9 +526,9 @@ module.exports.activityBar = {
   'activityBarBadge.foreground': DECORATION_FG
 }
 
-// ========================================================
+//
 // Side bar
-// ========================================================
+//
 
 // ℹ️ The side bar is inbetween the activity bar and editor, and contains the file
 // tree, search interface, git status and debug views
@@ -586,9 +544,9 @@ module.exports.sideBar = {
   'sideBarSectionHeader.foreground': TEXT_SUBTLE
 }
 
-// ========================================================
+//
 // Status bar
-// ========================================================
+//
 
 // The status bar is the bar at bottom of editor with status updates
 module.exports.statusBar = {
@@ -611,38 +569,9 @@ module.exports.statusBar = {
   'statusBar.noFolderBorder': BORDER
 }
 
-// ========================================================
-// Terminal
-// ========================================================
-
-// ℹ️ Terminal: 'bold' colors are based on terminal emulators and are 'brighter'
-// versions of that color
-module.exports.terminal = {
-  'terminalCursor.background': TEXT_PRIMARY,
-  'terminalCursor.foreground': CURSOR,
-  'terminal.background': EDITOR_BG,
-  'terminal.foreground': EDITOR_FG,
-  'terminal.ansiBlack': EDITOR_BG,
-  'terminal.ansiBlue': OCEAN,
-  'terminal.ansiCyan': ELECTRIC_LEAF, // ampersand, file path and arrow
-  'terminal.ansiGreen': ICE, // branch name
-  'terminal.ansiMagenta': PEPTO, // name
-  'terminal.ansiRed': APPLE,
-  'terminal.ansiWhite': TEXT_PRIMARY,
-  'terminal.ansiYellow': PEACH, // computer name
-  'terminal.ansiBrightBlack': GRAY_500,
-  'terminal.ansiBrightBlue': NEON_ICE,
-  'terminal.ansiBrightCyan': ARCTIC,
-  'terminal.ansiBrightGreen': AQUAMARINE,
-  'terminal.ansiBrightMagenta': PEPTO,
-  'terminal.ansiBrightRed': SALMON,
-  'terminal.ansiBrightWhite': GRAY_300,
-  'terminal.ansiBrightYellow': POLLEN
-}
-
-// ========================================================
+//
 // Extensions
-// ========================================================
+//
 
 module.exports.extensions = {
   'extensionButton.prominentBackground': ACTION_BG,
@@ -650,78 +579,10 @@ module.exports.extensions = {
   'extensionButton.prominentHoverBackground': ACTION_HOVER_BG
 }
 
-// ========================================================
+//
 // Debug
-// ========================================================
+//
 
 module.exports.debug = {
   'debugToolBar.background': WELL_BG // TODO: WIT?
-}
-
-// ---------------------------------------------------------------------------
-// Synatx token color variables
-// ---------------------------------------------------------------------------
-
-// Token Variables
-// ℹ️ All token variables should be organized by token type and declared here.
-
-const $comment = TEXT_SUBTLE
-const $constant = BANANA
-const $entity = POLLEN
-const $invalid = DANGER
-const $keyword = PEPTO
-const $markup = TEXT_PRIMARY
-const $storage = CARROT
-const $string = ICE
-const $support = PEACH
-const $variable = GRAY_200
-// MARKUP
-const $header = TEXT_SECONDARY
-
-//
-// Ungrouped colors - DEPRECATED
-
-// The color values used in the theme, these are all used in syntax tokens and should
-// be refactored to token type exports!
-const $red = SALMON
-const $boldRed = APPLE
-const $magenta = PEPTO
-const $boldMagenta = PLUM
-const $yellow = POLLEN
-const $boldYellow = BANANA
-const $orange = PEACH
-const $blue = NEON_ICE
-const $boldBlue = OCEAN
-const $cyan = ARCTIC
-const $boldCyan = ELECTRIC_LEAF
-const $green = ICE
-const $gray = GRAY_600
-
-module.exports.variables = {
-  // SYNTAX TOKENS
-  $comment,
-  $constant,
-  $entity,
-  $invalid,
-  $keyword,
-  $markup,
-  $storage,
-  $string,
-  $support,
-  $variable,
-  $header,
-  // UNGROUPED COLOR VARIABLES
-  $red,
-  $boldRed,
-  $magenta,
-  $boldMagenta,
-  $yellow,
-  $boldYellow,
-  $orange,
-  $blue,
-  $boldBlue,
-  $cyan,
-  $boldCyan,
-  $green,
-  $gray
 }
