@@ -1,12 +1,42 @@
 # The Color Safe
 
+#1c242c
+#151c23 #181f25
+
+#8c5b73
+#fe6083 #fe7694 #fa4d73
+#befeee #a9fef7
+#2c4344
+#85a5a0
+#919ca8
+
 _Safe keeping for potential colors_
 
-#FF2C6D Old cursor/danger color
+## Miami Dolch
+
+#4c4f50
+#393d3e
+#7a8694
+#5c6573
+#e47aa3
+#6bc2c8
+
+## MiTo Laser
+
+#b6315c
+#2a254a
+#302675
+#4499ae
+#c42d4f
+
+
+#FF2C6D
+#a9fef7
 
 #1b0824
 #310828
 #172d42
+#ff8f93
 
 #eeeeee
 #f5ebf7
