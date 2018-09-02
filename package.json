@@ -37,9 +37,9 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-eloquence": "^7.4.0",
     "chroma-js": "^1.3.7",
+    "eslint-config-eloquence": "^9.3.0",
     "js-yaml": "^3.12.0",
-    "prettier": "^1.13.5"
+    "prettier": "^1.14.2"
   }
 }
