@@ -19,18 +19,22 @@
 
 const PRIMARY = '#fe6083'
 const SECONDARY = '#befeee'
+const SECONDARY_TRANSLUCENT = '#befeee80'
 
 const BACKGROUND = '#1c242c'
-const BACKGROUND_DARK = '#181f25'
+const BACKGROUND_100 = '#1c2b3b'
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = '#f86c8a99'
 const BORDER = '#2c4344'
+
+const MITO_PURPLE = '#2a254a'
+const MITO_PURPLE_TRANSLUCENT = '#2a254aD9'
 
 const FOREGROUND = '#f0f0f0'
 const FOREGROUND_SUBTLE = '#919ca8'
 const FOREGROUND_INACTIVE = '#85a5a0'
 
-const INFO = '#93E0E3'
+// const INFO = '#93E0E3'
 const SUCCESS = '#9ed945'
 const WARNING = '#FFC300'
 const DANGER = '#ff427b'
@@ -53,17 +57,35 @@ const GIT_IGNORED = FOREGROUND_SUBTLE
 // ---------------------------------------------------------------------------
 
 //
+// Badges
+//
+
+const badge = {
+  'badge.background': FOREGROUND_INACTIVE,
+  'badge.foreground': SECONDARY,
+}
+
+//
+// Inputs
+//
+
+const input = {
+  'input.background': BACKGROUND_100,
+  'input.border': SECONDARY_TRANSLUCENT,
+}
+
+//
 // Activity Bar
 //
 
 const activityBar = {
   'activityBar.background': BACKGROUND,
   'activityBar.dropBackground': BACKGROUND_DRAG_DROP,
-  'activityBar.border': BORDER,
+  'activityBar.border': null,
   'activityBar.foreground': SECONDARY,
-  //
-  // 'activityBarBadge.background': PRIMARY,
-  // 'activityBarBadge.foreground': FOREGROUND,
+  // Badges
+  'activityBarBadge.background': null, // (No change from default badge styles)
+  'activityBarBadge.foreground': null, // (No change from default badge styles)
 }
 
 // ========================================================
@@ -92,6 +114,17 @@ const editorGroup = {
   // 'editorGroupHeader.noTabsBackground',
   'editorGroupHeader.tabsBackground': BACKGROUND,
   'editorGroupHeader.tabsBorder': BORDER,
+}
+
+// Editor decorations
+const editorDecorations = {
+  'editorRuler.foreground': BACKGROUND_DRAG_DROP,
+}
+
+// Editor widgets
+
+const editorWidget = {
+  'editorWidget.background': MITO_PURPLE_TRANSLUCENT,
 }
 
 const tab = {
@@ -141,13 +174,13 @@ const sideBar = {
 
 // Bar at bottom of application with current statuses and info
 const statusBar = {
-  'statusBar.background': BACKGROUND,
-  'statusBar.foreground': FOREGROUND_SUBTLE,
-  //   'statusBar.border': BORDER,
-  //   // DEBUGGING MODE
-  //   'statusBar.debuggingBackground': PRIMARY_TRANSLUCENT_300,
-  //   'statusBar.debuggingForeground': TEXT_PRIMARY,
-  //   'statusBar.debuggingBorder': BORDER,
+  'statusBar.background': BACKGROUND_100,
+  'statusBar.foreground': SECONDARY,
+  'statusBar.border': null,
+  // DEBUGGING MODE
+  'statusBar.debuggingBackground': MITO_PURPLE,
+  'statusBar.debuggingForeground': SECONDARY,
+  'statusBar.debuggingBorder': null,
   //   // NO FOLDER MODE
   //   'statusBar.noFolderBackground': WELL_BG,
   //   'statusBar.noFolderForeground': TEXT_PRIMARY,
@@ -166,7 +199,7 @@ const statusBar = {
 
 // Bar at top of application with title of project
 const titleBar = {
-  'titleBar.activeBackground': BACKGROUND_DARK,
+  'titleBar.activeBackground': BACKGROUND_100,
   'titleBar.activeForeground': PRIMARY,
   //   'titleBar.inactiveBackground': TITLE_BG,
   //   'titleBar.inactiveForeground': TITLE_FG,
@@ -174,9 +207,13 @@ const titleBar = {
 }
 
 module.exports = {
+  ...badge,
   ...activityBar,
   ...editor,
   ...editorGroup,
+  ...editorDecorations,
+  ...editorWidget,
+  ...input,
   ...panel,
   ...sideBar,
   ...statusBar,

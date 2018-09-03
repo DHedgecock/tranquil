@@ -6,7 +6,9 @@ _Safe keeping for potential colors_
 
 # Theme Colors
 
-#ff617e
+#1c2b3b
+
+#ff617e #e47aa399
 
 // Fonts const GRAY_100 = '#f0f0f0' const GRAY_200 = '#d4cbcc' const GRAY_300 =
 '#f5ebf7d9' const GRAY_400 = '#ab9bab' const GRAY_500 = '#7e6c88'
