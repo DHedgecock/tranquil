@@ -3,6 +3,38 @@
 _Safe keeping for potential colors_
 
 #FF2C6D Old cursor/danger color
+#b892f1
+
+# Theme Colors
+
+#ff617e
+
+// Fonts
+const GRAY_100 = '#f0f0f0'
+const GRAY_200 = '#d4cbcc'
+const GRAY_300 = '#f5ebf7d9'
+const GRAY_400 = '#ab9bab'
+const GRAY_500 = '#7e6c88'
+
+const GRAY_600 = '#2c4344' // Borders #1a2e42
+
+// Backgrounds
+const GRAY_700 = '#1c242c' // Editor BG
+const GRAY_800 = '#121c26' // Well BG
+const GRAY_900 = '#0a121b' // App Title BG
+
+//
+// Transparency colors
+//
+
+const TRANSPARENT = alpha('#000000', 0.0) // #00000000
+
+const PRIMARY_TRANSLUCENT_100 = alpha(ACCENT, 0.1)
+const PRIMARY_TRANSLUCENT_200 = alpha(ACCENT, 0.2)
+const PRIMARY_TRANSLUCENT_300 = alpha(ACCENT, 0.3)
+
+
+
 
 #1b0824
 #310828
