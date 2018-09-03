@@ -81,8 +81,17 @@ const editor = {
   'editorCursor.foreground': PRIMARY,
 }
 
+// Editor groups contain editor instances, and each instance is represented by
+// a tab
 const editorGroup = {
+  // Border applies to multiple editor groups
   'editorGroup.border': BORDER,
+  // 'editorGroup.dropBackground'
+  // 'editorGroup.emptyBackground'
+  // 'editorGroup.focusedEmptyBorder'
+  // 'editorGroupHeader.noTabsBackground',
+  'editorGroupHeader.tabsBackground': BACKGROUND,
+  'editorGroupHeader.tabsBorder': BORDER,
 }
 
 const tab = {
@@ -94,16 +103,33 @@ const tab = {
 }
 
 //
+// Panel
+//
+
+// Panels are shown below the editor area and contain views like Output and
+// Integrated Terminal.
+const panel = {
+  'panel.background': BACKGROUND,
+  'panel.border': BORDER,
+  // 'panel.dropBackground': BG_DRAG_DROP,
+  // Panel title
+  'panelTitle.activeBorder': PRIMARY,
+  'panelTitle.activeForeground': PRIMARY,
+  'panelTitle.inactiveForeground': FOREGROUND_INACTIVE,
+}
+
+//
 // Sidebar
 //
 
+// Contains the Explore/Debug/Extension/etc. views
 const sideBar = {
   'sideBar.background': BACKGROUND,
-  // 'sideBar.dropBackground': BG_DRAG_DROP,
   'sideBar.foreground': FOREGROUND_SUBTLE,
   'sideBar.border': BORDER,
+  // 'sideBar.dropBackground': BG_DRAG_DROP,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
-  'sideBarTitle.foreground': PRIMARY,
+  'sideBarTitle.foreground': FOREGROUND_INACTIVE,
   // Side bar sections for features
   'sideBarSectionHeader.background': BACKGROUND, // same bg for subtler headers
   'sideBarSectionHeader.foreground': FOREGROUND_INACTIVE,
@@ -113,24 +139,45 @@ const sideBar = {
 // Status Bar
 //
 
+// Bar at bottom of application with current statuses and info
 const statusBar = {
   'statusBar.background': BACKGROUND,
   'statusBar.foreground': FOREGROUND_SUBTLE,
+  //   'statusBar.border': BORDER,
+  //   // DEBUGGING MODE
+  //   'statusBar.debuggingBackground': PRIMARY_TRANSLUCENT_300,
+  //   'statusBar.debuggingForeground': TEXT_PRIMARY,
+  //   'statusBar.debuggingBorder': BORDER,
+  //   // NO FOLDER MODE
+  //   'statusBar.noFolderBackground': WELL_BG,
+  //   'statusBar.noFolderForeground': TEXT_PRIMARY,
+  //   'statusBar.noFolderBorder': BORDER
+  //   // 😢 Unfortunately, you can only style the background of status bar items, it
+  //   // would nice to instead style the foreground, but until then style background
+  //   'statusBarItem.activeBackground': DECORATION_BG,
+  //   'statusBarItem.hoverBackground': DECORATION_BG,
+  //   'statusBarItem.prominentBackground': DECORATION_BG,
+  //   'statusBarItem.prominentHoverBackground': DECORATION_BG,
 }
 
 //
 // Title Bar
 //
 
+// Bar at top of application with title of project
 const titleBar = {
   'titleBar.activeBackground': BACKGROUND_DARK,
   'titleBar.activeForeground': PRIMARY,
+  //   'titleBar.inactiveBackground': TITLE_BG,
+  //   'titleBar.inactiveForeground': TITLE_FG,
+  //   'titleBar.border': BORDER
 }
 
 module.exports = {
   ...activityBar,
   ...editor,
   ...editorGroup,
+  ...panel,
   ...sideBar,
   ...statusBar,
   ...tab,
@@ -325,15 +372,6 @@ module.exports = {
 // // Editor *tabs* are containers of individual editors
 
 // module.exports.editorGroupsTabs = {
-//   // EDITOR GROUPS
-//   'editorGroup.background': WELL_BG,
-//   'editorGroup.border': BORDER,
-//   'editorGroup.dropBackground': BG_DRAG_DROP,
-//   // The header containing all the editor tabs at the top of an editor group
-//   'editorGroupHeader.tabsBackground': EDITOR_BG,
-//   'editorGroupHeader.tabsBorder': '#6d5f6b', // BORDER,
-//   // 'editorGroupHeader.noTabsBackground' set 'showTabs' false to see this, it's v confusing
-
 //   // EDITOR TABS
 //   'tab.border': EDITOR_BG,
 //   'tab.activeBorder': TEXT_THEMED,
@@ -493,93 +531,6 @@ module.exports = {
 //   'editorMarkerNavigationError.background': DANGER,
 //   'editorMarkerNavigationWarning.background': WARNING,
 //   'editorMarkerNavigationInfo.background': INFO
-// }
-
-// //
-// // Panel
-// //
-
-// // The panel is shown below the editor and contains views like Output and Integrated
-// // Terminal
-// module.exports.panel = {
-//   'panel.background': EDITOR_BG,
-//   'panel.border': BORDER,
-//   'panel.dropBackground': BG_DRAG_DROP,
-//   // Panel title
-//   'panelTitle.activeBorder': TEXT_THEMED,
-//   'panelTitle.activeForeground': TEXT_THEMED,
-//   'panelTitle.inactiveForeground': TEXT_SECONDARY
-// }
-
-// //
-// // Title bar
-// //
-
-// // The title bar is the bar at the top of the editor
-// module.exports.titleBar = {
-//   'titleBar.activeBackground': TITLE_BG,
-//   'titleBar.activeForeground': TITLE_FG,
-//   'titleBar.inactiveBackground': TITLE_BG,
-//   'titleBar.inactiveForeground': TITLE_FG,
-//   'titleBar.border': BORDER
-// }
-
-// //
-// // Activity bar
-// //
-
-// // The far left sidebar (which can be hidden with: Toggle Activity Bar Visibility)
-// module.exports.activityBar = {
-//   'activityBar.background': WELL_BG,
-//   'activityBar.dropBackground': BG_DRAG_DROP,
-//   'activityBar.foreground': WELL_FG,
-//   'activityBar.border': BORDER_THEMED, // When it's open, it pops!
-//   // Badges
-//   'activityBarBadge.background': DECORATION_BG,
-//   'activityBarBadge.foreground': DECORATION_FG
-// }
-
-// //
-// // Side bar
-// //
-
-// // ℹ️ The side bar is inbetween the activity bar and editor, and contains the file
-// // tree, search interface, git status and debug views
-// module.exports.sideBar = {
-//   'sideBar.background': WELL_BG,
-//   'sideBar.dropBackground': BG_DRAG_DROP,
-//   'sideBar.foreground': WELL_FG,
-//   // sideBar.border
-//   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
-//   'sideBarTitle.foreground': TEXT_THEMED,
-//   // Side bar sections for features
-//   'sideBarSectionHeader.background': WELL_BG, // same bg for subtler headers
-//   'sideBarSectionHeader.foreground': TEXT_SUBTLE
-// }
-
-// //
-// // Status bar
-// //
-
-// // The status bar is the bar at bottom of editor with status updates
-// module.exports.statusBar = {
-//   'statusBar.background': EDITOR_BG,
-//   'statusBar.foreground': EDITOR_FG,
-//   'statusBar.border': BORDER,
-//   // 😢 Unfortunately, you can only style the background of status bar items, it
-//   // would nice to instead style the foreground, but until then style background
-//   'statusBarItem.activeBackground': DECORATION_BG,
-//   'statusBarItem.hoverBackground': DECORATION_BG,
-//   'statusBarItem.prominentBackground': DECORATION_BG,
-//   'statusBarItem.prominentHoverBackground': DECORATION_BG,
-//   // DEBUGGING MODE
-//   'statusBar.debuggingBackground': PRIMARY_TRANSLUCENT_300,
-//   'statusBar.debuggingForeground': TEXT_PRIMARY,
-//   'statusBar.debuggingBorder': BORDER,
-//   // NO FOLDER MODE
-//   'statusBar.noFolderBackground': WELL_BG,
-//   'statusBar.noFolderForeground': TEXT_PRIMARY,
-//   'statusBar.noFolderBorder': BORDER
 // }
 
 // //
