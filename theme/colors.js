@@ -21,13 +21,14 @@ const PRIMARY = '#fe6083'
 const SECONDARY = '#befeee'
 const SECONDARY_TRANSLUCENT = '#befeee80'
 
-const BACKGROUND = '#1c242c'
+const BACKGROUND = '#222b34'
 const BACKGROUND_100 = '#1c2b3b'
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = '#f86c8a99'
 const BORDER = '#2c4344'
+const BORDER_DARK = '#1c242c'
 
-const MITO_PURPLE = '#2a254a'
+const MITO_PURPLE = '#262b4b'
 const MITO_PURPLE_TRANSLUCENT = '#2a254aD9'
 
 const FOREGROUND = '#f0f0f0'
@@ -84,8 +85,8 @@ const activityBar = {
   'activityBar.border': null,
   'activityBar.foreground': SECONDARY,
   // Badges
-  'activityBarBadge.background': null, // (No change from default badge styles)
-  'activityBarBadge.foreground': null, // (No change from default badge styles)
+  'activityBarBadge.background': badge['badge.background'],
+  'activityBarBadge.foreground': badge['badge.foreground'],
 }
 
 // ========================================================
@@ -113,7 +114,7 @@ const editorGroup = {
   // 'editorGroup.focusedEmptyBorder'
   // 'editorGroupHeader.noTabsBackground',
   'editorGroupHeader.tabsBackground': BACKGROUND,
-  'editorGroupHeader.tabsBorder': BORDER,
+  'editorGroupHeader.tabsBorder': BORDER_DARK,
 }
 
 // Editor decorations
@@ -143,7 +144,7 @@ const tab = {
 // Integrated Terminal.
 const panel = {
   'panel.background': BACKGROUND,
-  'panel.border': BORDER,
+  'panel.border': BORDER_DARK,
   // 'panel.dropBackground': BG_DRAG_DROP,
   // Panel title
   'panelTitle.activeBorder': PRIMARY,
@@ -159,7 +160,7 @@ const panel = {
 const sideBar = {
   'sideBar.background': BACKGROUND,
   'sideBar.foreground': FOREGROUND_SUBTLE,
-  'sideBar.border': BORDER,
+  'sideBar.border': BORDER_DARK,
   // 'sideBar.dropBackground': BG_DRAG_DROP,
   // The title for the entire side bar, eg 'EXPLORER' or 'DEBUG'
   'sideBarTitle.foreground': FOREGROUND_INACTIVE,
@@ -174,7 +175,7 @@ const sideBar = {
 
 // Bar at bottom of application with current statuses and info
 const statusBar = {
-  'statusBar.background': BACKGROUND_100,
+  'statusBar.background': MITO_PURPLE,
   'statusBar.foreground': SECONDARY,
   'statusBar.border': null,
   // DEBUGGING MODE
@@ -199,7 +200,7 @@ const statusBar = {
 
 // Bar at top of application with title of project
 const titleBar = {
-  'titleBar.activeBackground': BACKGROUND_100,
+  'titleBar.activeBackground': MITO_PURPLE,
   'titleBar.activeForeground': PRIMARY,
   //   'titleBar.inactiveBackground': TITLE_BG,
   //   'titleBar.inactiveForeground': TITLE_FG,

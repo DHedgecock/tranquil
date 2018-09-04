@@ -6,7 +6,9 @@ _Safe keeping for potential colors_
 
 # Theme Colors
 
-#1c2b3b
+#1c2b3b #1c242c
+
+#2a254a
 
 #ff617e #e47aa399
 
