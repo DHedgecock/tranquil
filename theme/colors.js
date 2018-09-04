@@ -21,7 +21,7 @@ const PRIMARY = '#fe6083'
 const SECONDARY = '#befeee'
 const SECONDARY_TRANSLUCENT = '#befeee80'
 
-const BACKGROUND = '#222b34'
+const BACKGROUND = '#212b36'
 const BACKGROUND_100 = '#1c2b3b'
 // Drag and drop background for theme, used primarily in list views
 const BACKGROUND_DRAG_DROP = '#f86c8a99'
