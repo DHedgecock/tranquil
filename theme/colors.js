@@ -62,7 +62,7 @@ const GIT_IGNORED = FOREGROUND_SUBTLE
 //
 
 const badge = {
-  'badge.background': FOREGROUND_INACTIVE,
+  'badge.background': PRIMARY,
   'badge.foreground': SECONDARY,
 }
 
