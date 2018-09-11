@@ -3,6 +3,9 @@ const { writeFile } = require('fs')
 // Load theme color variables
 const colors = require('./theme/colors')
 
+// Load syntax tokens
+const tokens = require('./theme/syntax-tokens')
+
 // Create the base theme definition
 // ---------------------------------------------------------------------------
 
@@ -14,6 +17,7 @@ let theme = {
   semanticClass: 'theme.dark.tranquil',
   // Editor theme styles
   colors,
+  tokenColors: [...tokens],
 }
 
 // Convert color variables to string vlaues

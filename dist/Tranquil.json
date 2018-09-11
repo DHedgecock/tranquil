@@ -62,5 +62,69 @@
     "tab.inactiveForeground": "#85a5a0",
     "titleBar.activeBackground": "#262b4b",
     "titleBar.activeForeground": "#fe6083"
-  }
+  },
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#ab9bab",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "constant",
+      "settings": {
+        "foreground": "#f0f0f0"
+      }
+    },
+    {
+      "scope": "entity",
+      "settings": {
+        "foreground": "#e8e8e8"
+      }
+    },
+    {
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#e0e0e0",
+        "fontStyle": "italic bold underline"
+      }
+    },
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#d9d9d9"
+      }
+    },
+    {
+      "scope": "markup",
+      "settings": {
+        "foreground": "#d1d1d1"
+      }
+    },
+    {
+      "scope": "storage",
+      "settings": {
+        "foreground": "#d4d4d4"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#c9c9c9"
+      }
+    },
+    {
+      "scope": "support",
+      "settings": {
+        "foreground": "#bfbfbf"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#b5b5b5"
+      }
+    }
+  ]
 }
