@@ -35,8 +35,18 @@ const FOREGROUND = '#f0f0f0'
 const FOREGROUND_SUBTLE = '#919ca8'
 const FOREGROUND_INACTIVE = '#85a5a0'
 
-// const INFO = '#93E0E3'
-const SUCCESS = '#9ed945'
+// Git colors
+const GIT_ADDED = '#a3ff57'
+const GIT_MODIFIED = '#ffd000'
+const GIT_DELETED = '#ff427b'
+
+const GIT_UNTRACKED = '#c8ff00'
+const GIT_IGNORED = '#405c5f'
+const GIT_CONFLICTING = '#ff428a'
+const GIT_SUBMODULE = '#cc6796'
+
+// Status colors
+const INFO = '#93E0E3'
 const WARNING = '#FFC300'
 const DANGER = '#ff427b'
 
@@ -46,13 +56,6 @@ const DANGER = '#ff427b'
 
 // Element grouping variables
 // ---------------------------------------------------------------------------
-
-// Git- status colors for git states
-const GIT_ADDED = SUCCESS
-const GIT_MODIFIED = WARNING
-const GIT_REMOVED = DANGER
-const GIT_CONFLICTED = DANGER
-const GIT_IGNORED = FOREGROUND_SUBTLE
 
 // VSCode Radical theme 🎉
 // ---------------------------------------------------------------------------
@@ -117,23 +120,44 @@ const editorGroup = {
   'editorGroupHeader.tabsBorder': BORDER_DARK,
 }
 
-// Editor decorations
-const editorDecorations = {
-  'editorRuler.foreground': BACKGROUND_DRAG_DROP,
-}
-
-// Editor widgets
-
-const editorWidget = {
-  'editorWidget.background': MITO_PURPLE_TRANSLUCENT,
-}
-
+// Editor tabs
 const tab = {
   'tab.activeBorder': PRIMARY,
   'tab.activeBackground': BACKGROUND,
   'tab.activeForeground': PRIMARY,
   'tab.inactiveBackground': BACKGROUND,
   'tab.inactiveForeground': FOREGROUND_INACTIVE,
+}
+
+// Editor decorations
+const editorDecorations = {
+  'editorRuler.foreground': BACKGROUND_DRAG_DROP,
+}
+
+// Editor gutter - contains the glyph margins and the line numbers
+const editorGutter = {
+  'editorGutter.background': null, // Defaults to editor bg
+  'editorGutter.addedBackground': GIT_ADDED,
+  'editorGutter.modifiedBackground': GIT_MODIFIED,
+  'editorGutter.deletedBackground': GIT_DELETED,
+}
+
+// Overview ruler - located beneath scroll bar on right edge of editor and contains an
+// overview of all editor decorations
+const editorOverviewRuler = {
+  // Status decorations (includes linter)
+  'editorOverviewRuler.errorForeground': DANGER,
+  'editorOverviewRuler.warningForeground': WARNING,
+  'editorOverviewRuler.infoForeground': INFO,
+  // Git decorations
+  'editorOverviewRuler.modifiedForeground': GIT_MODIFIED,
+  'editorOverviewRuler.addedForeground': GIT_ADDED,
+  'editorOverviewRuler.deletedForeground': GIT_DELETED,
+}
+
+// Editor widgets
+const editorWidget = {
+  'editorWidget.background': MITO_PURPLE_TRANSLUCENT,
 }
 
 //
@@ -207,13 +231,40 @@ const titleBar = {
   //   'titleBar.border': BORDER
 }
 
+//
+// Git
+//
+
+const gitDecoration = {
+  'gitDecoration.addedResourceForeground': GIT_ADDED,
+  'gitDecoration.modifiedResourceForeground': GIT_MODIFIED,
+  'gitDecoration.deletedResourceForeground': GIT_DELETED,
+  'gitDecoration.untrackedResourceForeground': GIT_UNTRACKED,
+  'gitDecoration.ignoredResourceForeground': GIT_IGNORED,
+  'gitDecoration.conflictingResourceForeground': GIT_CONFLICTING,
+  'gitDecoration.submoduleResourceForeground': GIT_SUBMODULE,
+}
+
+const diffEditor = {
+  'diffEditor.insertedTextBackground': '#43fdd533',
+  'diffEditor.insertedTextBorder': null,
+  'diffEditor.removedTextBackground': '#fe608233',
+  'diffEditor.removedTextBorder': null,
+  // ℹ️ Diff borders get added around everything line by line and it's super
+  // overwhelming to look at, so we disable them
+}
+
 module.exports = {
   ...badge,
   ...activityBar,
+  ...diffEditor,
   ...editor,
   ...editorGroup,
   ...editorDecorations,
+  ...editorGutter,
+  ...editorOverviewRuler,
   ...editorWidget,
+  ...gitDecoration,
   ...input,
   ...panel,
   ...sideBar,
@@ -367,27 +418,6 @@ module.exports = {
 //   'scrollbarSlider.hoverBackground': PRIMARY_TRANSLUCENT_200
 // }
 
-// //
-// // Git
-// //
-
-// module.exports.git = {
-//   'gitDecoration.untrackedResourceForeground': GIT_ADDED,
-//   'gitDecoration.modifiedResourceForeground': GIT_MODIFIED,
-//   'gitDecoration.deletedResourceForeground': GIT_REMOVED,
-//   'gitDecoration.conflictingResourceForeground': GIT_CONFLICTED,
-//   'gitDecoration.ignoredResourceForeground': GIT_IGNORED
-// }
-
-// module.exports.diff = {
-//   'diffEditor.insertedTextBackground': '#00eed32b',
-//   'diffEditor.removedTextBackground': '#fc28692b',
-//   // Diff borders get added around everything line by line and it's super
-//   // overwhelming to look at, so we disable them
-//   'diffEditor.insertedTextBorder': null,
-//   'diffEditor.removedTextBorder': null
-// }
-
 // module.exports.merge = {
 //   'merge.border': EDITOR_BG,
 //   'merge.currentHeaderBackground': '#703268',
@@ -492,34 +522,10 @@ module.exports = {
 // }
 
 // //
-// // Editor gutter
-// //
-
-// // The gutter contains the glyph margins and the line numbers
-// module.exports.editorGutter = {
-//   'editorGutter.background': EDITOR_BG,
-//   'editorGutter.addedBackground': GIT_ADDED,
-//   'editorGutter.modifiedBackground': GIT_MODIFIED,
-//   'editorGutter.deletedBackground': GIT_REMOVED
-// }
-
-// //
 // // Editor overview ruler
 // //
 
-// // The overview ruler is the thin bar at the far right of the editor, it shows
-// // decorations for different editor statuses
 // module.exports.editorOverviewRuler = {
-//   // Linter status decorations
-//   'editorOverviewRuler.errorForeground': DANGER,
-//   'editorOverviewRuler.warningForeground': WARNING,
-//   'editorOverviewRuler.infoForeground': INFO,
-
-//   // Git status decorations
-//   'editorOverviewRuler.addedForeground': GIT_ADDED,
-//   'editorOverviewRuler.modifiedForeground': GIT_MODIFIED,
-//   'editorOverviewRuler.deletedForeground': GIT_REMOVED,
-
 //   // Merge conflict decorations
 //   'editorOverviewRuler.currentContentForeground': '#703268', // TODO: variable
 //   'editorOverviewRuler.incomingContentForeground': '#1E4751' // TODO: variable
